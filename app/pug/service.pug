@@ -1,0 +1,36 @@
+extends ./share/container.pug
+block config
+    - var title = '企业资讯';
+    - var currentId = 'news';
+    -
+        var nlist = [
+                {text:'商务会议',class:'icon1',href:'#'},
+                {text:'企业团建',class:'icon2',href:'#'},
+                {text:'活动沙龙',class:'icon3',href:'#'},
+                {text:'职场培训',class:'icon4',href:'#'},
+                {text:'场地租赁',class:'icon5',href:'#'},
+                {text:'展览展销',class:'icon6',href:'#'},
+                {text:'餐饮服务',class:'icon7',href:'#'}
+            ];
+block css
+    link(rel='stylesheet',href=cssUrl + 'service.css')
+block append main
+    #service
+        img.responsive(src=imgUrl+"banner.jpg", alt="")
+        .container
+            .sidebar
+                dl.nav
+                    dt 服务项目
+                    each val, index in nlist
+                        dd(class=(index == 7)?'last':'')
+                            a(class=val.class href=val.href) #{val.text}
+            .content
+                h1 杭州店莱福士酒店商务会议场所
+                p 上海凯旋先锋主要从事各种会议、庆典、展览展示会、公司年会、形象促销活动、演唱会、商业推广、产品展销、产品展销开幕式、签售会、促销活动、交易会、试乘试驾等活动场地的布置、搭建、租赁。一、天津篷房租赁：提供大型产品展销开产品篷房、庆典篷房、展览篷房、红色喜庆篷房等各种户外活动场所蓬房租赁、棚房搭建及拆卸服务。
+                img.responsive(src=imgUrl+"service1.jpg", alt="")
+                p 上海凯旋先锋主要从事各种会议、庆典、展览展示会、公司年会、形象促销活动、演唱会、商业推广、产品展销、产品展销开幕式、签售会、促销活动、交易会、试乘试驾等活动场地的布置、搭建、租赁。一、天津篷房租赁：提供大型产品展销开产品篷房、庆典篷房、展览篷房、红色喜庆篷房等各种户外活动场所蓬房租赁、棚房搭建及拆卸服务。
+                div
+                    img(src=imgUrl+"service2.jpg", alt="")
+                    img.mr0(src=imgUrl+"service3.jpg", alt="")
+block append js
+        script(src=jsUrl+"sidepage.js")

@@ -1,0 +1,92 @@
+@import './_config.scss';
+#service{
+    .container{
+        margin-top: 70px;
+    }
+    .sidebar{
+        width: 26.084%;
+        float: left;
+    }
+    dl{
+        width: 77.77%;
+        float: left;
+        border-bottom: none;
+    }
+    dt{
+        font-size: 26px;
+    }
+    dd{
+        position: relative;
+        padding: 5% 0;
+        border-image:url($imgUrl+'service_border.png') 2 1 stretch;
+        border-top: 2px solid #fff;
+        &.last{
+            border-bottom: 0;
+        }
+        a{
+            display: block;
+            height: 50px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 50px;
+            @for $i from 1 through 7 {
+                &.icon#{$i}:before {
+                    display: inline-block;
+                    // line-height: 50px;
+                    // float: left;
+                    margin: 6px 20px 0 0;
+                    vertical-align: middle;
+                    content: url($imgUrl+'service_icon#{$i}.png');
+                }
+            }
+        }
+
+        &:hover{
+            border:none;
+            a{
+                color:#fff;
+                background-color: #ff9000;
+                @for $i from 1 through 7 {
+                    &.icon#{$i}:before {
+                        content: url($imgUrl+'service_icon#{$i}_on.png');
+                    }
+                }
+            }
+            &:before,&:after{
+                content: url($imgUrl+'service_border_on.png');
+                width: 100%;
+                position: absolute;
+                left: 0;
+                z-index: 0;
+            }
+            &:before{
+                top: -15px;
+            }
+            &:after{
+                bottom: -6px;
+            }
+        }
+    }
+
+    .content{
+        float: left;
+        width: 73.916%;
+        padding-bottom: 100px;
+        h1{
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 24px;
+            margin: 20px 0;
+        }
+        img{
+            margin-right: 3.382%;
+        }
+    }
+}
+/* 超小屏幕（手机，小于 768px） */
+@media screen and (max-width: 768px){
+
+}

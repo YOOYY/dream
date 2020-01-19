@@ -1,0 +1,82 @@
+@import './_config.scss';
+#brand{
+    .container{
+        padding-top: 70px;
+    }
+    .sidebar{
+        width: 25.83333%;
+        float: left;
+    }
+    dl{
+        width: 80%;
+        float: left;
+        border:1px solid #eee;
+        border-bottom: none;
+        a{
+            display: block;
+        }
+    }
+    dt{
+        font-size: 26px;
+    }
+    dt,dd a{
+        padding-left: 10%;
+        height: 80px;
+        line-height: 80px;
+        border-bottom: #eee 1px solid;
+    }
+    dd{
+        position: relative;
+        &:hover{
+            a{
+                color:#ff9000;
+            }
+            &:after{
+                content: '';
+                height: 30px;width: 0;
+                border-right: 4px solid #ff9000;
+                position: absolute;
+                left: 0;top: 26px;
+            }
+        }
+    }
+    .content{
+        float: left;
+        width: 74%;
+        h1{
+            padding-left: 18px;
+            border-left: 4px solid #ff9000;
+            font-size: 18px;
+            line-height: 26px;
+            margin: 30px 0;
+            clear: both;
+        }
+        h2{
+            font-size: 18px;
+            margin-top: 7%;
+        }
+        p{
+            font-size: 16px;
+            line-height: 24px;
+            color: #666;
+            margin: 20px 0;
+        }
+        li{
+            width: 100%;
+            padding:0;
+        }
+        img{
+            float: left;
+            width: 18.918%;
+            margin: 4.054% 4.054% 4.054% 0;
+        }
+        .list{
+            float: left;
+            width: 77%;
+        }
+    }
+}
+/* 超小屏幕（手机，小于 768px） */
+@media screen and (max-width: 768px){
+
+}

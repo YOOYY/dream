@@ -1,0 +1,201 @@
+@import './_config.scss';
+#shop{
+    .container{
+        padding-top: 90px;
+    }
+    .tips{
+        font-size: 24px;
+        text-align: center;
+        line-height: 36px;
+    }
+    .title{
+        margin: 60px 0;
+        text-align: center;
+        span{
+            font-size: 26px;
+        }
+        img{
+            margin: 10px 20px 0 20px;
+        }
+    }
+}
+
+#shoppage{
+    .container{
+        padding-top: 63px;
+    }
+    .box{
+        margin: 57px 0;
+        .title{
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 26px;
+            color: #221815;
+            &:before,&:after{
+                content: '';
+                margin: 0 20px;
+                width: 10px;height: 10px;
+                border-radius: 50%;
+                background-color: #8f8f8f;
+                display: inline-block;
+                margin-top: 10px;
+            }
+        }
+        .des{
+            font-size: 22px;
+            text-align: center;
+            line-height: 39px;
+        }
+    }
+    .panel{
+        border: solid 2px #dbdde0;
+        background-color: #fcfcfa;
+        margin: 57px 0;
+        overflow: hidden;
+
+        img{
+            width: 37.5%;
+            float: left;
+        }
+        .text{
+            padding-top: 95px;
+            float: left;
+            width: 62.5%;
+            .title{
+                font-size: 26px;
+                margin-bottom: 10px;
+                padding-left: 14%;
+            }
+            .des{
+                margin: 0 auto;
+            }
+            p{
+                width: 72%;
+                font-size: 16px;
+                line-height: 28px;
+                margin: 0 auto;
+            }
+        }
+    }
+    .bg0{
+        background-color: #fff;
+    }
+    .panel2{
+        float: left;
+        width: 31.66%;
+        margin: 0 2.5% 2.5% 0;
+        text-align: center;
+        .title{
+            font-size: 26px;
+            padding: 27px 0;
+            color: #fff;
+            background-color: #254b53;
+        }
+        .des{
+            height: 200px;
+            font-size: 22px;
+            padding: 40px 20% 0 20%;
+            background-color: #f7feff;
+        }
+    }
+    .mg2{
+        width: 65.82%;
+        .smalltitle{
+            text-align: left;
+            font-family: MicrosoftYaHei;
+            font-size: 26px;
+            font-weight: bold;
+            line-height: 40px;
+            color: #221815;
+        }
+        .small{
+            text-align: left;
+            font-family: PingFangSC-Light;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .mytitle{
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 26px;
+        color: #221815;
+        &:before,&:after{
+            content: '';
+            margin: 0 20px;
+            width: 10px;height: 10px;
+            border-radius: 50%;
+            background-color: #8f8f8f;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    }
+    .mytips{
+        width: 285px;
+        font-size: 20px;
+        padding: 24px 90px;
+        background-color: #fffbf7;
+        border:1px solid #d9d3c3;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .myp{
+        text-align: center;
+        font-size: 20px;
+        line-height: 36px;
+        padding: 0 10%;
+    }
+    .md2{
+        margin-right: 3.666%;
+        width: 48.167%;
+        .title{
+            background-color: #806959;
+        }
+        .des{
+            padding-left: 5%;
+            padding-right: 5%;
+            background-color: #fffbf7;
+        }
+    }
+    .ss{
+        clear: both;
+        padding:3% 20%;
+        margin-top: 100px;
+        background-color: #fffbf7;
+        text-align: center;
+        line-height: 36px;
+        margin-bottom: 100px;
+        span{
+            color: #6e3814;
+            font-weight: bold;
+        }
+    }
+}
+#shoppage1{
+    .container{
+        padding:350px 0 100px 0;
+        position: relative;
+    }
+    .box{
+        position: absolute;
+        z-index: 2;
+        top: -50px;
+        left: 0;
+        img{
+            width: 25.5%;
+            float: left;
+            &.last{
+                width: 23.5%;
+            }
+        }
+    }
+    .map{
+        display: block;
+        margin: 0 auto;
+    }
+}
+/* 超小屏幕（手机，小于 768px） */
+@media screen and (max-width: 768px){
+
+}

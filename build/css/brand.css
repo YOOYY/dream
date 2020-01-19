@@ -1,0 +1,68 @@
+@charset "UTF-8";
+#brand .container {
+  padding-top: 70px; }
+
+#brand .sidebar {
+  width: 25.83333%;
+  float: left; }
+
+#brand dl {
+  width: 80%;
+  float: left;
+  border: 1px solid #eee;
+  border-bottom: none; }
+  #brand dl a {
+    display: block; }
+
+#brand dt {
+  font-size: 26px; }
+
+#brand dt, #brand dd a {
+  padding-left: 10%;
+  height: 80px;
+  line-height: 80px;
+  border-bottom: #eee 1px solid; }
+
+#brand dd {
+  position: relative; }
+  #brand dd:hover a {
+    color: #ff9000; }
+  #brand dd:hover:after {
+    content: '';
+    height: 30px;
+    width: 0;
+    border-right: 4px solid #ff9000;
+    position: absolute;
+    left: 0;
+    top: 26px; }
+
+#brand .content {
+  float: left;
+  width: 74%; }
+  #brand .content h1 {
+    padding-left: 18px;
+    border-left: 4px solid #ff9000;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 30px 0;
+    clear: both; }
+  #brand .content h2 {
+    font-size: 18px;
+    margin-top: 7%; }
+  #brand .content p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+    margin: 20px 0; }
+  #brand .content li {
+    width: 100%;
+    padding: 0; }
+  #brand .content img {
+    float: left;
+    width: 18.918%;
+    margin: 4.054% 4.054% 4.054% 0; }
+  #brand .content .list {
+    float: left;
+    width: 77%; }
+
+/* 超小屏幕（手机，小于 768px） */

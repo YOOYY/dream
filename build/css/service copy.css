@@ -1,0 +1,41 @@
+@charset "UTF-8";
+#brand .sidebar {
+  width: 25%;
+  float: left; }
+
+#brand dl {
+  width: 80%;
+  float: left;
+  border-top: 2px solid #ddd;
+  border-image: url("border.png") 2 0 stretch;
+  border-bottom: none; }
+
+#brand dd {
+  position: relative;
+  padding: 5% 0; }
+  #brand dd a {
+    display: block;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px; }
+    #brand dd a img {
+      margin-right: 5px; }
+  #brand dd:hover a {
+    color: #fff;
+    background-color: #ff9000; }
+  #brand dd:hover:after, #brand dd:hover:after {
+    content: url("border.png");
+    width: 100%;
+    position: absolute;
+    left: 0; }
+  #brand dd:hover:before {
+    top: -2px; }
+  #brand dd:hover:after {
+    bottom: -2px; }
+
+#brand .content {
+  float: left;
+  width: 75%; }
+
+/* 超小屏幕（手机，小于 768px） */

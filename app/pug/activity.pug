@@ -1,0 +1,37 @@
+extends ./share/container.pug
+block config
+    - var title = '企业资讯';
+    - var currentId = 'news';
+    -
+        var nlist = [
+                {title:'无锡重磅，首家知识共享社区梦想天地来了！',date:' 2019-09-26',img:'news1.jpg',des:'在无锡这被互联网高度覆盖的城市，“共享”早就成为了人们生活的日常。除了圈地兴起的彩色单车'}, 
+                {title:'聚焦财税新政，助推企业服务',date:'2019-09-15',img:'news2.jpg',des:'梦想天地《财税及企业管理》培训活动圆满落幕 '}, 
+                {title:'梦想天地2020业务研讨会',date:'2020-01-15',img:'news3.jpg',des:'梦想天地2020业务梦想天地2020业务研讨会梦想天地2020业务研讨会梦想天地'},
+                {title:'有了它，可以体面的吃蟹',date:'2019-09-08',img:'news4.jpg',des:'马上就要中秋了，又到了螃蟹小可爱们瑟瑟发抖的季节 '}
+            ];
+block css
+    link(rel='stylesheet',href=cssUrl + 'news.css')
+block append main
+    #activity
+        img.responsive(src=imgUrl+"banner_activity.jpg", alt="")
+        .container
+            ul.nav
+                li.active
+                    a(href='#') 活动推荐
+                li
+                    i
+                    a(href='#') 精彩回顾
+            ol.content
+                each nval, nindex in nlist
+                    li
+                        a(href='#')
+                            img(src=imgUrl+nval.img)
+                            .list
+                                h2 #{nval.title}
+                                p.time #{nval.date}
+                                p.des #{nval.des}
+            .page
+                #page.page_div
+block append js
+        script(src=jsUrl+"pageMe.js")
+        script(src=jsUrl+"sidepage.js")
