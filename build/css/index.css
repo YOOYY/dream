@@ -98,13 +98,42 @@ h1 {
     #newlist .more img {
       margin: 8px 0 0 20px; }
 
+.list li {
+  padding: 15px 30px;
+  overflow: hidden; }
+
+.list a {
+  width: 100%;
+  display: block;
+  overflow: hidden; }
+  .list a:hover {
+    color: #f5a623; }
+
+.list .visibility {
+  visibility: hidden;
+  margin-right: -1em; }
+
+.list_title, .list_date {
+  overflow: hidden;
+  white-space: nowrap; }
+
+.list_title {
+  float: left;
+  width: 70%;
+  text-overflow: ellipsis; }
+
+.list_date {
+  float: left;
+  text-align: right;
+  width: 30%; }
+
 #friendlink {
   margin-bottom: 80px; }
   #friendlink table {
     width: 95%;
     border-collapse: collapse;
     table-layout: fixed;
-    background: url("../imgs/table_bg.jpg") no-repeat center center/100% 100%;
+    background: url("../imgs/index/table_bg.jpg") no-repeat center center/100% 100%;
     padding: 0 2.5%; }
     #friendlink table td {
       text-align: center;

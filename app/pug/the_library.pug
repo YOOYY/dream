@@ -1,0 +1,63 @@
+extends ./share/container.pug
+block config
+    - var title = '自主品牌';
+    - var keywords = '自主品牌';
+    - var description = '自主品牌';
+    - var currentId = 'brand';
+    - var mimgUrl = imgUrl+'brand/';
+    - var type = 'The Library';
+    -
+        var list = [
+                {title:'全民参与的文化盛事',img:'pic10.jpg',des:'The Library 打造的是一个学人图书馆，也是一个社交图书馆。以兼容多元化的属性，满足多品牌、各群体需求，以文化、艺术为出发点，实现全民参与。'}, 
+                {title:'多功能社交空间',img:'pic11.jpg',des:'The Library 不仅仅是图书馆，更是依托智能图书馆的知识分享属性搭载的社交空间，集图书艺术品陈列及文化分享空间等于一体，满足现代人群的多重社交需求。'}, 
+                {title:'知识/艺术的“共享中心”',img:'pic12.jpg',des:'以图书及文化活动分享知识，以艺术现场共享前端艺术形式及内容。打破单一的“埋头”学习方式，将学习者的兴趣、伙伴交往与他们在学业、公益或事业等领域的成就相连接，并利用社交和数字媒体，使得这种互动的学习形式更有效率，更加普及。'},
+                {title:'图书馆的创新运营',img:'pic13.jpg',des:'区别于传统图书馆， The Library 通过社群营造及文化事件探索图书馆、图书出版、图书销售的新模式。The Library 赋予社会的，也不仅仅是一个图书馆概念，这里将成为文化交流、文化事件的发生地，积极发挥文化的引导和文化的渗透功能。'}
+            ];
+block css
+    link(rel='stylesheet',href=cssUrl + 'brand.css')
+block append main
+    #brand
+        img.responsive(src=mimgUrl+"banner3.jpg", alt="")
+        .container
+            .sidebar
+                dl.nav
+                    dt 自主品牌
+                    each val, index in header.nav[2].subnav
+                        dd(class=(type == val.text)?'active':'') #[a(href=val.href) #{val.text}]
+            .content
+                h1.margintop0 项目定位
+                p The library 学人图书馆传承传统图书馆知识汇集与获取的文化基因，结合“互联网+”与“社交化学习”的前沿理念，将藏书、学习、社交，独创全民参与及互动的新生代社交场景图书馆，最大化提升阅读和知识社交的融合，从根本上打破商业书店的反社交属性，达到学习与交流的最佳方式。#[br]The library 学人图书馆 为促进现代图书馆的发展，提供了一个“传承优秀学习传统”，”紧跟前沿智能科技” 及“创新社交场景属性”的完美的解决方案。#[br]The Library学人图书馆 由智能知识分享体系与主题场景社交空间共同组成。冲破传统图书馆和书店的桎梏，结合“互联网+”的前沿科技概念，打造智能书籍、藏品借阅服务、心得体会分享等互动体系，构建新的基于兴趣爱好、精神追求的强关系社群。打造场景化非正式学习地标。
+                h1 核心优势
+                ol
+                    each val, index in list
+                        case index
+                            when 0
+                                li.paddingtop0.bordertop0
+                                    img(src=mimgUrl+val.img)
+                                    .list
+                                        h2.title #{val.title}
+                                        .des.ellipsis-wrap
+                                            .ellipsis #{val.des}
+                                        //- p.des #{val.des}
+                            when 3
+                                li.paddingbottom0
+                                    img(src=mimgUrl+val.img)
+                                    .list
+                                        h2.title #{val.title}
+                                        .des.ellipsis-wrap
+                                            .ellipsis #{val.des}
+                                        //- p.des #{val.des}
+                            default
+                                li
+                                    img(src=mimgUrl+val.img)
+                                    .list
+                                        h2.title #{val.title}
+                                        .des.ellipsis-wrap
+                                            .ellipsis #{val.des}
+                                        //- p.des #{val.des}
+                h1 产品模型
+                p The Library 由全国统一的图书管理系统、APP（管理端／机构端/作者端／读户端）、终端设备等共同组成。
+                p The Library 实体店的藏品分类基本书库、特藏书库、艺术品、装置、会员纪念品。
+                p The Library 学人图书馆 作为EDU MALL的核心区域和亮点区域，其本身的图书区、学习分享空间，将与EDU MALL的其他区域（餐厅、The Stage等）一起成为学习分享超体验的空间。
+                p The Library 将珍品书籍、孤本及市场上难寻的珍贵名家、名人专著展现给读者。 同时，结合艺术化的空间设计，及艺术化布置，营造高格调的文化氛围。
+block append js

@@ -10,7 +10,9 @@
   width: 80%;
   float: left;
   border: 1px solid #eee;
-  border-bottom: none; }
+  border-radius: 6px;
+  border-bottom: none;
+  overflow: hidden; }
   #brand dl a {
     display: block; }
 
@@ -18,16 +20,16 @@
   font-size: 26px; }
 
 #brand dt, #brand dd a {
-  padding-left: 10%;
+  padding-left: 12%;
   height: 80px;
   line-height: 80px;
   border-bottom: #eee 1px solid; }
 
 #brand dd {
   position: relative; }
-  #brand dd:hover a {
+  #brand dd:hover a, #brand dd.active a {
     color: #ff9000; }
-  #brand dd:hover:after {
+  #brand dd:hover:after, #brand dd.active:after {
     content: '';
     height: 30px;
     width: 0;
@@ -38,31 +40,65 @@
 
 #brand .content {
   float: left;
-  width: 74%; }
+  width: 74%;
+  padding-bottom: 50px; }
   #brand .content h1 {
-    padding-left: 18px;
+    padding-left: 20px;
     border-left: 4px solid #ff9000;
     font-size: 18px;
-    line-height: 26px;
     margin: 30px 0;
     clear: both; }
   #brand .content h2 {
     font-size: 18px;
-    margin-top: 7%; }
-  #brand .content p {
+    padding-top: 3.5%; }
+  #brand .content p, #brand .content .des {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 26px;
     color: #666;
-    margin: 20px 0; }
+    margin: 20px 0;
+    overflow: hidden; }
+  #brand .content .des {
+    height: 100px; }
+    #brand .content .des:after {
+      top: -15px;
+      height: 25px;
+      width: 41px;
+      margin-left: -3em;
+      padding-right: 18px;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), white 40%, white); }
+    #brand .content .des:before {
+      height: 100px; }
   #brand .content li {
     width: 100%;
-    padding: 0; }
+    padding: 4.054% 0;
+    overflow: hidden;
+    border-top: 1px solid #eee; }
   #brand .content img {
     float: left;
-    width: 18.918%;
-    margin: 4.054% 4.054% 4.054% 0; }
+    width: 18.945%;
+    margin-right: 4.054%; }
   #brand .content .list {
     float: left;
     width: 77%; }
 
+#brand .imgbox {
+  overflow: hidden; }
+  #brand .imgbox li {
+    width: 49.7%;
+    margin: 0 0.6% 0.6% 0;
+    padding: 0;
+    border: none;
+    float: left; }
+    #brand .imgbox li img {
+      width: 100%; }
+
+@media (max-width: 992px) {
+  #brand .content img {
+    margin-top: 20px; }
+  #brand .content .des:after {
+    top: -24px; } }
+
 /* 超小屏幕（手机，小于 768px） */
+@media screen and (max-width: 768px) {
+  #brand .content img {
+    margin-top: 35px; } }

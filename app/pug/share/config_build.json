@@ -3,11 +3,11 @@
     "cssUrl":"./css/",
     "jsUrl":"./js/",
     "cnTitle":"梦想天地",
-    "viewUrl":"/",
+    "viewUrl":"./",
     "header":{
         "nav":[
             {
-                "href":"./index.html",
+                "href":"index.html",
                 "pageId":"index",
                 "text":"首页"
             },
@@ -16,34 +16,34 @@
                 "pageId":"news",
                 "text":"企业动态",
                 "subnav":[
-                    {"text":"活动推荐","href":"./news.html"},
-                    {"text":"精彩回顾","href":"./news.html"}
+                    {"text":"活动推荐","href":"news.html"},
+                    {"text":"精彩回顾","href":"news.html"}
                 ]
             },
             {
                 "href":"#",
-                "pageId":"news",
+                "pageId":"brand",
                 "text":"自主品牌",
                 "subnav":[
-                    {"text":"EDU","href":"./brand.html"},
-                    {"text":"Dream I Lab","href":"./brand.html"},
-                    {"text":"The Library","href":"./brand.html"},
-                    {"text":"jolpa'","href":"./brand.html"}
+                    {"text":"EDU","href":"edu.html"},
+                    {"text":"Dream I Lab","href":"dream_i_lab.html"},
+                    {"text":"The Library","href":"the_library.html"},
+                    {"text":"jolpa'","href":"jolpa.html"}
                 ]
             },
             {
-                "href":"#",
-                "pageId":"introduction",
+                "href":"service.html",
+                "pageId":"service",
                 "text":"服务项目"
             },
             {
-                "href":"./shop.html",
-                "pageId":"customer",
+                "href":"shop.html",
+                "pageId":"shop",
                 "text":"线下门店"
             },
             {
-                "href":"./friend.html",
-                "pageId":"wiki",
+                "href":"business.html",
+                "pageId":"business",
                 "text":"商务合作"
             }
         ],

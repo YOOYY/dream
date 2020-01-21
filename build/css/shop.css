@@ -1,31 +1,67 @@
 @charset "UTF-8";
-#shop .container {
+#course .container {
+  margin-top: 96px; }
+  #course .container a {
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    margin: 0 2.6% 2.6% 0;
+    width: 31.6%;
+    float: left; }
+    #course .container a:hover:after, #course .container a.last:after {
+      content: none; }
+  #course .container a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    z-index: 1;
+    background: #000;
+    opacity: 0.5; }
+  #course .container img {
+    width: 100%; }
+
+#course2 .container {
   padding-top: 90px; }
 
-#shop .tips {
+#course2 .tips {
   font-size: 24px;
   text-align: center;
   line-height: 36px; }
 
-#shop .title {
+#course2 .title {
   margin: 60px 0;
   text-align: center; }
-  #shop .title span {
+  #course2 .title span {
     font-size: 26px; }
-  #shop .title img {
+  #course2 .title img {
     margin: 10px 20px 0 20px; }
 
-#shoppage .container {
+#course2 .content a {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  margin: 0 2.6% 2.6% 0;
+  width: 31.6%;
+  float: left; }
+
+#course2 .content img {
+  width: 100%; }
+
+#coursepage .container {
   padding-top: 63px; }
 
-#shoppage .box {
+#coursepage .box {
   margin: 57px 0; }
-  #shoppage .box .title {
+  #coursepage .box .title {
     margin-bottom: 30px;
     text-align: center;
     font-size: 26px;
     color: #221815; }
-    #shoppage .box .title:before, #shoppage .box .title:after {
+    #coursepage .box .title:before, #coursepage .box .title:after {
       content: '';
       margin: 0 20px;
       width: 10px;
@@ -33,76 +69,190 @@
       border-radius: 50%;
       background-color: #8f8f8f;
       display: inline-block;
-      margin-top: 10px; }
-  #shoppage .box .des {
+      margin-top: 10px;
+      vertical-align: text-top; }
+  #coursepage .box .des {
     font-size: 22px;
     text-align: center;
     line-height: 39px; }
 
-#shoppage .panel {
+#coursepage table {
+  border-collapse: collapse;
+  table-layout: fixed; }
+
+#coursepage tr, #coursepage td {
+  border: none; }
+
+#coursepage .panel {
   border: solid 2px #dbdde0;
   background-color: #fcfcfa;
   margin: 57px 0;
   overflow: hidden; }
-  #shoppage .panel img {
+  #coursepage .panel .pic {
     width: 37.5%;
-    float: left; }
-  #shoppage .panel .text {
-    padding-top: 95px;
-    float: left;
+    border-right: 2px solid #dbdde0;
+    padding: 0; }
+  #coursepage .panel img {
+    width: 100%;
+    vertical-align: middle; }
+  #coursepage .panel .text {
     width: 62.5%; }
-    #shoppage .panel .text .title {
+    #coursepage .panel .text .title {
       font-size: 26px;
-      margin-bottom: 10px;
-      padding-left: 14%; }
-    #shoppage .panel .text .des {
-      margin: 0 auto; }
-    #shoppage .panel .text p {
+      width: 72%;
+      margin: 0 auto 10px auto; }
+    #coursepage .panel .text .des {
+      vertical-align: middle; }
+    #coursepage .panel .text p {
       width: 72%;
       font-size: 16px;
       line-height: 28px;
       margin: 0 auto; }
 
-#shoppage .bg0 {
+#coursepage .bg0 {
   background-color: #fff; }
 
-#shoppage .panel2 {
+#coursepage.music .container {
+  padding-bottom: 100px; }
+
+#coursepage .panel2 {
   float: left;
-  width: 31.66%;
+  width: 31.6%;
   margin: 0 2.5% 2.5% 0;
-  text-align: center; }
-  #shoppage .panel2 .title {
+  text-align: center;
+  border: 2px solid #bababa; }
+  #coursepage .panel2 td {
+    margin: 0; }
+  #coursepage .panel2 .title {
     font-size: 26px;
     padding: 27px 0;
     color: #fff;
-    background-color: #254b53; }
-  #shoppage .panel2 .des {
-    height: 200px;
+    background-color: #254b53;
+    border-bottom: 2px solid #bababa; }
+  #coursepage .panel2 .des {
+    height: 240px;
     font-size: 22px;
-    padding: 40px 20% 0 20%;
+    padding: 0 20%;
     background-color: #f7feff; }
 
-#shoppage .mg2 {
+#coursepage.sport .container {
+  padding-top: 55px; }
+
+#coursepage.sport .tips {
+  text-align: center;
+  line-height: 40px;
+  margin: 60px 0; }
+
+#coursepage.sport .panel {
+  border: solid 2px #dbdde0;
+  background-color: #fcfcfa;
+  margin: 57px 0;
+  overflow: hidden; }
+  #coursepage.sport .panel .text {
+    background-color: #f1f7ff; }
+
+#coursepage.sport .slogan {
+  padding: 2.58% 10.33%;
+  color: #221815;
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+  background-color: #f1f7ff;
+  margin-bottom: 63px;
+  position: relative;
+  font-weight: bold; }
+  #coursepage.sport .slogan:before, #coursepage.sport .slogan:after {
+    font-size: 60px;
+    color: #b9b7b7;
+    position: absolute; }
+  #coursepage.sport .slogan:before {
+    content: '“';
+    top: 20%;
+    left: 10.33%; }
+  #coursepage.sport .slogan::after {
+    content: '”';
+    bottom: 0%;
+    right: 10.33%; }
+
+#coursepage.sport .ask {
+  color: #221815;
+  text-align: center;
+  font-family: SourceHanSansCN-Light;
+  font-size: 26px;
+  line-height: 40px; }
+  #coursepage.sport .ask .ans {
+    font-size: 26px;
+    font-weight: bold; }
+
+#coursepage.sport .panel3 {
+  width: 100%;
+  margin-bottom: 40px; }
+  #coursepage.sport .panel3 p {
+    margin: 30px 0; }
+  #coursepage.sport .panel3 .title {
+    background-color: #48576f;
+    line-height: 80px;
+    color: #fff;
+    height: 80px;
+    text-align: center;
+    font-size: 26px; }
+  #coursepage.sport .panel3 .des {
+    font-size: 22px;
+    line-height: 36px;
+    background-color: #f1f7ff;
+    height: 240px; }
+    #coursepage.sport .panel3 .des span {
+      font-weight: bold; }
+    #coursepage.sport .panel3 .des h2 {
+      font-size: 22px;
+      margin-top: 20px; }
+
+#coursepage.sport .md2 {
+  margin-right: 3.75%;
+  width: 48.125%;
+  float: left; }
+
+#coursepage.sport .padding5 {
+  padding: 5%;
+  font-size: 20px !important; }
+
+#coursepage.sport .h455 {
+  height: 455px !important; }
+
+#coursepage.sport .bot {
+  padding: 3% 7%;
+  margin-bottom: 60px;
+  overflow: hidden;
+  background-color: #f1f7ff; }
+  #coursepage.sport .bot p {
+    float: left;
+    width: 42%;
+    margin-right: 6%;
+    margin-bottom: 10px; }
+  #coursepage.sport .bot span {
+    font-weight: bold; }
+
+#coursepage .mg2 {
   width: 65.82%; }
-  #shoppage .mg2 .smalltitle {
+  #coursepage .mg2 .smalltitle {
     text-align: left;
     font-family: MicrosoftYaHei;
     font-size: 26px;
     font-weight: bold;
     line-height: 40px;
     color: #221815; }
-  #shoppage .mg2 .small {
+  #coursepage .mg2 .small {
     text-align: left;
     font-family: PingFangSC-Light;
     font-size: 16px;
     line-height: 24px; }
 
-#shoppage .mytitle {
+#coursepage .mytitle {
   margin-bottom: 30px;
   text-align: center;
   font-size: 26px;
   color: #221815; }
-  #shoppage .mytitle:before, #shoppage .mytitle:after {
+  #coursepage .mytitle:before, #coursepage .mytitle:after {
     content: '';
     margin: 0 20px;
     width: 10px;
@@ -112,7 +262,7 @@
     display: inline-block;
     margin-top: 10px; }
 
-#shoppage .mytips {
+#coursepage .mytips {
   width: 285px;
   font-size: 20px;
   padding: 24px 90px;
@@ -120,25 +270,29 @@
   border: 1px solid #d9d3c3;
   border-radius: 10px;
   margin: 0 auto;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-weight: bold; }
 
-#shoppage .myp {
+#coursepage .myp {
   text-align: center;
   font-size: 20px;
   line-height: 36px;
   padding: 0 10%; }
 
-#shoppage .md2 {
+#coursepage.art .md2 {
   margin-right: 3.666%;
-  width: 48.167%; }
-  #shoppage .md2 .title {
-    background-color: #806959; }
-  #shoppage .md2 .des {
+  width: 48.167%;
+  border-color: #e1d0c6; }
+  #coursepage.art .md2 .title {
+    background-color: #806959;
+    border-color: #e1d0c6; }
+  #coursepage.art .md2 .des {
     padding-left: 5%;
     padding-right: 5%;
-    background-color: #fffbf7; }
+    background-color: #fffbf7;
+    height: 340px; }
 
-#shoppage .ss {
+#coursepage .ss {
   clear: both;
   padding: 3% 20%;
   margin-top: 100px;
@@ -146,27 +300,29 @@
   text-align: center;
   line-height: 36px;
   margin-bottom: 100px; }
-  #shoppage .ss span {
+  #coursepage .ss span {
     color: #6e3814;
     font-weight: bold; }
 
-#shoppage1 .container {
-  padding: 350px 0 100px 0;
+#shop .container {
+  padding: 30% 0 11.25% 0;
   position: relative; }
 
-#shoppage1 .box {
+#shop .box {
   position: absolute;
   z-index: 2;
-  top: -50px;
+  top: -60px;
   left: 0; }
-  #shoppage1 .box img {
+  #shop .box img {
     width: 25.5%;
-    float: left; }
-    #shoppage1 .box img.last {
+    float: left;
+    cursor: pointer; }
+    #shop .box img.last {
       width: 23.5%; }
 
-#shoppage1 .map {
+#shop .map {
   display: block;
+  width: 70%;
   margin: 0 auto; }
 
 /* 超小屏幕（手机，小于 768px） */

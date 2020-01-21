@@ -1,34 +1,28 @@
 extends ./share/container.pug
 block config
     - var title = '线下店铺';
+    - var keywords = '线下店铺';
+    - var description = '线下店铺';
     - var currentId = 'shop';
+    - var mimgUrl = imgUrl+'shop/';
 block css
     link(rel='stylesheet',href=cssUrl + 'shop.css')
 block append main
     #shop
-        img.responsive(src=imgUrl+"banner_shop.jpg", alt="")
+        img.responsive(src=mimgUrl+"banner1.jpg", alt="")
         .container
-            p.tips 生活是一蔬一饭的日常，是一花一木的风雅，亦是一期一会的珍惜
-            p.tips 鉴赏生活里头的风物，亦伴你探究生活无边的风采
-            .title
-                img(src=imgUrl+"shop_pic.png", alt="")
-                span 风物研究所
-                img(src=imgUrl+"shop_pic.png", alt="")
-            .content
-                img(src=imgUrl+"shop1.jpg", alt="")
-                img(src=imgUrl+"shop2.jpg", alt="")
-                img.mr0(src=imgUrl+"shop3.jpg", alt="")
-                img(src=imgUrl+"shop4.jpg", alt="")
-                img(src=imgUrl+"shop5.jpg", alt="")
-                img.mr0(src=imgUrl+"shop6.jpg", alt="")
-                img(src=imgUrl+"shop7.jpg", alt="")
-                img(src=imgUrl+"shop8.jpg", alt="")
-                img.mr0(src=imgUrl+"shop9.jpg", alt="")
-                img(src=imgUrl+"shop10.jpg", alt="")
-                img(src=imgUrl+"shop11.jpg", alt="")
-                img.mr0(src=imgUrl+"shop12.jpg", alt="")
-                img(src=imgUrl+"shop13.jpg", alt="")
-                img(src=imgUrl+"shop14.jpg", alt="")
-                img.mr0(src=imgUrl+"shop15.jpg", alt="")
+            .box
+                img(src=mimgUrl+"nav1.png", alt="")
+                img(src=mimgUrl+"nav2.png", alt="")
+                img(src=mimgUrl+"nav3.png", alt="")
+                img.last(src=mimgUrl+"nav4.png", alt="")
+            img.map(src=mimgUrl+"map.png", alt="")
 block append js
-        script(src=jsUrl+"sidepage.js")
+    script.
+        $(function(){
+            $('.box img').click(function(){
+                var index = $(this).index();
+                $('#shop .responsive').attr('src',"#{mimgUrl}banner"+ (index+1) +".jpg");
+            })
+            $('ul li').eq(0).click();
+        })

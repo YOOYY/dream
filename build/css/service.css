@@ -8,19 +8,20 @@
 
 #service dl {
   width: 77.77%;
-  float: left;
-  border-bottom: none; }
+  float: left; }
 
 #service dt {
-  font-size: 26px; }
+  font-size: 26px;
+  padding-bottom: 18px; }
 
 #service dd {
   position: relative;
   padding: 5% 0;
-  border-image: url("../imgs/service_border.png") 2 1 stretch;
-  border-top: 2px solid #fff; }
+  border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #eee 20%, #eee 80%, rgba(255, 255, 255, 0)) 2 1 stretch;
+  border-top: 2px solid #eee; }
   #service dd.last {
-    border-bottom: 0; }
+    border-bottom: 2px solid #eee;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #eee 20%, #eee 80%, rgba(255, 255, 255, 0)) 2 1 stretch; }
   #service dd a {
     display: block;
     height: 50px;
@@ -31,66 +32,60 @@
       display: inline-block;
       margin: 6px 20px 0 0;
       vertical-align: middle;
-      content: url("../imgs/service_icon1.png"); }
+      content: url("../imgs/service/icon1.png"); }
     #service dd a.icon2:before {
       display: inline-block;
       margin: 6px 20px 0 0;
       vertical-align: middle;
-      content: url("../imgs/service_icon2.png"); }
+      content: url("../imgs/service/icon2.png"); }
     #service dd a.icon3:before {
       display: inline-block;
       margin: 6px 20px 0 0;
       vertical-align: middle;
-      content: url("../imgs/service_icon3.png"); }
+      content: url("../imgs/service/icon3.png"); }
     #service dd a.icon4:before {
       display: inline-block;
       margin: 6px 20px 0 0;
       vertical-align: middle;
-      content: url("../imgs/service_icon4.png"); }
+      content: url("../imgs/service/icon4.png"); }
     #service dd a.icon5:before {
       display: inline-block;
       margin: 6px 20px 0 0;
       vertical-align: middle;
-      content: url("../imgs/service_icon5.png"); }
+      content: url("../imgs/service/icon5.png"); }
     #service dd a.icon6:before {
       display: inline-block;
       margin: 6px 20px 0 0;
       vertical-align: middle;
-      content: url("../imgs/service_icon6.png"); }
+      content: url("../imgs/service/icon6.png"); }
     #service dd a.icon7:before {
       display: inline-block;
       margin: 6px 20px 0 0;
       vertical-align: middle;
-      content: url("../imgs/service_icon7.png"); }
+      content: url("../imgs/service/icon7.png"); }
   #service dd:hover {
-    border: none; }
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffd9a9 20%, #ffd9a9 80%, rgba(255, 255, 255, 0)) 2 1 stretch;
+    border-bottom: 2px solid #ffd9a9;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -2px; }
     #service dd:hover a {
       color: #fff;
       background-color: #ff9000; }
       #service dd:hover a.icon1:before {
-        content: url("../imgs/service_icon1_on.png"); }
+        content: url("../imgs/service/icon1_on.png"); }
       #service dd:hover a.icon2:before {
-        content: url("../imgs/service_icon2_on.png"); }
+        content: url("../imgs/service/icon2_on.png"); }
       #service dd:hover a.icon3:before {
-        content: url("../imgs/service_icon3_on.png"); }
+        content: url("../imgs/service/icon3_on.png"); }
       #service dd:hover a.icon4:before {
-        content: url("../imgs/service_icon4_on.png"); }
+        content: url("../imgs/service/icon4_on.png"); }
       #service dd:hover a.icon5:before {
-        content: url("../imgs/service_icon5_on.png"); }
+        content: url("../imgs/service/icon5_on.png"); }
       #service dd:hover a.icon6:before {
-        content: url("../imgs/service_icon6_on.png"); }
+        content: url("../imgs/service/icon6_on.png"); }
       #service dd:hover a.icon7:before {
-        content: url("../imgs/service_icon7_on.png"); }
-    #service dd:hover:before, #service dd:hover:after {
-      content: url("../imgs/service_border_on.png");
-      width: 100%;
-      position: absolute;
-      left: 0;
-      z-index: 0; }
-    #service dd:hover:before {
-      top: -15px; }
-    #service dd:hover:after {
-      bottom: -6px; }
+        content: url("../imgs/service/icon7_on.png"); }
 
 #service .content {
   float: left;
@@ -98,12 +93,14 @@
   padding-bottom: 100px; }
   #service .content h1 {
     font-size: 26px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    color: #221815; }
   #service .content p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 26px;
     margin: 20px 0; }
-  #service .content img {
-    margin-right: 3.382%; }
+  #service .content .imgbox img {
+    margin-right: 3.4%;
+    width: 48.3%; }
 
 /* 超小屏幕（手机，小于 768px） */

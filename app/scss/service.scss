@@ -1,4 +1,5 @@
 @import './_config.scss';
+$mimgUrl:$imgUrl+'service/';
 #service{
     .container{
         margin-top: 70px;
@@ -10,18 +11,19 @@
     dl{
         width: 77.77%;
         float: left;
-        border-bottom: none;
     }
     dt{
         font-size: 26px;
+        padding-bottom: 18px;
     }
     dd{
         position: relative;
         padding: 5% 0;
-        border-image:url($imgUrl+'service_border.png') 2 1 stretch;
-        border-top: 2px solid #fff;
+        border-image:linear-gradient(to right,rgba(255,255,255,0),#eee 20%,#eee 80%,rgba(255,255,255,0)) 2 1 stretch;
+        border-top: 2px solid #eee;
         &.last{
-            border-bottom: 0;
+            border-bottom: 2px solid #eee;
+            border-image:linear-gradient(to right,rgba(255,255,255,0),#eee 20%,#eee 80%,rgba(255,255,255,0)) 2 1 stretch;
         }
         a{
             display: block;
@@ -32,39 +34,28 @@
             @for $i from 1 through 7 {
                 &.icon#{$i}:before {
                     display: inline-block;
-                    // line-height: 50px;
-                    // float: left;
                     margin: 6px 20px 0 0;
                     vertical-align: middle;
-                    content: url($imgUrl+'service_icon#{$i}.png');
+                    content: url($mimgUrl+'icon#{$i}.png');
                 }
             }
         }
 
         &:hover{
-            border:none;
             a{
                 color:#fff;
                 background-color: #ff9000;
                 @for $i from 1 through 7 {
                     &.icon#{$i}:before {
-                        content: url($imgUrl+'service_icon#{$i}_on.png');
+                        content: url($mimgUrl+'icon#{$i}_on.png');
                     }
                 }
             }
-            &:before,&:after{
-                content: url($imgUrl+'service_border_on.png');
-                width: 100%;
-                position: absolute;
-                left: 0;
-                z-index: 0;
-            }
-            &:before{
-                top: -15px;
-            }
-            &:after{
-                bottom: -6px;
-            }
+            border-image:linear-gradient(to right,rgba(255,255,255,0),#ffd9a9 20%,#ffd9a9 80%,rgba(255,255,255,0)) 2 1 stretch;
+            border-bottom: 2px solid #ffd9a9;
+            position: relative;
+            z-index: 1;
+            margin-bottom: -2px;
         }
     }
 
@@ -75,14 +66,18 @@
         h1{
             font-size: 26px;
             margin-bottom: 20px;
+            color: #221815;
         }
         p{
             font-size: 16px;
-            line-height: 24px;
+            line-height: 26px;
             margin: 20px 0;
         }
-        img{
-            margin-right: 3.382%;
+        .imgbox{
+            img{
+                margin-right: 3.4%;
+                width: 48.3%;
+            }
         }
     }
 }

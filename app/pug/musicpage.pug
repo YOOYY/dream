@@ -1,0 +1,85 @@
+extends ./share/container.pug
+block config
+    - var title = '线下店铺';
+    - var currentId = 'shop';
+block css
+    link(rel='stylesheet',href=cssUrl + 'shop.css')
+block append main
+    - var mimgUrl = imgUrl+'shop/';
+    #coursepage.music
+        img.responsive(src=mimgUrl+"banner12.jpg", alt="")
+        .container
+            table.panel.bg0
+                tr
+                    td.pic
+                        img(src=mimgUrl+"musicpage1.jpg", alt="")
+                    td.text
+                        h2.title 喜欢的歌，在喜欢的场合唱得出来
+                        .des
+                            p 所有喜欢的歌，只是听别人唱唱也太不够味了。
+                            p 所有喜欢的场合，若没唱出当时的心情，事后总难免意犹未尽。
+                            p 所有喜欢的歌都学会，到了喜欢的场合就能唱出内心的欢喜来。
+            table.panel
+                tr
+                    td.text
+                        h2.title 用一年的时间实现一场自己的独立音乐会
+                        .des
+                            p 每个人都有自己独特的声音
+                            p 每个人都能找到只属于他一人的音乐和乐器
+                            p 在爵角音乐
+                            p 三个月你就能拥有自己的音乐会
+                            p 一年就能拥有自己的独立音乐会
+                    td.pic
+                        img(src=mimgUrl+"musicpage2.jpg", alt="")
+            table.panel.bg0
+                tr
+                    td.pic
+                        img(src=mimgUrl+"musicpage3.jpg", alt="")
+                    td.text
+                        h2.title 准备成为音乐行家的人
+                        h2.title 也准备好了比别人做更久的坚持
+                        .des
+                            p 爵角音乐不仅关注音乐本身，更懂得为你解决音乐的表演需求。在这一年的时间里，爵角音乐将会根据你的个人特性为你找到适合自己的音乐进阶之路。一年的坚持过后，你能找到的不仅是懂你的音乐和乐器，还有懂你的风景和人。
+            table.panel2
+                tr
+                    td.title 授课内容
+                tr
+                    td.des
+                        p 乐队钢琴
+                        p 吉他
+                        p 声乐
+                        p 爵士鼓
+            table.panel2
+                tr
+                    td.title 授课形式
+                tr
+                    td.des
+                        p 一对一教学
+                        p 量身教学
+            table.panel2.mr0
+                tr
+                    td.title 课时安排
+                tr
+                    td.des
+                        p 48节课/1年
+            table.panel2
+                tr
+                    td.title 课程价格
+                tr
+                    td.des
+                        p 9000/1年
+                        p （ 赠送价值3600的录音棚录音和拍摄 ）
+            table.panel2.mg2.mr0
+                tr
+                    td.title 授课机构
+                tr
+                    td.des
+                        p.smalltitle 《爵角音乐》  健康 / 快乐 /  生活
+                        p.small 促进全民音乐普及，培养全民音乐素质
+                        p.small 让全民体验音乐给生活带来的快乐
+                        p.small 专业的音乐人为您提供体系教学
+                        p.small 专业的教学思路，策划每一个细节，追求极致教学质量
+                        p.small 如果你愿意，你将成为下一个明星
+            img.responsive(src=mimgUrl+"banner13.jpg", alt="")
+block append js
+        script(src=jsUrl+"sidepage.js")

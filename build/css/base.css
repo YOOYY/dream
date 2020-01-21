@@ -43,6 +43,18 @@ a {
 .marginleft20 {
   margin-left: 20%; }
 
+.bordertop0 {
+  border-top: none !important; }
+
+.paddingbottom0 {
+  padding-bottom: 0 !important; }
+
+.margintop0 {
+  margin-top: 0 !important; }
+
+.paddingtop0 {
+  padding-top: 0 !important; }
+
 .mr0 {
   margin-right: 0 !important; }
 
@@ -53,8 +65,12 @@ a {
   width: 100%;
   height: auto; }
 
+.singletext {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
 .ellipsis-wrap {
-  height: 40px;
   overflow: hidden; }
   .ellipsis-wrap .ellipsis {
     float: right;
@@ -62,10 +78,9 @@ a {
     width: 100%;
     word-break: break-all; }
   .ellipsis-wrap:before {
-    float: left;
-    width: 5px;
     content: '';
-    height: 60px; }
+    float: left;
+    width: 5px; }
   .ellipsis-wrap:after {
     float: right;
     content: "...";
@@ -73,7 +88,6 @@ a {
     color: #000;
     background: #fff;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white 60%, white);
-    height: 20px;
     font-size: 18px;
     line-height: 24px;
     /* 为三个省略号的宽度 */
@@ -83,8 +97,45 @@ a {
     /* 移动省略号位置 */
     position: relative;
     left: 100%;
-    top: -40px;
     padding-right: 5px; }
+
+.page_div {
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 170px; }
+
+.page {
+  color: #666;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden; }
+  .page button {
+    display: inline-block;
+    width: 46px;
+    height: 44px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 44px;
+    background-color: #f9f9f9;
+    border: none;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+  .page .current {
+    background-color: #ff9000;
+    color: #fff; }
+  .page button:disabled {
+    opacity: 0.5;
+    cursor: no-drop; }
+
+#nextPage img, #prePage img {
+  margin-top: 15px; }
+
+#nextPage {
+  border-right: none; }
 
 #header .nav {
   float: right;
@@ -100,7 +151,7 @@ a {
   #header .nav div {
     position: relative;
     cursor: pointer; }
-  #header .nav div:hover, #header .nav a:hover {
+  #header .nav div:hover, #header .nav a:hover, #header .nav .active {
     color: #f9b882; }
 
 #header .subnav {
@@ -128,34 +179,22 @@ a {
   padding: 27px 0 0 20px;
   width: 108px; }
 
-.list li {
-  padding: 15px 30px;
-  overflow: hidden; }
-
-.list a {
-  width: 100%;
-  display: block;
-  overflow: hidden; }
-  .list a:hover {
-    color: #f5a623; }
-
-.list .visibility {
-  visibility: hidden;
-  margin-right: -1em; }
-
-.list_title, .list_date {
-  overflow: hidden;
-  white-space: nowrap; }
-
-.list_title {
-  float: left;
-  width: 70%;
-  text-overflow: ellipsis; }
-
-.list_date {
-  float: left;
-  text-align: right;
-  width: 30%; }
+.res_banner {
+  padding-top: 22%;
+  position: relative; }
+  .res_banner img {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .res_banner p {
+    font-size: 60px;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    left: 0;
+    top: 50%;
+    margin-top: -30px;
+    width: 100%; }
 
 #footer {
   background-color: #2d2d2d; }
@@ -174,9 +213,8 @@ a {
     float: left;
     width: 33.3%; }
   #footer dt {
-    margin-bottom: 28px; }
-    #footer dt a {
-      color: #fff; }
+    margin-bottom: 28px;
+    color: #fff; }
   #footer dd {
     font-size: 16px;
     margin-bottom: 18px; }
@@ -228,7 +266,10 @@ a {
     width: 80%;
     margin: 0 auto;
     padding-top: 20px;
-    float: none; } }
+    float: none; }
+  .res_banner p {
+    font-size: 40px;
+    margin-top: -20px; } }
 
 /* 超小屏幕（手机，小于 768px） */
 @media screen and (max-width: 768px) {
@@ -253,4 +294,7 @@ a {
     width: 76px;
     padding: 15px; }
   #header .nav {
-    display: none; } }
+    display: none; }
+  .res_banner p {
+    font-size: 30px;
+    margin-top: -15px; } }

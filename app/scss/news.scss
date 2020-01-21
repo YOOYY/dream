@@ -1,11 +1,12 @@
 @import './_config.scss';
-#news{
+$mimgUrl:$imgUrl+'news/';
+#information{
     background-color: #f8f8fa;
     ul{
         overflow: hidden;
     }
     .nav{
-        margin: 70px 0;
+        margin: 70px 0 65px 0;
         li{
             width: 160px;height: 50px;
             background-color:#fff;
@@ -24,18 +25,19 @@
     }
     .newslist{
         li{
-            width: 41.75%;
+            width: 41.15%;
             margin: 0 2.5% 2% 0;
-            padding: 3.5%;
-            // height: 230px;   
+            padding: 3.7% 3.8%;
             background-color: #fff;
-            box-shadow: #888;
-            &:hover{
+            box-shadow: 0px 5px 38px 0px rgba(0, 0, 0, 0.1);
+            &:hover,.active{
                 .title{
                     color: #ff9000;
                 }
                 .icon{
-                    width: 30px;
+                    display: inline-block;
+                    width: 34px;height: 12px;
+                    background: url($mimgUrl+'more.png') no-repeat;
                 }
             }
         }
@@ -45,18 +47,20 @@
             padding: 10% 0;
             float: left;
             .day{
-                font-size: 30px;
+                font-size: 36px;
+                line-height: 36px;
             }
             .line{
-                width: 40%;
+                width: 34%;
                 height: 4px;
                 margin: 13px 0;
                 background-color: #eee;
             }
             .year{
-                font-size: 16px;
+                font-size: 14px;
             }
         }
+
         .list{
             width: 76%;
             float: right;
@@ -65,63 +69,35 @@
                 white-space:nowrap;
                 text-overflow:ellipsis;
             }
-            .des{
-                margin:5.263% 0 11.842%;
+            .des,.more{
                 font-size: 16px;
+                line-height: 26px;
                 color: #666;
             }
+            .des{
+                height: 50px;
+                margin:5.263% 0 11.842% 0;
+                &:after{
+                    top: -33px;
+                    height: 25px;
+                }
+                &:before{
+                    height: 60px;
+                }
+            }
             .more{
-                font-size: 16px;
-                color: #666;
+                position: relative;
             }
             .icon{
                 width: 0;
-                margin: 6px 10px 0 0;
+                margin-right: 10px;
                 transition: width 500ms;
             }
         }
     }
 }
 
-.page{
-    text-align: center;
-    padding-top: 90px;
-    padding-bottom: 170px;
-}
-.page_div{
-    margin: 20px auto;
-    color:#666;
-    text-align: center;
-    display:inline-block;
-    border:1px solid #ddd;
-    border-radius: 6px;
-    overflow: hidden;
-    button {
-        display:inline-block;
-        width:46px;
-        height:44px;
-        cursor:pointer;
-        font-size:16px;
-        line-height:44px;
-        background-color:#f9f9f9;
-        border:none;
-        border-right:1px solid #ddd;
-        text-align:center;
-        -webkit-appearance:none;
-        -moz-appearance:none;
-        appearance:none;
-    }
-    .current {
-        background-color:#ff9000;
-        color:#FFF
-    }
-    button:disabled{opacity:.5;cursor:no-drop}
-}
-#nextPage{
-    border-right: none;
-}
-
-#article{
+#information_article{
     h1,.time{
         text-align: center;
     }
@@ -134,14 +110,15 @@
         color: #ccc;
         margin:20px 0 50px 0;
     }
-    p{
-        font-size: 16px;
-        text-indent: 2em;
-        line-height: 24px;
-        color: #666;
-        margin: 30px 0;
-    }
     .content{
+        padding-bottom: 30px;
+        border-bottom: 1px solid #eee;
+        p{
+            font-size: 16px;
+            line-height: 24px;
+            color: #666;
+            margin: 30px 0;
+        }
         img{
             margin-right: 1.25%;
             width: 32.5%;
@@ -150,23 +127,26 @@
 }
 
 #activity_article{
+    .content{
+        padding-bottom: 30px;
+        border-bottom: 1px solid #eee;
+        p{
+            font-size: 16px;
+            line-height: 24px;
+            margin: 30px 0;
+        }
+    }
     .time{
         font-size: 14px; 
         color: #666;
-        margin:70px 0 50px 0;
-        text-indent:0;
-    }
-    p{
-        font-size: 16px;
-        text-indent: 2em;
-        line-height: 24px;
-        margin: 30px 0;
+        padding:70px 0 26px 0;
+        border-bottom: 1px solid #eee;
     }
 }
 
-#activity_article,#article{
+#activity_article,#information_article{
     .nav{
-        margin: 60px 0;
+        margin: 40px 0;
         a{
             display: block;
             color: #888;
@@ -179,7 +159,7 @@
     }
 }
 
-#activity{
+#news{
     .nav {
         overflow: hidden;
         padding: 70px 0;
@@ -227,6 +207,7 @@
             h2{
                 margin-top: 3.378%;
                 font-size: 18px;
+                font-weight: normal;
             }
             .time{
                 margin: 2.55% 0;
@@ -242,13 +223,13 @@
 }
 /* 超小屏幕（手机，小于 768px） */
 @media screen and (max-width: 768px){
-    #news{
-        .page{
+    #information{
+        .page_box{
             padding-top: 30px;
             padding-bottom: 60px;
         }
     }
-    #activity{
+    #news{
         .content{
             img{
                 width: 40%;

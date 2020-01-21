@@ -6,11 +6,11 @@
             each val, index in header.nav
                 li
                     if val.subnav
-                        div !{val.text}
+                        div(class={active:currentId === val.pageId}) !{val.text}
                             ul.subnav
                                 each sval,sindex in val.subnav
                                     li
-                                        a(href=viewUrl+sval.href class={active:currentId === val.pageId})
+                                        a(href=viewUrl+sval.href)
                                             |!{sval.text}
                     else
                         a(href=viewUrl+val.href class={active:currentId === val.pageId})

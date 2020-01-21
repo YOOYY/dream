@@ -4,16 +4,17 @@ block config
     - var keywords = '首页';
     - var description = '首页';
     - var currentId = 'index';
+    - var mimgUrl = imgUrl+'index/';
     -
         var nlist = [
-                {title:'Hello，欢迎来到无锡梦想天地',date:'2020.01.15'}, 
-                {title:'无锡重磅，首家知识共享社区梦想天地来了！',date:'2020.01.15'}, 
-                {title:'无锡梦想天地开展扫黑除恶专项斗争专题学习会',date:'2020.01.15'},
-                {title:'在寒冷的冬夜，给爱人和自己煮一杯热红酒',date:'2020.01.15'},
-                {title:"不忘初心，Jolpa'餐厅两周年",date:'2020.01.15'},
-                {title:"将平淡无奇的一天变成无可替代的回忆",date:'2020.01.15'},
-                {title:"如果在古代，你的中秋节可能是这样过的",date:'2020.01.15'},
-                {title:"梦想天地2020业务研讨会",date:'2020.01.15'}
+                {title:'无锡重磅，首家知识共享社区梦想天地来了！',date:'2020.01.15', href:'activity_article.html'}, 
+                {title:'Hello，欢迎来到无锡梦想天地',date:'2020.01.15', href:'information_article1.html'}, 
+                {title:'无锡梦想天地开展扫黑除恶专项斗争专题学习会',date:'2020.01.15', href:'information_article2.html'},
+                {title:'在寒冷的冬夜，给爱人和自己煮一杯热红酒',date:'2020.01.15', href:'information_article3.html'},
+                {title:"不忘初心，Jolpa'餐厅两周年",date:'2020.01.15', href:'information_article4.html'},
+                {title:"将平淡无奇的一天变成无可替代的回忆",date:'2020.01.15', href:'index.html'},
+                {title:"如果在古代，你的中秋节可能是这样过的",date:'2020.01.15', href:'index.html'},
+                {title:"梦想天地2020业务研讨会",date:'2020.01.15', href:'index.html'}
             ];
 block css
     link(rel='stylesheet',href=cssUrl + 'index.css')
@@ -22,58 +23,58 @@ block append main
     ul#mySlide
         li
             a(href='#')
-                img.responsive(src=imgUrl+'banner1.jpg' title='' alt='')
+                img.responsive(src=mimgUrl+'banner1.jpg' title='' alt='')
         li
             a(href='#')
-                img.responsive(src=imgUrl+'banner2.jpg' title='' alt='')
+                img.responsive(src=mimgUrl+'banner2.jpg' title='' alt='')
         li
             a(href='#')
-                img.responsive(src=imgUrl+'banner3.jpg' title='' alt='')
+                img.responsive(src=mimgUrl+'banner3.jpg' title='' alt='')
         li
             a(href='#')
-                img.responsive(src=imgUrl+'banner4.jpg' title='' alt='')
+                img.responsive(src=mimgUrl+'banner4.jpg' title='' alt='')
     #course.container.margintop
         .course_left
-            a(href='#') #[img(src=imgUrl+"course.png", alt="")]
-            a.row_2.first(href='#') #[img(src=imgUrl+"course3.png")]
-            a.row_2(href='#') #[img(src=imgUrl+"course4.png")]
+            a(href=viewUrl+'course.html') #[img(src=mimgUrl+"course.png", alt="")]
+            a.row_2.first(href='#') #[img(src=mimgUrl+"course3.png")]
+            a.row_2(href='#') #[img(src=mimgUrl+"course4.png")]
         .course_right
-            a(href='#') #[img(src=imgUrl+"course2.png", alt="")]
-            a.last(href='#') #[img(src=imgUrl+"course5.png")]
+            a(href='#') #[img(src=mimgUrl+"course2.png", alt="")]
+            a.last(href='#') #[img(src=mimgUrl+"course5.png")]
         .course_bottom
-            a.col_1(href='#') #[img(src=imgUrl+"course6.png", alt="")]
-            a.col_2(href='#') #[img(src=imgUrl+"course7.png", alt="")]
+            a.col_1(href='#') #[img(src=mimgUrl+"course6.png", alt="")]
+            a.col_2(href='#') #[img(src=mimgUrl+"course7.png", alt="")]
     #newlist.margintop
         .container
             h1 企业资讯
             ol.list
                 each nval, nindex in nlist
                     li
-                        a(href='/index.html')
+                        a(href=viewUrl+nval.href)
                             span.list_title #{nval.title}
                             span.list_date #{nval.date}#[span.visibility 日]
-            a.more(href=viewUrl+"") 查看更多#[img(src=imgUrl+"more.png", alt="")]
-    #friendlink.container.margintop
+            a.more(href=viewUrl+"information.html") 查看更多#[img(src=mimgUrl+"more.png", alt="")]
+    #friendlink.container
         h1 合作品牌
         table
             tr
                 td.side
-                    img(src=imgUrl+"icon1.png", alt="")
+                    img(src=mimgUrl+"icon1.png", alt="")
                 td
-                    img(src=imgUrl+"icon2.png", alt="")
+                    img(src=mimgUrl+"icon2.png", alt="")
                 td
-                    img(src=imgUrl+"icon3.png", alt="")
+                    img(src=mimgUrl+"icon3.png", alt="")
                 td.side
-                    img(src=imgUrl+"icon4.png", alt="")
+                    img(src=mimgUrl+"icon4.png", alt="")
             tr
                 td.side
-                    img(src=imgUrl+"icon5.png", alt="")
+                    img(src=mimgUrl+"icon5.png", alt="")
                 td
-                    img(src=imgUrl+"icon6.png", alt="")
+                    img(src=mimgUrl+"icon6.png", alt="")
                 td
-                    img(src=imgUrl+"icon7.png", alt="")
+                    img(src=mimgUrl+"icon7.png", alt="")
                 td.side
-                    img(src=imgUrl+"icon8.png", alt="")
+                    img(src=mimgUrl+"icon8.png", alt="")
 block append js
         script(src=jsUrl+"index.js")
         script(src=jsUrl+"jquery.edslider.js")

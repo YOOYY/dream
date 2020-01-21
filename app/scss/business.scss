@@ -1,0 +1,108 @@
+@import './_config.scss';
+$mimgUrl:$imgUrl+'business/';
+#business{
+    .container{
+        margin: 80px;
+    }
+    .middle{
+        margin: 25px 0;
+    }
+    ul{
+        width: 75px;
+        background-color: #ffd9a8;
+        float: left;
+        li{
+            float: none;
+            height: 130px;
+            padding: 55px 30%;
+            font-size: 26px;
+            color: #fff;
+            background-color: #b57a2e;
+            text-align: center;
+            &.active,&:hover{
+                background-color: #ff9000;
+            }
+        }
+    }
+    .content{
+        // float: left;
+        // width: 93.6%;
+        margin-left: 75px;
+        overflow: hidden;
+        &>div{
+            height: 570px;
+            padding: 100px 10.666%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: none;
+        }
+        .first{
+            background-image: url($mimgUrl+'bg1.jpg');
+            .number{
+                margin: 20px 0 50px 0;
+                color: #fff;
+            }
+            .code{
+                width: 272px;
+                overflow: hidden;
+            }
+            .tip{
+                padding-top: 250px;
+            }
+        }
+        .second{
+            background-image: url($mimgUrl+'bg2.jpg');
+            font-size: 16px;
+            line-height: 26px;
+            .title{
+                padding-top: 20px;
+                font-weight: bold;
+            }
+            .des{
+                margin-bottom: 13px;
+            }
+            .tip{
+                padding-top: 160px;
+            }
+        }
+        .last{
+            background-image: url($mimgUrl+'bg3.jpg');
+        }
+        h1{
+            border-bottom: 2px solid #fff;
+            color: #fff;
+            font-size: 26px;
+            padding-bottom: 19px;
+        }
+        p{
+            color: #fff;
+        }
+        .tip{
+            color: #929498;
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width: 992px) {
+    #business{
+        .content{
+            .second{
+                .tip{
+                    padding-top: 60px;
+                }
+            }
+        }
+    }
+}
+/* 超小屏幕（手机，小于 768px） */
+@media screen and (max-width: 768px){
+    #business{
+        .content{
+            .second{
+                .tip{
+                    padding-top: 35px;
+                }
+            }
+        }
+    }
+}
