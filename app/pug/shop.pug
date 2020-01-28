@@ -12,10 +12,14 @@ block append main
         img.responsive(src=mimgUrl+"banner1.jpg", alt="")
         .container
             .box
-                img(src=mimgUrl+"nav1.png", alt="")
-                img(src=mimgUrl+"nav2.png", alt="")
-                img(src=mimgUrl+"nav3.png", alt="")
-                img.last(src=mimgUrl+"nav4.png", alt="")
+                a(target='_blank' href=viewUrl+'course.html')
+                    img(src=mimgUrl+"nav1.png", alt="")
+                a(target='_blank' href='#')
+                    img(src=mimgUrl+"nav2.png", alt="")
+                a(target='_blank' href='#')
+                    img(src=mimgUrl+"nav3.png", alt="")
+                a(target='_blank' href='#')
+                    img.last(src=mimgUrl+"nav4.png", alt="")
             img.map(src=mimgUrl+"map.png", alt="")
 block append js
     script.
