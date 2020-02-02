@@ -1,4 +1,5 @@
-var imgUrl = './imgs/index/';
+var imgUrl = './imgs/';
+var iImgUrl = imgUrl+'index/';
 
 $(function(){
     $('.phone-nav').click(function(){
