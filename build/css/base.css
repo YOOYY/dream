@@ -30,6 +30,11 @@ a {
   font-family: '思源黑体',Arial, Helvetica,STXihei,"华文细黑", "Microsoft Yahei","微软雅黑", sans-serif;
   font-size: 18px; }
 
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: none; }
+
 .clearfix:after, .container:after {
   content: '';
   clear: both;
@@ -58,6 +63,9 @@ a {
 .mr0 {
   margin-right: 0 !important; }
 
+.ml0 {
+  margin-left: 0 !important; }
+
 .clear {
   clear: both; }
 
@@ -74,13 +82,13 @@ a {
   overflow: hidden; }
   .ellipsis-wrap .ellipsis {
     float: right;
-    margin-left: -5px;
+    margin-left: -10px;
     width: 100%;
     word-break: break-all; }
   .ellipsis-wrap:before {
     content: '';
     float: left;
-    width: 5px; }
+    width: 10px; }
   .ellipsis-wrap:after {
     float: right;
     content: "...";
@@ -96,8 +104,8 @@ a {
     margin-left: -3em;
     /* 移动省略号位置 */
     position: relative;
-    left: 100%;
-    padding-right: 5px; }
+    left: 97%;
+    padding-right: 10px; }
 
 .page_div {
   text-align: center;
@@ -218,8 +226,6 @@ a {
   #footer dd {
     font-size: 16px;
     margin-bottom: 18px; }
-    #footer dd a {
-      color: #989898; }
   #footer .phone dt, #footer .phone dd {
     font-size: 24px;
     color: #fff; }
@@ -228,12 +234,15 @@ a {
     clear: both;
     border-top: 1px solid #838383; }
     #footer .tips a {
-      color: #989898;
       font-size: 16px; }
   #footer .code {
     width: 31%;
     float: right;
     overflow: hidden; }
+  #footer a {
+    color: #989898; }
+    #footer a:hover {
+      color: #fff; }
 
 .erweibox {
   float: left;
@@ -282,7 +291,8 @@ a {
     padding: 10px;
     text-align: center;
     float: right;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     #header .phone-nav .subnav {
       width: 150px;
       top: 40px;
@@ -296,5 +306,15 @@ a {
   #header .nav {
     display: none; }
   .res_banner p {
-    font-size: 30px;
-    margin-top: -15px; } }
+    font-size: 18px;
+    margin-top: -15px; }
+  .page_div {
+    padding-top: 45px;
+    padding-bottom: 45px; }
+  .page button {
+    width: 35px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 36px; }
+  #nextPage img, #prePage img {
+    margin-top: 12px; } }

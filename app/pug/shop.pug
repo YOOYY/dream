@@ -9,24 +9,32 @@ block css
     link(rel='stylesheet',href=cssUrl + 'shop.css')
 block append main
     #shop
-        img.responsive(src=mimgUrl+"banner1.jpg", alt="")
+        img.responsive.banner(src=mimgUrl+"banner1.jpg", alt="")
         .container
             .box
                 a(target='_blank' href=viewUrl+'course.html')
                     img(src=mimgUrl+"nav1.png", alt="")
-                a(target='_blank' href='#')
+                a(href='#')
                     img(src=mimgUrl+"nav2.png", alt="")
-                a(target='_blank' href='#')
+                a(href='#')
                     img(src=mimgUrl+"nav3.png", alt="")
-                a(target='_blank' href='#')
+                a(href='#')
                     img.last(src=mimgUrl+"nav4.png", alt="")
-            img.map(src=mimgUrl+"map.png", alt="")
+            .map
+                img.responsive(src=mimgUrl+"map.png", alt="")
+                img.icon1.icon(src=mimgUrl+"map_icon.png", alt="")
+                img.icon2.icon(src=mimgUrl+"map_icon.png", alt="")
+                img.icon3.icon(src=mimgUrl+"map_icon.png", alt="")
+                img.icon4.icon(src=mimgUrl+"map_icon.png", alt="")
 block append js
     script.
         $(function(){
             $('.box img').click(function(){
-                var index = $(this).index();
-                $('#shop .responsive').attr('src',"#{mimgUrl}banner"+ (index+1) +".jpg");
+                var index = $(this).parent().index();
+                $('#shop .banner').attr('src',"#{mimgUrl}banner"+ (index+1) +".jpg");
+                $('.box img,.map .icon').removeClass('active');
+                $(this).addClass('active');
+                $('.map .icon'+(index+1)).addClass('active');
             })
-            $('ul li').eq(0).click();
+            $('#shop .box img').eq(0).click();
         })

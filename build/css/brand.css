@@ -48,57 +48,62 @@
     font-size: 18px;
     margin: 30px 0;
     clear: both; }
+  #brand .content td {
+    border-top: 1px solid #eee;
+    padding: 3.5% 0;
+    vertical-align: middle; }
+  #brand .content .list {
+    padding-left: 3.5%; }
   #brand .content h2 {
-    font-size: 18px;
-    padding-top: 3.5%; }
-  #brand .content p, #brand .content .des {
+    font-size: 18px; }
+  #brand .content p {
     font-size: 16px;
     line-height: 26px;
     color: #666;
-    margin: 20px 0;
+    margin-top: 20px;
     overflow: hidden; }
-  #brand .content .des {
-    height: 100px; }
-    #brand .content .des:after {
-      top: -15px;
-      height: 25px;
-      width: 41px;
-      margin-left: -3em;
-      padding-right: 18px;
-      background: linear-gradient(to right, rgba(255, 255, 255, 0), white 40%, white); }
-    #brand .content .des:before {
-      height: 100px; }
-  #brand .content li {
-    width: 100%;
-    padding: 4.054% 0;
-    overflow: hidden;
-    border-top: 1px solid #eee; }
-  #brand .content img {
-    float: left;
-    width: 18.945%;
-    margin-right: 4.054%; }
-  #brand .content .list {
-    float: left;
-    width: 77%; }
-
-#brand .imgbox {
-  overflow: hidden; }
-  #brand .imgbox li {
-    width: 49.7%;
-    margin: 0 0.6% 0.6% 0;
-    padding: 0;
-    border: none;
-    float: left; }
-    #brand .imgbox li img {
-      width: 100%; }
+    #brand .content p a {
+      color: #666; }
+  #brand .content .imgbox {
+    overflow: hidden; }
+    #brand .content .imgbox li {
+      width: 49.7%;
+      margin: 0 0.6% 0.6% 0;
+      padding: 0;
+      border: none;
+      float: left; }
+      #brand .content .imgbox li img {
+        width: 100%; }
 
 @media (max-width: 992px) {
-  #brand .content img {
-    margin-top: 20px; }
-  #brand .content .des:after {
-    top: -24px; } }
+  #brand dt {
+    font-size: 24px; } }
 
 /* 超小屏幕（手机，小于 768px） */
 @media screen and (max-width: 768px) {
-  #brand .content img {
-    margin-top: 35px; } }
+  #brand .container {
+    padding-top: 0; }
+    #brand .container .content {
+      width: 100%; }
+      #brand .container .content .thumb {
+        width: 30%; }
+        #brand .container .content .thumb img {
+          width: 100%; }
+      #brand .container .content .list {
+        width: 70%; }
+  #brand .sidebar {
+    width: 100%;
+    text-align: center; }
+    #brand .sidebar .nav {
+      width: 100%;
+      float: none;
+      display: inline-block; }
+    #brand .sidebar dt {
+      display: none; }
+    #brand .sidebar dd {
+      float: left;
+      width: 25%; }
+      #brand .sidebar dd a {
+        padding-left: 0; }
+      #brand .sidebar dd.active:after {
+        content: none; } }

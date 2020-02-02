@@ -30,33 +30,30 @@ block append main
                 h1.margintop0 项目定位
                 p 少儿教育百货店，借鉴百货店经典模式，全面提升教育场所的品位和体验感，为教育产业解决场地刚需等疼点。#[br]百货公司在其诞生后的百多年来，一直是几乎所有的商品最好的销售流通舞台。在更为先进的购物中心业态出现后的几十年间，依然是其中最重要核心部分。目前教育行业市场竞争无序、消费者选择困难的现状下，Dream i Lab梦想实验室以其“集合、创新、共享”等核心优势，为众多教育项目集中引流、为商品品质和信誉背书，跨界改造教育产品的销售流通模式，展现出巨大的商机和优势。#[br]空间上，Dream i Lab通过禁区管控的方式实现托管陪伴功能，通过分时共享教室的设置实现少儿培训全品类集成；#[br]营运上，通过会员制、一站式、乐园化以及全配套的服务，打造少儿健康、快乐、优能成长俱乐部；#[br]内容上，将多学科人格通识类知识技能课程集成与一体，打造面向未来的创新式学习。
                 h1 核心优势
-                ol
+                table
                     each val, index in list
                         case index
                             when 0
-                                li.paddingtop0.bordertop0
-                                    img(src=mimgUrl+val.img)
-                                    .list
+                               tr
+                                    td.paddingtop0.bordertop0.thumb
+                                        img(src=mimgUrl+val.img)
+                                    td.paddingtop0.bordertop0.list
                                         h2.title #{val.title}
-                                        .des.ellipsis-wrap
-                                            .ellipsis #{val.des}
-                                        //- p.des #{val.des}
+                                        p #{val.des}
                             when 5
-                                li.paddingbottom0
-                                    img(src=mimgUrl+val.img)
-                                    .list
+                                tr
+                                    td.paddingbottom0.thumb
+                                        img(src=mimgUrl+val.img)
+                                    td.list.paddingbottom0
                                         h2.title #{val.title}
-                                        .des.ellipsis-wrap
-                                            .ellipsis #{val.des}
-                                        //- p.des #{val.des}
+                                        p #{val.des}
                             default
-                                li
-                                    img(src=mimgUrl+val.img)
-                                    .list
+                                tr
+                                    td.thumb
+                                        img(src=mimgUrl+val.img)
+                                    td.list
                                         h2.title #{val.title}
-                                        .des.ellipsis-wrap
-                                            .ellipsis #{val.des}
-                                        //- p.des #{val.des}
+                                        p #{val.des}
                 h1 人群与战略
                 p 国内商业发展三线以上城市的中产城市家庭，少儿年龄层从1—17岁，主力客群80、90后为人父母的中高收入人群。
                 p 与主管部门、权威机构、行业协会、优秀业者通过共建 、认证等合作形成借力，打造平台的公信力和权威性。

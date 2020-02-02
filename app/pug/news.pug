@@ -26,12 +26,14 @@ block append main
                 li
                     i
                     a(href='#') 精彩回顾
-            ol.content
+            table.content
                 each nval, nindex in nlist
-                    li
-                        a(href=nval.href)
-                            img(src=mimgUrl+nval.img)
-                            .list
+                    tr
+                        td.thumb
+                            a(href=nval.href)
+                                img(src=mimgUrl+nval.img)
+                        td.list
+                            a(href=nval.href)
                                 h2.singletext #{nval.title}
                                 p.time #{nval.date}
                                 p.des.singletext #{nval.des}

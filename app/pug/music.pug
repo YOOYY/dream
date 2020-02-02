@@ -6,7 +6,18 @@ block config
     - var currentId = 'shop';
     - var mimgUrl = imgUrl+'shop/';
     -
-        var list = ['musicpage.html','music.html','music.html','music.html','music.html','music.html','music.html','music.html','music.html','music.html','music.html','music.html'];
+        var list = [
+            {href:'musicpage.html',text:'爵角音乐-音乐专业全年课程班（48节）'},
+            {href:'music.html',text:'古琴&nbsp&nbsp周一周四 A班'},
+            {href:'music.html',text:'古琴&nbsp&nbsp周二周五 B班（12节）'},
+            {href:'music.html',text:'古琴&nbsp&nbsp每周五晚 C班'},
+            {href:'music.html',text:'古琴&nbsp&nbsp周六 D班（12节）'},
+            {href:'music.html',text:'古琴&nbsp&nbsp周六 E班（12节）'},
+            {href:'music.html',text:'爵角音乐-音乐专业全年45课（45节）'},
+            {href:'music.html',text:'音乐专业班 1元预约'},
+            {href:'music.html',text:'爵角音乐-聚会明星养成计划（10节）'},
+            {href:'music.html',text:'璞提书院—周艳老师戏曲（10节）'}
+        ];
 block css
     link(rel='stylesheet',href=cssUrl + 'shop.css')
 block append main
@@ -21,5 +32,8 @@ block append main
                 img(src=mimgUrl+"icon.png", alt="")
             .content
                 each val, index in list
-                    a(href=viewUrl+val class=((index+1)%3 == 0)?'mr0':'') #[img(src=mimgUrl+"music"+(index+1)+".jpg", alt="")]
+                    a(href=viewUrl+val.href class=(index%3 == 0)?'ml0 clear':'')
+                        img(src=mimgUrl+"music"+(index+1)+".png", alt="")
+                        p !{val.text}
+                a(href='#') #[img(src=mimgUrl+"more.png", alt="")]
 block append js

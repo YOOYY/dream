@@ -27,27 +27,30 @@ block append main
                 h1.margintop0 梦想天地介绍
                 p EDUMALL梦想天地打造全新体验式场景与互动消费相结合的文创教育集合店，根据市场消费需求、客户消费习惯及业态空间需求，创造性地将教育、文创、美学、运动、科技以及配套服务等诸多领域内容融为一体，寓消费于体验，寓体验于互动，全面提升消费体验。#[br]开设于国内一、二线城市的中心位置及高级购物中心内，以高端的、场景化的分时共享空间、线上线下以内容为核心的推广营销，令广泛的内容资源供应端，与正在兴起的知识消费市场，实现最为简单、易获得的全面对接。共享空间，共享人群，价值引导、社群维护……一个国内前所未有的，充满青年学术气息和欢乐氛围的综合教育服务平台，令教与学，从此简单。
                 h1 核心优势
-                ol
+                table
                     each val, index in list
                         case index
                             when 0
-                                li.paddingtop0.bordertop0
-                                    img(src=mimgUrl+val.img)
-                                    .list
+                                tr
+                                    td.paddingtop0.bordertop0.thumb
+                                        img(src=mimgUrl+val.img)
+                                    td.paddingtop0.bordertop0.list
                                         h2.title #{val.title}
-                                        p.des #{val.des}
+                                        p #{val.des}
                             when 2
-                                li.paddingbottom0
-                                    img(src=mimgUrl+val.img)
-                                    .list
+                                tr
+                                    td.paddingbottom0.thumb
+                                        img(src=mimgUrl+val.img)
+                                    td.list.paddingbottom0
                                         h2.title #{val.title}
-                                        p.des #{val.des}
+                                        p #{val.des}
                             default
-                                li
-                                    img(src=mimgUrl+val.img)
-                                    .list
+                                tr
+                                    td.thumb
+                                        img(src=mimgUrl+val.img)
+                                    td.list
                                         h2.title #{val.title}
-                                        p.des #{val.des}
+                                        p #{val.des}
                 h1 目标客群
                 p 出入城市中心/高级购物中心的城市新兴中产阶级和80年后愿意为兴趣爱好买单的年轻群体，受到众多服务机构与零售品牌共同认可和青睐的目标人群。
                 p 以创设具备深度/垂直行销力的、彰显优越生活的课程/活动为核心，为众多品牌、IP提供事件营销的载体，追求最广泛、最高效的CO-BRANDING联合营销。

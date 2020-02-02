@@ -41,7 +41,7 @@ $mimgUrl:$imgUrl+'service/';
             }
         }
 
-        &:hover{
+        &:hover,&.active{
             a{
                 color:#fff;
                 background-color: #ff9000;
@@ -81,7 +81,28 @@ $mimgUrl:$imgUrl+'service/';
         }
     }
 }
+@media (max-width: 992px) {
+    #service{
+        dt{
+            font-size: 24px;
+        }
+    }
+}
 /* 超小屏幕（手机，小于 768px） */
 @media screen and (max-width: 768px){
-
+    #service{
+        dt{
+            font-size: 18px;
+        }
+        dd{
+            a{
+                &:before{
+                    content:none!important;
+                }
+            }
+        }
+        .content h1{
+            font-size: 20px;
+        }
+    }
 }

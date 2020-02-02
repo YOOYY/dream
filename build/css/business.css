@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #business .container {
-  margin: 80px; }
+  margin: 80px auto; }
 
 #business .middle {
   margin: 25px 0; }

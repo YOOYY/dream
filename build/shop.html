@@ -46,18 +46,19 @@
         <div class="phone-nav"><img src="./imgs/phone_nav.png" alt="">
           <ul class="subnav">
             <li><a href="./index.html">首页</a></li>
-            <li><a href="./#">企业动态</a></li>
-            <li><a href="./#">自主品牌</a></li>
+            <li><a href="./news.html">企业动态</a></li>
+            <li><a href="./edu.html">自主品牌</a></li>
             <li><a href="./service.html">服务项目</a></li>
-            <li><a class="active" href="./shop.html">线下门店</a></li>
+            <li><a href="./shop.html">线下门店</a></li>
             <li><a href="./business.html">商务合作</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <div id="shop"><img class="responsive" src="./imgs/shop/banner1.jpg" alt="">
+    <div id="shop"><img class="responsive banner" src="./imgs/shop/banner1.jpg" alt="">
       <div class="container">
-        <div class="box"><a target="_blank" href="./course.html"><img src="./imgs/shop/nav1.png" alt=""></a><a target="_blank" href="#"><img src="./imgs/shop/nav2.png" alt=""></a><a target="_blank" href="#"><img src="./imgs/shop/nav3.png" alt=""></a><a target="_blank" href="#"><img class="last" src="./imgs/shop/nav4.png" alt=""></a></div><img class="map" src="./imgs/shop/map.png" alt="">
+        <div class="box"><a target="_blank" href="./course.html"><img src="./imgs/shop/nav1.png" alt=""></a><a href="#"><img src="./imgs/shop/nav2.png" alt=""></a><a href="#"><img src="./imgs/shop/nav3.png" alt=""></a><a href="#"><img class="last" src="./imgs/shop/nav4.png" alt=""></a></div>
+        <div class="map"><img class="responsive" src="./imgs/shop/map.png" alt=""><img class="icon1 icon" src="./imgs/shop/map_icon.png" alt=""><img class="icon2 icon" src="./imgs/shop/map_icon.png" alt=""><img class="icon3 icon" src="./imgs/shop/map_icon.png" alt=""><img class="icon4 icon" src="./imgs/shop/map_icon.png" alt=""></div>
       </div>
     </div>
     <div id="footer">
@@ -91,17 +92,21 @@
             </div>
           </div>
         </div>
-        <p class="tips"> <a href="#" target="_blank">网站备案/许可证号：沪ICP备18024039号-1 沪公网安备</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a class="beian" href="#" target="_blank">ICP备案</a></p>
+        <p class="tips"> <a href="#" target="_blank">网站备案/许可证号：沪ICP备18024039号-1 <img src="./imgs/beian.png">沪公网安备</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a class="beian" href="#" target="_blank">ICP备案</a></p>
       </div>
     </div>
     <script src="./js/jquery.js"></script>
+    <script src="./js/base.js"></script>
     <script>
       $(function(){
           $('.box img').click(function(){
-              var index = $(this).index();
-              $('#shop .responsive').attr('src',"./imgs/shop/banner"+ (index+1) +".jpg");
+              var index = $(this).parent().index();
+              $('#shop .banner').attr('src',"./imgs/shop/banner"+ (index+1) +".jpg");
+              $('.box img,.map .icon').removeClass('active');
+              $(this).addClass('active');
+              $('.map .icon'+(index+1)).addClass('active');
           })
-          $('ul li').eq(0).click();
+          $('#shop .box img').eq(0).click();
       })
     </script>
   </body>

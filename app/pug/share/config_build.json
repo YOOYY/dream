@@ -12,7 +12,7 @@
                 "text":"首页"
             },
             {
-                "href":"#",
+                "href":"news.html",
                 "pageId":"news",
                 "text":"企业动态",
                 "subnav":[
@@ -21,7 +21,7 @@
                 ]
             },
             {
-                "href":"#",
+                "href":"edu.html",
                 "pageId":"brand",
                 "text":"自主品牌",
                 "subnav":[

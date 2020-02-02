@@ -38,7 +38,11 @@ a{
     font-family: '思源黑体',Arial, Helvetica,STXihei,"华文细黑", "Microsoft Yahei","微软雅黑", sans-serif;
     font-size: 18px;
 }
-
+table{
+    border-collapse:collapse;
+    table-layout:fixed;
+    border: none;
+}
 .clearfix:after,.container:after{
     content:'';
     clear:both;
@@ -69,7 +73,9 @@ a{
 .mr0{
     margin-right: 0!important;
 }
-
+.ml0{
+    margin-left: 0!important;
+}
 .clear{
     clear: both;
 }
@@ -86,14 +92,14 @@ a{
     overflow: hidden;
     .ellipsis {
         float: right;
-        margin-left: -5px;
+        margin-left: -10px;
         width: 100%;
         word-break: break-all;
     }
     &:before {
         content: '';
         float: left;
-        width: 5px;
+        width: 10px;
     }
     &:after {
         float: right;
@@ -110,8 +116,8 @@ a{
         margin-left: -3em;
         /* 移动省略号位置 */
         position: relative;
-        left: 100%;
-        padding-right: 5px;
+        left: 97%;
+        padding-right: 10px;
     }
 }
 
@@ -256,9 +262,6 @@ a{
     dd{
         font-size: 16px;
         margin-bottom: 18px;
-        a{
-            color: #989898;
-        }
     }
 
     .phone{
@@ -272,7 +275,6 @@ a{
         clear: both;
         border-top: 1px solid #838383;
         a{
-            color: #989898;
             font-size: 16px;
         }
     }
@@ -280,6 +282,12 @@ a{
         width: 31%;
         float: right;
         overflow: hidden;
+    }
+    a{
+        color: #989898;
+        &:hover{
+            color: #fff;
+        }
     }
 }
 
@@ -298,7 +306,7 @@ a{
 }
 
 /* 小屏幕（平板，大于等于 768px） */
-@media (max-width: 992px) { 
+@media (max-width: 992px) {
     #header{
         li{
             font-size: 16px;
@@ -353,6 +361,7 @@ a{
             text-align: center;
             float: right;
             position: relative;
+            cursor: pointer;
             .subnav{
                 width: 150px;
                 top: 40px;right: 30px;
@@ -372,8 +381,26 @@ a{
     }
     .res_banner{
         p{
-            font-size: 30px;
+            font-size: 18px;
             margin-top: -15px;
+        }
+    }
+    .page_div{
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+    
+    .page{
+        button {
+            width:35px;
+            height:36px;
+            font-size:16px;
+            line-height:36px;
+        }
+    }
+    #nextPage,#prePage{
+        img{
+            margin-top: 12px;
         }
     }
 }

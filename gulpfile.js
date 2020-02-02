@@ -5,6 +5,7 @@ var gulp = require("gulp"),
     concat = require('gulp-concat'),
     browserSync = require('browser-sync'),
     htmlmin = require('gulp-htmlmin'),
+    tinypng = require('gulp-tinypng'),
     reload = browserSync.reload,
 
     pug = require('gulp-pug'),
@@ -30,7 +31,8 @@ var gulp = require("gulp"),
     colors = require('ansi-colors'),
     outhtmlPath = outPath + "/",
     outcssPath = outPath + "/css",
-    outjsPath = outPath + "/js";
+    outjsPath = outPath + "/js",
+    outImgPath = outPath + "/imgs";
     
 gulp.task('pug', () =>
     gulp.src([htmlPath + '/**/*.pug', '!' + htmlPath + '/share/**'])
@@ -86,6 +88,13 @@ gulp.task('js',() =>
     .pipe(gulp.dest(outjsPath))
     .pipe(reload({ stream: true }))
 )
+
+gulp.task('tinyImg',() => 
+    gulp.src(imgPath + '/**/*.{png,jpg}')
+    .pipe(tinypng('L8AJPOaiMhx8bO2jozWdWi4T5WZIZiSk'))
+    .pipe(gulp.dest(outImgPath))
+)
+
 gulp.task('ts',() => 
     gulp.src([jsPath + '/*.ts','!' + jsPath + '/config_'+ (condition===true?'debug':'build') +'.ts'])
     .pipe(ts({

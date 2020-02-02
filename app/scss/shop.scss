@@ -1,4 +1,5 @@
 @import './_config.scss';
+$mimgUrl:$imgUrl+'shop/';
 #course{
     .container{
         margin-top: 96px;
@@ -9,23 +10,27 @@
             margin: 0 2.6% 2.6% 0;
             width: 31.6%;
             float: left;
+            @for $i from 1 through 5 {
+                &.icon#{$i}:after {
+                    background: url($mimgUrl+'course_text#{$i}.png') center center/cover;
+                }
+            }
+            &:after{
+                content:'';
+                position: absolute;
+                left: 0; top: 0; right: 0; bottom: 0;
+                z-index: 2;
+                width: 100%;
+            }
             &:hover,&.last{
                 &:after{
                     content: none;
                 }
             }
         }
-        a:after{
-            content: '';
-            position: absolute;
-            left: 0;top:0;bottom:0;right:0;
-            border-radius: 10px;
-            z-index: 1;
-            background: #000;
-            opacity: 0.5;
-        }
         img{
             width: 100%;
+            border-radius: 10px;
         }
     }
 }
@@ -53,12 +58,18 @@
             display: block;
             position: relative;
             border-radius: 10px;
-            margin: 0 2.6% 2.6% 0;
+            margin: 0 0 2.6% 2.6%;
             width: 31.6%;
             float: left;
         }
+        p{
+            font-size: 24px;
+            text-align: center;
+            margin-top: 28px;
+        }
         img{
             width: 100%;
+            border-radius: 10px;
         }
     }
 }
@@ -174,9 +185,7 @@
             background-color: #fcfcfa;
             margin: 57px 0;
             overflow: hidden;
-            .text{
-                background-color: #f1f7ff;
-            }
+            background-color: #f2f8ff;
         }
         .slogan{
             padding: 2.58% 10.33%;
@@ -184,7 +193,7 @@
             font-size: 16px;
             line-height: 36px;
             text-align: center;
-            background-color: #f1f7ff;
+            background-color: #f2f8ff;
             margin-bottom: 63px;
             position: relative;
             font-weight: bold;
@@ -232,14 +241,18 @@
             .des{
                 font-size: 22px;
                 line-height: 36px;
-                background-color:#f1f7ff;
+                background-color:#f2f8ff;
                 height: 240px;
+                padding: 0 40px;
                 span{
                     font-weight: bold;
                 }
                 h2{
                     font-size: 22px;
-                    margin-top: 20px;
+                    margin-top: 40px;
+                }
+                &.h455 p{
+                    margin: 0;
                 }
             }
         }
@@ -260,7 +273,7 @@
             padding: 3% 7%;
             margin-bottom: 60px;
             overflow: hidden;
-            background-color: #f1f7ff;
+            background-color: #f2f8ff;
             p{
                 float: left;
                 width: 42%;
@@ -371,15 +384,240 @@
                 width: 23.5%;
             }
         }
+        .active{
+            animation: rotate 2s linear infinite;
+            position: relative;
+        }
     }
     .map{
         display: block;
         width: 70%;
         margin: 0 auto;
+        position: relative;
+        .icon{
+            position: absolute;
+            width: 3%;
+        }
+        .active{
+            animation: rotate_map 1s linear infinite;
+        }
+        .icon1{
+            top: 62.5%;
+            right: 11.9%;
+        }
+        .icon2{
+            top: 53.4%;
+            right: 15.5%;
+        }
+        .icon3{
+            top: 55.5%;
+            right: 12.9%;
+        }
+        .icon4{
+            top: 62.9%;
+            right: 10.5%;
+        }
     }
 }
 
+@keyframes rotate {
+    0% {
+    transform: translateY(0) ;
+}
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(-20px);
+    
+    }
+    75% {
+        ransform: translateY(-10px) ;
+    }
+    100% {
+        transform: translateY(0) ;
+    }
+}
+
+@keyframes rotate_map {
+    0% {
+    transform: translateY(0) ;
+}
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(-10px);
+    
+    }
+    75% {
+        ransform: translateY(-5px) ;
+    }
+    100% {
+        transform: translateY(0) ;
+    }
+}
+@media (max-width: 992px) {
+    #coursepage{
+        .box{
+            .title{
+                font-size: 24px;
+            }
+            .des{
+                font-size: 20px;
+            }
+        }
+        .panel{
+            .text .title{
+                font-size: 20px;
+            }
+        }
+        &.sport {
+            .container{
+                padding-top: 0;
+                .slogan{
+                    font-size: 14px;
+                    &:before,&:after{
+                        font-size: 50px;
+                    }
+                    &:before{
+                        top: 10%;
+                        left: 5%;
+                    }
+                }
+                .md2{
+                    .des{
+                        height: 300px;
+                    }
+                }
+            }
+        }
+        .mg2 .smalltitle{
+            font-size: 20px;
+        }
+    }
+}
 /* 超小屏幕（手机，小于 768px） */
 @media screen and (max-width: 768px){
+    #course{
+        .container{
+            margin-top: 40px;
+        }
+    }
+    #course2{
+        .container{
+            padding: 40px;
+        }
+        .tips{
+            font-size: 16px;
+        }
+        .title{
+            margin: 30px 0;
+            span{
+                font-size: 20px;
+            }
+        }
+        .content{
+            p{
+                font-size: 18px;
+                margin: 14px 0;
+            }
+        }
+    }
+    #coursepage{
+        .container{
+            padding: 0;
+        }
+        &.music .container{
+            padding-bottom: 30px;
+        }
+        .box{
+            .title{
+                font-size: 16px;
+                &:before,&:after{
+                    content: none;
+                }
+            }
+            .des{
+                font-size: 14px;
+            }
+        }
+        .panel{
+            .text{
+                .title{
+                    font-size: 16px;
+                }
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+        .panel2{
+            .title{
+                font-size: 20px;
+                padding: 18px 0;
+            }
+            .des{
+                padding:0;
+                font-size: 18px;
+                height: 150px;
+            }
+            &.mg2{
+                .des{
+                    height: 210px;
+                }
+                .smalltitle{
+                    font-size: 16px;
+                }
+                .small{
+                    font-size: 14px;
+                }
+            }
+            .h210{
+                height: 210px;
+            }
+        }
+        &.art .md2{
+            width: 100%;
+            margin-left: 0;
+            .des{
+                height: auto;
+                padding: 20px;
+            }
+        }
+        &.sport {
+            .container{
+                padding-top: 0;
+                .tips{
+                    font-size: 14px;
+                }
+                .slogan{
+                    font-size: 14px;
+                    &:before,&:after{
+                        font-size: 50px;
+                    }
+                    &:before{
+                        top: 10%;
+                        left: 3%;
+                    }
+                }
+                .ask{
+                    font-size: 20px;
+                    .ans{
+                        font-size: 20px;
+                    }
+                }
 
+                .md2{
+                    margin-right: 0;
+                    width: 100%;
+                }
+            }
+        }
+        .mytips{
+            width: 80%;
+            text-align: center;
+            padding: 10px;
+        }
+    }
 }

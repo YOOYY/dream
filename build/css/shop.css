@@ -8,21 +8,30 @@
     margin: 0 2.6% 2.6% 0;
     width: 31.6%;
     float: left; }
+    #course .container a.icon1:after {
+      background: url("../imgs/shop/course_text1.png") center center/cover; }
+    #course .container a.icon2:after {
+      background: url("../imgs/shop/course_text2.png") center center/cover; }
+    #course .container a.icon3:after {
+      background: url("../imgs/shop/course_text3.png") center center/cover; }
+    #course .container a.icon4:after {
+      background: url("../imgs/shop/course_text4.png") center center/cover; }
+    #course .container a.icon5:after {
+      background: url("../imgs/shop/course_text5.png") center center/cover; }
+    #course .container a:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 100%; }
     #course .container a:hover:after, #course .container a.last:after {
       content: none; }
-  #course .container a:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 10px;
-    z-index: 1;
-    background: #000;
-    opacity: 0.5; }
   #course .container img {
-    width: 100%; }
+    width: 100%;
+    border-radius: 10px; }
 
 #course2 .container {
   padding-top: 90px; }
@@ -44,12 +53,18 @@
   display: block;
   position: relative;
   border-radius: 10px;
-  margin: 0 2.6% 2.6% 0;
+  margin: 0 0 2.6% 2.6%;
   width: 31.6%;
   float: left; }
 
+#course2 .content p {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 28px; }
+
 #course2 .content img {
-  width: 100%; }
+  width: 100%;
+  border-radius: 10px; }
 
 #coursepage .container {
   padding-top: 63px; }
@@ -147,9 +162,8 @@
   border: solid 2px #dbdde0;
   background-color: #fcfcfa;
   margin: 57px 0;
-  overflow: hidden; }
-  #coursepage.sport .panel .text {
-    background-color: #f1f7ff; }
+  overflow: hidden;
+  background-color: #f2f8ff; }
 
 #coursepage.sport .slogan {
   padding: 2.58% 10.33%;
@@ -157,7 +171,7 @@
   font-size: 16px;
   line-height: 36px;
   text-align: center;
-  background-color: #f1f7ff;
+  background-color: #f2f8ff;
   margin-bottom: 63px;
   position: relative;
   font-weight: bold; }
@@ -199,13 +213,16 @@
   #coursepage.sport .panel3 .des {
     font-size: 22px;
     line-height: 36px;
-    background-color: #f1f7ff;
-    height: 240px; }
+    background-color: #f2f8ff;
+    height: 240px;
+    padding: 0 40px; }
     #coursepage.sport .panel3 .des span {
       font-weight: bold; }
     #coursepage.sport .panel3 .des h2 {
       font-size: 22px;
-      margin-top: 20px; }
+      margin-top: 40px; }
+    #coursepage.sport .panel3 .des.h455 p {
+      margin: 0; }
 
 #coursepage.sport .md2 {
   margin-right: 3.75%;
@@ -223,7 +240,7 @@
   padding: 3% 7%;
   margin-bottom: 60px;
   overflow: hidden;
-  background-color: #f1f7ff; }
+  background-color: #f2f8ff; }
   #coursepage.sport .bot p {
     float: left;
     width: 42%;
@@ -319,10 +336,147 @@
     cursor: pointer; }
     #shop .box img.last {
       width: 23.5%; }
+  #shop .box .active {
+    animation: rotate 2s linear infinite;
+    position: relative; }
 
 #shop .map {
   display: block;
   width: 70%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
+  #shop .map .icon {
+    position: absolute;
+    width: 3%; }
+  #shop .map .active {
+    animation: rotate_map 1s linear infinite; }
+  #shop .map .icon1 {
+    top: 62.5%;
+    right: 11.9%; }
+  #shop .map .icon2 {
+    top: 53.4%;
+    right: 15.5%; }
+  #shop .map .icon3 {
+    top: 55.5%;
+    right: 12.9%; }
+  #shop .map .icon4 {
+    top: 62.9%;
+    right: 10.5%; }
+
+@keyframes rotate {
+  0% {
+    transform: translateY(0); }
+  25% {
+    transform: translateY(-10px); }
+  50% {
+    transform: translateY(-20px); }
+  75% {
+    ransform: translateY(-10px); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes rotate_map {
+  0% {
+    transform: translateY(0); }
+  25% {
+    transform: translateY(-5px); }
+  50% {
+    transform: translateY(-10px); }
+  75% {
+    ransform: translateY(-5px); }
+  100% {
+    transform: translateY(0); } }
+
+@media (max-width: 992px) {
+  #coursepage .box .title {
+    font-size: 24px; }
+  #coursepage .box .des {
+    font-size: 20px; }
+  #coursepage .panel .text .title {
+    font-size: 20px; }
+  #coursepage.sport .container {
+    padding-top: 0; }
+    #coursepage.sport .container .slogan {
+      font-size: 14px; }
+      #coursepage.sport .container .slogan:before, #coursepage.sport .container .slogan:after {
+        font-size: 50px; }
+      #coursepage.sport .container .slogan:before {
+        top: 10%;
+        left: 5%; }
+    #coursepage.sport .container .md2 .des {
+      height: 300px; }
+  #coursepage .mg2 .smalltitle {
+    font-size: 20px; } }
 
 /* 超小屏幕（手机，小于 768px） */
+@media screen and (max-width: 768px) {
+  #course .container {
+    margin-top: 40px; }
+  #course2 .container {
+    padding: 40px; }
+  #course2 .tips {
+    font-size: 16px; }
+  #course2 .title {
+    margin: 30px 0; }
+    #course2 .title span {
+      font-size: 20px; }
+  #course2 .content p {
+    font-size: 18px;
+    margin: 14px 0; }
+  #coursepage .container {
+    padding: 0; }
+  #coursepage.music .container {
+    padding-bottom: 30px; }
+  #coursepage .box .title {
+    font-size: 16px; }
+    #coursepage .box .title:before, #coursepage .box .title:after {
+      content: none; }
+  #coursepage .box .des {
+    font-size: 14px; }
+  #coursepage .panel .text .title {
+    font-size: 16px; }
+  #coursepage .panel .text p {
+    font-size: 14px; }
+  #coursepage .panel2 .title {
+    font-size: 20px;
+    padding: 18px 0; }
+  #coursepage .panel2 .des {
+    padding: 0;
+    font-size: 18px;
+    height: 150px; }
+  #coursepage .panel2.mg2 .des {
+    height: 210px; }
+  #coursepage .panel2.mg2 .smalltitle {
+    font-size: 16px; }
+  #coursepage .panel2.mg2 .small {
+    font-size: 14px; }
+  #coursepage .panel2 .h210 {
+    height: 210px; }
+  #coursepage.art .md2 {
+    width: 100%;
+    margin-left: 0; }
+    #coursepage.art .md2 .des {
+      height: auto;
+      padding: 20px; }
+  #coursepage.sport .container {
+    padding-top: 0; }
+    #coursepage.sport .container .tips {
+      font-size: 14px; }
+    #coursepage.sport .container .slogan {
+      font-size: 14px; }
+      #coursepage.sport .container .slogan:before, #coursepage.sport .container .slogan:after {
+        font-size: 50px; }
+      #coursepage.sport .container .slogan:before {
+        top: 10%;
+        left: 3%; }
+    #coursepage.sport .container .ask {
+      font-size: 20px; }
+      #coursepage.sport .container .ask .ans {
+        font-size: 20px; }
+    #coursepage.sport .container .md2 {
+      margin-right: 0;
+      width: 100%; }
+  #coursepage .mytips {
+    width: 80%;
+    text-align: center;
+    padding: 10px; } }

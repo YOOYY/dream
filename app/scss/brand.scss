@@ -53,80 +53,89 @@
             margin: 30px 0;
             clear: both;
         }
+        td{
+            border-top: 1px solid #eee;
+            padding: 3.5% 0;
+            vertical-align:middle;
+        }
+        .list{
+            padding-left: 3.5%;
+        }
         h2{
             font-size: 18px;
-            padding-top: 3.5%;
         }
-        p,.des{
+        p{
             font-size: 16px;
             line-height: 26px;
             color: #666;
-            margin: 20px 0;
+            margin-top: 20px;
             overflow: hidden;
-        }
-        .des{
-            height: 100px;
-            &:after{
-                top: -15px;
-                height: 25px;
-                width: 41px;
-                margin-left: -3em;
-                padding-right: 18px;
-                background:linear-gradient(to right,rgba(255,255,255,0),white 40%,white);
-            }
-            &:before{
-                height: 100px;
+            a{
+                color: #666;
             }
         }
-        li{
-            width: 100%;
-            padding:4.054% 0;
+        .imgbox{
             overflow: hidden;
-            border-top: 1px solid #eee;
-        }
-        img{
-            float: left;
-            width: 18.945%;
-            margin-right: 4.054%;
-        }
-        .list{
-            float: left;
-            width: 77%;
-        }
-    }
-    .imgbox{
-        overflow: hidden;
-        li{
-            width: 49.7%;
-            margin: 0 0.6% 0.6% 0;
-            padding: 0;
-            border:none;
-            float: left;
-            img{
-                width: 100%;
+            li{
+                width: 49.7%;
+                margin: 0 0.6% 0.6% 0;
+                padding: 0;
+                border:none;
+                float: left;
+                img{
+                    width: 100%;
+                }
             }
         }
     }
 }
 @media (max-width: 992px) {
     #brand{
-        .content{
-            img{
-                margin-top: 20px;
-            }
-            .des:after{
-                top: -24px;
-            }
+        dt{
+            font-size: 24px;
         }
     }
 }
 /* 超小屏幕（手机，小于 768px） */
 @media screen and (max-width: 768px){
     #brand{
-        .content{
-            img{
-                margin-top: 35px;
+        .container{
+            padding-top: 0;
+            .content{
+                width: 100%;
+                .thumb{
+                    width: 30%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .list{
+                    width: 70%;
+                }
             }
         }
+        .sidebar{
+            width: 100%;
+            text-align: center;
+            .nav{
+                width: 100%;
+                float: none;
+                display: inline-block;
+            }
+            dt{
+                display: none;
+            }
+            dd{
+                float: left;
+                width: 25%;
+                a{
+                    padding-left: 0;
+                }
+                &.active:after{
+                    content:none;
+                }
+            }
+        }
+
     }
 }

@@ -63,28 +63,28 @@
       margin: 6px 20px 0 0;
       vertical-align: middle;
       content: url("../imgs/service/icon7.png"); }
-  #service dd:hover {
+  #service dd:hover, #service dd.active {
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffd9a9 20%, #ffd9a9 80%, rgba(255, 255, 255, 0)) 2 1 stretch;
     border-bottom: 2px solid #ffd9a9;
     position: relative;
     z-index: 1;
     margin-bottom: -2px; }
-    #service dd:hover a {
+    #service dd:hover a, #service dd.active a {
       color: #fff;
       background-color: #ff9000; }
-      #service dd:hover a.icon1:before {
+      #service dd:hover a.icon1:before, #service dd.active a.icon1:before {
         content: url("../imgs/service/icon1_on.png"); }
-      #service dd:hover a.icon2:before {
+      #service dd:hover a.icon2:before, #service dd.active a.icon2:before {
         content: url("../imgs/service/icon2_on.png"); }
-      #service dd:hover a.icon3:before {
+      #service dd:hover a.icon3:before, #service dd.active a.icon3:before {
         content: url("../imgs/service/icon3_on.png"); }
-      #service dd:hover a.icon4:before {
+      #service dd:hover a.icon4:before, #service dd.active a.icon4:before {
         content: url("../imgs/service/icon4_on.png"); }
-      #service dd:hover a.icon5:before {
+      #service dd:hover a.icon5:before, #service dd.active a.icon5:before {
         content: url("../imgs/service/icon5_on.png"); }
-      #service dd:hover a.icon6:before {
+      #service dd:hover a.icon6:before, #service dd.active a.icon6:before {
         content: url("../imgs/service/icon6_on.png"); }
-      #service dd:hover a.icon7:before {
+      #service dd:hover a.icon7:before, #service dd.active a.icon7:before {
         content: url("../imgs/service/icon7_on.png"); }
 
 #service .content {
@@ -103,4 +103,15 @@
     margin-right: 3.4%;
     width: 48.3%; }
 
+@media (max-width: 992px) {
+  #service dt {
+    font-size: 24px; } }
+
 /* 超小屏幕（手机，小于 768px） */
+@media screen and (max-width: 768px) {
+  #service dt {
+    font-size: 18px; }
+  #service dd a:before {
+    content: none !important; }
+  #service .content h1 {
+    font-size: 20px; } }

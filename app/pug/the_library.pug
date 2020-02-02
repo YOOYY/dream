@@ -28,33 +28,30 @@ block append main
                 h1.margintop0 项目定位
                 p The library 学人图书馆传承传统图书馆知识汇集与获取的文化基因，结合“互联网+”与“社交化学习”的前沿理念，将藏书、学习、社交，独创全民参与及互动的新生代社交场景图书馆，最大化提升阅读和知识社交的融合，从根本上打破商业书店的反社交属性，达到学习与交流的最佳方式。#[br]The library 学人图书馆 为促进现代图书馆的发展，提供了一个“传承优秀学习传统”，”紧跟前沿智能科技” 及“创新社交场景属性”的完美的解决方案。#[br]The Library学人图书馆 由智能知识分享体系与主题场景社交空间共同组成。冲破传统图书馆和书店的桎梏，结合“互联网+”的前沿科技概念，打造智能书籍、藏品借阅服务、心得体会分享等互动体系，构建新的基于兴趣爱好、精神追求的强关系社群。打造场景化非正式学习地标。
                 h1 核心优势
-                ol
+                table
                     each val, index in list
                         case index
                             when 0
-                                li.paddingtop0.bordertop0
-                                    img(src=mimgUrl+val.img)
-                                    .list
+                               tr
+                                    td.paddingtop0.bordertop0.thumb
+                                        img(src=mimgUrl+val.img)
+                                    td.paddingtop0.bordertop0.list
                                         h2.title #{val.title}
-                                        .des.ellipsis-wrap
-                                            .ellipsis #{val.des}
-                                        //- p.des #{val.des}
+                                        p #{val.des}
                             when 3
-                                li.paddingbottom0
-                                    img(src=mimgUrl+val.img)
-                                    .list
+                                tr
+                                    td.paddingbottom0.thumb
+                                        img(src=mimgUrl+val.img)
+                                    td.list.paddingbottom0
                                         h2.title #{val.title}
-                                        .des.ellipsis-wrap
-                                            .ellipsis #{val.des}
-                                        //- p.des #{val.des}
+                                        p #{val.des}
                             default
-                                li
-                                    img(src=mimgUrl+val.img)
-                                    .list
+                                tr
+                                    td.thumb
+                                        img(src=mimgUrl+val.img)
+                                    td.list
                                         h2.title #{val.title}
-                                        .des.ellipsis-wrap
-                                            .ellipsis #{val.des}
-                                        //- p.des #{val.des}
+                                        p #{val.des}
                 h1 产品模型
                 p The Library 由全国统一的图书管理系统、APP（管理端／机构端/作者端／读户端）、终端设备等共同组成。
                 p The Library 实体店的藏品分类基本书库、特藏书库、艺术品、装置、会员纪念品。

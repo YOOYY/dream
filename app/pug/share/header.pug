@@ -20,5 +20,5 @@
             ul.subnav
                 each pval,pindex in header.nav
                     li
-                        a(href=viewUrl+pval.href class={active:currentId === pval.pageId})
+                        a(href=viewUrl+pval.href)
                             |!{pval.text}
