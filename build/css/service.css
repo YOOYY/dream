@@ -1,117 +1,88 @@
 @charset "UTF-8";
-#service .container {
-  margin-top: 70px; }
+body {
+  background-color: #f8f8fa; }
 
-#service .sidebar {
-  width: 26.084%;
-  float: left; }
+#service .navbar {
+  background-color: #fff;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08); }
 
-#service dl {
-  width: 77.77%;
-  float: left; }
-
-#service dt {
-  font-size: 26px;
-  padding-bottom: 18px; }
-
-#service dd {
-  position: relative;
-  padding: 5% 0;
-  border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #eee 20%, #eee 80%, rgba(255, 255, 255, 0)) 2 1 stretch;
-  border-top: 2px solid #eee; }
-  #service dd.last {
-    border-bottom: 2px solid #eee;
-    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #eee 20%, #eee 80%, rgba(255, 255, 255, 0)) 2 1 stretch; }
-  #service dd a {
-    display: block;
-    height: 50px;
-    border-radius: 5px;
+#service .nav {
+  width: 56%;
+  height: 90px;
+  margin: 0 auto;
+  overflow: hidden; }
+  #service .nav .center {
+    margin: 0 100px; }
+  #service .nav li {
+    font-size: 26px;
     text-align: center;
-    line-height: 50px; }
-    #service dd a.icon1:before {
-      display: inline-block;
-      margin: 6px 20px 0 0;
-      vertical-align: middle;
-      content: url("../imgs/service/icon1.png"); }
-    #service dd a.icon2:before {
-      display: inline-block;
-      margin: 6px 20px 0 0;
-      vertical-align: middle;
-      content: url("../imgs/service/icon2.png"); }
-    #service dd a.icon3:before {
-      display: inline-block;
-      margin: 6px 20px 0 0;
-      vertical-align: middle;
-      content: url("../imgs/service/icon3.png"); }
-    #service dd a.icon4:before {
-      display: inline-block;
-      margin: 6px 20px 0 0;
-      vertical-align: middle;
-      content: url("../imgs/service/icon4.png"); }
-    #service dd a.icon5:before {
-      display: inline-block;
-      margin: 6px 20px 0 0;
-      vertical-align: middle;
-      content: url("../imgs/service/icon5.png"); }
-    #service dd a.icon6:before {
-      display: inline-block;
-      margin: 6px 20px 0 0;
-      vertical-align: middle;
-      content: url("../imgs/service/icon6.png"); }
-    #service dd a.icon7:before {
-      display: inline-block;
-      margin: 6px 20px 0 0;
-      vertical-align: middle;
-      content: url("../imgs/service/icon7.png"); }
-  #service dd:hover, #service dd.active {
-    border-image: linear-gradient(to right, rgba(255, 255, 255, 0), #ffd9a9 20%, #ffd9a9 80%, rgba(255, 255, 255, 0)) 2 1 stretch;
-    border-bottom: 2px solid #ffd9a9;
-    position: relative;
-    z-index: 1;
-    margin-bottom: -2px; }
-    #service dd:hover a, #service dd.active a {
-      color: #fff;
-      background-color: #ff9000; }
-      #service dd:hover a.icon1:before, #service dd.active a.icon1:before {
-        content: url("../imgs/service/icon1_on.png"); }
-      #service dd:hover a.icon2:before, #service dd.active a.icon2:before {
-        content: url("../imgs/service/icon2_on.png"); }
-      #service dd:hover a.icon3:before, #service dd.active a.icon3:before {
-        content: url("../imgs/service/icon3_on.png"); }
-      #service dd:hover a.icon4:before, #service dd.active a.icon4:before {
-        content: url("../imgs/service/icon4_on.png"); }
-      #service dd:hover a.icon5:before, #service dd.active a.icon5:before {
-        content: url("../imgs/service/icon5_on.png"); }
-      #service dd:hover a.icon6:before, #service dd.active a.icon6:before {
-        content: url("../imgs/service/icon6_on.png"); }
-      #service dd:hover a.icon7:before, #service dd.active a.icon7:before {
-        content: url("../imgs/service/icon7_on.png"); }
+    line-height: 90px;
+    cursor: pointer; }
+  #service .nav .active {
+    background: no-repeat bottom center;
+    background-image: linear-gradient(to right, #ff9000, #ff9000);
+    background-size: 50px 4px; }
 
 #service .content {
-  float: left;
-  width: 73.916%;
-  padding-bottom: 100px; }
-  #service .content h1 {
-    font-size: 26px;
-    margin-bottom: 20px;
-    color: #221815; }
+  margin: 114px auto;
+  padding: 60px 0 70px 0;
+  max-width: 1125px;
+  background-color: #fff;
+  text-align: center; }
   #service .content p {
     font-size: 16px;
-    line-height: 26px;
-    margin: 20px 0; }
-  #service .content .imgbox img {
-    margin-right: 3.4%;
-    width: 48.3%; }
+    font-weight: bold;
+    line-height: 28px; }
+  #service .content .pic {
+    margin-top: 45px; }
 
-@media (max-width: 992px) {
-  #service dt {
-    font-size: 24px; } }
+#service .margintop {
+  margin-top: 150px; }
+
+#service .item {
+  position: relative;
+  margin-bottom: 8.9166%; }
+  #service .item:after {
+    content: '';
+    clear: both;
+    display: block;
+    width: 0;
+    height: 0; }
+  #service .item img {
+    width: 37.5%;
+    z-index: 1;
+    margin-top: -3.75%; }
+  #service .item .panel {
+    width: 62.5%;
+    border: solid 2px #e4e4e4;
+    padding: 4.1666% 10% 5.416% 11%; }
+  #service .item .title {
+    margin: 20px 0;
+    font-size: 26px; }
+  #service .item .des {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8%;
+    line-height: 30px; }
+  #service .item .line {
+    width: 8%;
+    height: 2px;
+    background-color: #b7b7b7; }
+  #service .item img, #service .item .panel {
+    position: relative;
+    float: left;
+    box-sizing: border-box; }
+
+#service .item1 img {
+  left: 4.166%; }
+
+#service .item1 .panel {
+  right: 4.166%; }
+
+#service .item2 img {
+  right: 4.166%; }
+
+#service .item2 .panel {
+  left: 4.166%; }
 
 /* 超小屏幕（手机，小于 768px） */
-@media screen and (max-width: 768px) {
-  #service dt {
-    font-size: 18px; }
-  #service dd a:before {
-    content: none !important; }
-  #service .content h1 {
-    font-size: 20px; } }

@@ -1,46 +1,76 @@
 extends ./share/container.pug
 block config
-    - var title = '服务项目';
-    - var keywords = '服务项目';
-    - var description = '服务项目';
+    - var title = '主营业务';
+    - var keywords = '主营业务';
+    - var description = '主营业务';
     - var currentId = 'service';
     - var mimgUrl = imgUrl+'service/';
-    -
-        var nlist = [
-                {text:'商务会议',class:'icon1',href:'#'},
-                {text:'企业团建',class:'icon2',href:'#'},
-                {text:'活动沙龙',class:'icon3',href:'#'},
-                {text:'职场培训',class:'icon4',href:'#'},
-                {text:'场地租赁',class:'icon5',href:'#'},
-                {text:'展览展销',class:'icon6',href:'#'},
-                {text:'餐饮服务',class:'icon7',href:'#'}
-            ];
 block css
     link(rel='stylesheet',href=cssUrl + 'service.css')
 block append main
     #service
-        img.responsive(src=mimgUrl+"banner.jpg", alt="")
+        .banner_container
+            img.responsive(src=mimgUrl+"banner1.jpg", alt="")
+        .navbar
+            ul.nav
+                li.active 创新综合体的开发、运营与管理
+                li.center 教育（文化）品牌的集合与运营
+                li 延伸服务
         .container
-            .sidebar
-                dl.nav
-                    dt 服务项目
-                    each val, index in nlist
-                        case index
-                            when 0
-                                dd.active
-                                    a(class=val.class href=val.href) #{val.text}
-                            when 6
-                                dd.last
-                                    a(class=val.class href=val.href) #{val.text}
-                            default
-                                dd
-                                    a(class=val.class href=val.href) #{val.text}
             .content
-                h1 杭州店莱福士酒店商务会议场所
-                p 上海凯旋先锋主要从事各种会议、庆典、展览展示会、公司年会、形象促销活动、演唱会、商业推广、产品展销、产品展销开幕式、签售会、促销活动、交易会、试乘试驾等活动场地的布置、搭建、租赁。一、天津篷房租赁：提供大型产品展销开产品篷房、庆典篷房、展览篷房、红色喜庆篷房等各种户外活动场所蓬房租赁、棚房搭建及拆卸服务。
-                img.responsive(src=mimgUrl+"pic1.jpg", alt="")
-                p 上海凯旋先锋主要从事各种会议、庆典、展览展示会、公司年会、形象促销活动、演唱会、商业推广、产品展销、产品展销开幕式、签售会、促销活动、交易会、试乘试驾等活动场地的布置、搭建、租赁。一、天津篷房租赁：提供大型产品展销开产品篷房、庆典篷房、展览篷房、红色喜庆篷房等各种户外活动场所蓬房租赁、棚房搭建及拆卸服务。
-                .imgbox
-                    img(src=mimgUrl+"pic2.jpg", alt="")
-                    img.mr0(src=mimgUrl+"pic3.jpg", alt="")
+                p 梦想天地起源于商业与教育、文化领域的跨界联合，
+                p 基于对行业融合创新发展的洞悉，
+                p 以满足人民群众对美好生活的追求和向往为宗旨，
+                p 通过集合、创新、共享的方式，建设和运营创新综合体，
+                p 成为国内政府与商业综合体青睐的文化商业品牌。
+                img.pic(src=mimgUrl+"pic1.png", alt="")
+            .content
+                p 梦想天地通过成人教育集合店、
+                p 青少年学习成长中心、
+                p 学人图书馆等多种商业模式的创新与实践，
+                p 提供高水平的品牌筛选、引流、推广等服务，
+                p 成为市场领先的集合运营商。
+                img.pic(src=mimgUrl+"pic2.png", alt="")
+            div
+                .item.item1.margintop
+                    img(src=mimgUrl+"pic3.png", alt="")
+                    .panel
+                        h3.title 餐 饮
+                        p.des 一个洋溢着文化气息的现代概念图书馆空间，搭配精美的餐饮美食， 致力为都市人休闲、体验、交流打造一个有趣、有料的所在。
+                        .line
+                .item.item2
+                    .panel
+                        h3.title 零 售
+                        p.des 依托丰富的教育产品以及文创产品，与互联网及线下体验相结合，对商品的生产、流通与销售过程进行升级改造，进而重塑业态结构与生态圈，打造融合的零售新模式。
+                        .line
+                    img(src=mimgUrl+"pic4.png", alt="")
+                .item.item1
+                    img(src=mimgUrl+"pic5.png", alt="")
+                    .panel
+                        h3.title 商务服务
+                        p.des 为入驻的商家提供商务信息咨询、市场营销策划、文化交流活动、 会务及展览活动、运营管理支持、信息及广告发布等相关商务服务。
+                        .line
+                .item.item2
+                    .panel
+                        h3.title 会员服务
+                        p.des 梦想天地将为其战略合作伙伴及大型企业机构提供会员服务，成为其vip会员服务中心,进行积分兑换、活动安排、课程定制等服务，同时成为vip会员及其亲属生活进阶、学习成长、社交休闲的重要场所。
+                        .line
+                    img(src=mimgUrl+"pic6.png", alt="")
+                .item.item1
+                    img(src=mimgUrl+"pic7.png", alt="")
+                    .panel
+                        h3.title 公益活动
+                        p.des 梦想天地以提升中国人的精神气质为己任，同时积极投身公益事业，我们还将联合国内知名的公益机构，推陈出新，成为一个城市公益事业的创新窗口和集聚地。
+                        .line
 block append js
+    script.
+        $(function(){
+            $('#service .nav li').click(function(){
+                var index = $(this).index();
+                console.log(index);
+                $(this).addClass('active').siblings().removeClass('active');
+                $('#service .container>div').eq(index).show().siblings().hide();
+                $('#service .responsive').attr('src',"#{mimgUrl}banner"+ (index+1) +".jpg");
+            })
+            $('#service .nav li').eq(0).click();
+        })

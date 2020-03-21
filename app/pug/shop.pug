@@ -9,7 +9,8 @@ block css
     link(rel='stylesheet',href=cssUrl + 'shop.css')
 block append main
     #shop
-        img.responsive.banner(src=mimgUrl+"banner1.jpg", alt="")
+        .banner_container
+            img.responsive.banner(src=mimgUrl+"banner1.jpg", alt="")
         .container
             .box
                 a(target='_blank' href=viewUrl+'course.html')
@@ -22,19 +23,42 @@ block append main
                     img.last(src=mimgUrl+"nav4.png", alt="")
             .map
                 img.responsive(src=mimgUrl+"map.png", alt="")
-                img.icon1.icon(src=mimgUrl+"map_icon.png", alt="")
-                img.icon2.icon(src=mimgUrl+"map_icon.png", alt="")
-                img.icon3.icon(src=mimgUrl+"map_icon.png", alt="")
-                img.icon4.icon(src=mimgUrl+"map_icon.png", alt="")
+                .icon1.icon
+                    img(src=mimgUrl+"map_icon.png", alt="")
+                    .line —————————杭州
+                .icon2.icon
+                    img(src=mimgUrl+"map_icon.png", alt="")
+                    .line —————————扬州
+                .icon3.icon
+                    img(src=mimgUrl+"map_icon.png", alt="")
+                    .line —————————无锡
+                .icon4.icon
+                    img(src=mimgUrl+"map_icon.png", alt="")
+                    .line —————————宁波
+                h2.tips.double 项目地址：杭州市江干区四季青街道新业路 228 号来福士中心 6 层#[br]联系电话：0571-85022988
+                h2.tips 项目地址：扬州市广陵区文昌东路9号广陵公共文化中心
+                h2.tips.double 项目地址：无锡市梁溪区人民中路86号#[br]联系电话：0510-82827700
+                h2.tips 项目地址：宁波市江北区大闸南路501号1-1
 block append js
     script.
         $(function(){
-            $('.box img').click(function(){
+            $('.icon').click(function(){
+                var index = $(this).index();
+                $('#shop .banner').attr('src',"#{mimgUrl}banner"+ index +".jpg");
+                $('.box img,.map .icon').removeClass('active');
+                $(this).addClass('active');
+                $('.box a').eq(index-1).children().addClass('active');
+                $('#shop .tips').hide();
+                $('#shop .tips').eq(index-1).show();
+            })
+            $('.box img').mouseenter(function(){
                 var index = $(this).parent().index();
                 $('#shop .banner').attr('src',"#{mimgUrl}banner"+ (index+1) +".jpg");
                 $('.box img,.map .icon').removeClass('active');
                 $(this).addClass('active');
                 $('.map .icon'+(index+1)).addClass('active');
+                $('#shop .tips').hide();
+                $('#shop .tips').eq(index).show();
             })
-            $('#shop .box img').eq(0).click();
+            $('#shop .box img').eq(0).mouseenter();
         })

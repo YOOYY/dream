@@ -1,8 +1,8 @@
 extends ./share/container.pug
 block config
-    - var title = '企业动态';
-    - var keywords = '企业动态';
-    - var description = '企业动态';
+    - var title = '集团资讯';
+    - var keywords = '集团资讯';
+    - var description = '集团资讯';
     - var currentId = 'news';
     - var mimgUrl = imgUrl+'news/';
     -
@@ -22,10 +22,10 @@ block append main
         .container
             ul.nav
                 li.active
-                    a(href=viewUrl+'information.html') 活动推荐
+                    a(href='#') 集团资讯
                 li
                     i
-                    a(href='#') 精彩回顾
+                    a(href=viewUrl+'information.html') 特色活动
             table.content
                 each nval, nindex in nlist
                     tr

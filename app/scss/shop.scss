@@ -34,6 +34,61 @@ $mimgUrl:$imgUrl+'shop/';
         }
     }
 }
+#shoppage{
+    .container{
+        padding-bottom: 110px;
+    }
+    h1{
+        margin: 80px 0 50px 0;
+        text-align: center;
+        font-size: 36px;
+    }
+    .banner_box{
+        height: 420px;
+        position: relative;
+        .prev,.next{
+            position: absolute;
+            top: 186px;
+            z-index: 10;
+            cursor: pointer;
+        }
+        .prev{
+            left: 18px;
+        }
+        .next{
+            right: 18px;
+        }
+        ul{
+            height: 420px;
+            position: relative;
+            margin:6px auto;
+            li{
+                position: absolute;
+                overflow: hidden;
+            }
+            .pos_1 {
+                top: 70px; left: 0; z-index: 2; filter: alpha(opacity=60); opacity: 0.6; 
+                img{width:450px;}
+            }
+            .pos_2 { 
+                top: 35px; left: 135px; z-index: 3; filter: alpha(opacity=80); opacity: 0.8;
+                img{width:555px;}
+            }
+            .pos_3 { 
+                top: 0; left: 268px; z-index: 4; 
+                img{width:665px;}
+            }
+            .pos_4 { 
+                top: 35px; left: 511px; z-index: 3; filter: alpha(opacity=80); opacity: 0.8;
+                img{width:555px;}    
+            }
+            .pos_5 {
+                top: 70px; left: 750px; z-index: 2; filter: alpha(opacity=60); opacity: 0.6; 
+                img{width:450px;}    
+            }
+        }
+    }
+}
 #course2{
     .container{
         padding-top: 90px;
@@ -369,20 +424,25 @@ $mimgUrl:$imgUrl+'shop/';
 
 #shop{
     .container{
-        padding:30% 0 11.25% 0;
+        padding:310px 0 105px 0;
         position: relative;
     }
     .box{
         position: absolute;
         z-index: 2;
-        top: -60px; left: 0;
+        top: -76px; left: 0;
         img{
             width: 25.5%;
             float: left;
             cursor: pointer;
+            box-shadow: -7px 35px 10px -12px
+            rgba(26, 26, 26, 0.34);
             &.last{
                 width: 23.5%;
             }
+        }
+        a{
+            overflow: hidden;
         }
         .active{
             animation: rotate 2s linear infinite;
@@ -396,27 +456,61 @@ $mimgUrl:$imgUrl+'shop/';
         position: relative;
         .icon{
             position: absolute;
-            width: 3%;
+            width: 29.236%;
+            cursor: pointer;
+            img{
+                float: left;
+                width: 10%;
+            }
         }
         .active{
-            animation: rotate_map 1s linear infinite;
+            img{
+                width: 15.2%;
+            }
+            .line{
+                color: #ff7200;
+                line-height: 42px;
+            }
         }
+        // .active{
+        //     animation: rotate_map 1s linear infinite;
+        // }
         .icon1{
-            top: 62.5%;
-            right: 11.9%;
+            top: 52.4%;
+            right: -10%;
         }
         .icon2{
-            top: 53.4%;
-            right: 15.5%;
+            top: 43.5%;
+            right: -8.7%;
         }
         .icon3{
-            top: 55.5%;
-            right: 12.9%;
+            top: 49.6%;
+            right: -7.7%;
         }
         .icon4{
-            top: 62.9%;
-            right: 10.5%;
+            top: 64.6%;
+            right: -9.5%;
         }
+    }
+    .tips{
+        position: absolute;
+        top: 15.3%;right: -4%;
+        padding: 4.16% 7.91%;
+        font-size: 24px;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0px 5px 10px 0px #c3c3c3;
+        border-radius: 10px;
+        border: solid 1px #b7b7b7;
+        display: none;
+    }
+    .double{
+        line-height: 42px;
+        padding: 3.58% 7.91%;
+    }
+    .line{
+        // position: absolute;
+        float: left;
     }
 }
 

@@ -1,8 +1,8 @@
 extends ./share/container.pug
 block config
-    - var title = '企业资讯';
-    - var keywords = '企业资讯';
-    - var description = '企业资讯';
+    - var title = '特色活动';
+    - var keywords = '特色活动';
+    - var description = '特色活动';
     - var currentId = 'news';
     - var mimgUrl = imgUrl+'news/';
     -
@@ -13,8 +13,6 @@ block config
                 {title:'在寒冷的冬夜，给爱人和自己煮一杯热红酒',date:'2019.12',day:'20',des:'热红酒，估计是冬季最潮流的饮品了。这种起源于欧 洲的饮品，让人体验到新奇，也感', href:'information_article3.html'},
                 {title:"不忘初心，Jolpa'餐厅两周年",date:'2019.09',day:'27',des:'在无锡这被互联网高度覆盖的城市，“共享”早就成 为了人们生活的日常。除了圈地兴起的彩色', href:'information_article4.html'},
                 {title:"将平淡无奇的一天变成无可替代的回忆",date:'2019.09',day:'12',des:'金九银十，Edumall全面发力，在刚刚过去的一周里， 我们这里举办了丰富多彩的活动', href:'information.html'},
-                {title:"如果在古代，你的中秋节可能是这样过的",date:'2019.09',day:'10',des:'又是眼巴巴等中秋节的一天。也是想家的一天中秋节 也叫“仲秋节”。又因有祈求团圆的相关节俗', href:'information.html'},
-                {title:"梦想天地2020业务研讨会",date:'2020.01',day:'15',des:'梦想天地2020业务研讨会2020年1月15日-16日 上海市杨浦区邯郸路399号A-01号内里百货', href:'information.html'}
             ];
 block css
     link(rel='stylesheet',href=cssUrl + 'news.css')
@@ -22,24 +20,28 @@ block append main
     #information
         .res_banner
             img.responsive(src=mimgUrl+"banner_bg.jpg", alt="")
-            p 企业资讯
+            p 媒体中心
         .container
             ul.nav
-                li.active #[a(href=viewUrl+'information.html') 所有]
-                li #[a(href='#') 公司新闻]
-                li #[a(href='#') 常见问题]
+                li
+                    a(href='#') 集团资讯
+                li.active
+                    i
+                    a(href=viewUrl+'information.html') 特色活动
             ul.newslist
                 each val, index in list
                     li(class=index%2==1?'mr0':'')
-                        .time
-                            .day #{val.day}
-                            .line
-                            .year #{val.date}
-                        .list
-                            a.title(href=viewUrl+val.href) #{val.title}
-                            .des.ellipsis-wrap
-                                .ellipsis #{val.des}
-                            a.more(href=viewUrl+val.href) #[i(class='icon')]查看详情
+                        a(href=viewUrl+val.href)
+                            img(src=`${mimgUrl}panel${index+1}.jpg`, alt="")
+                            .text
+                                .time
+                                    .day #{val.day}
+                                    .line
+                                    .year #{val.date}
+                                .list
+                                    h2.title #{val.title}
+                                    .des #{val.des}
+                                    a.more(href=viewUrl+val.href) #[i(class='icon')]查看详情
             .page_div
                 #page.page
 block append js

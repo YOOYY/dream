@@ -1,0 +1,66 @@
+@import './_config.scss';
+#introduction{
+    h1{
+        font-size: 36px;
+        text-align: center;
+        padding-bottom:12px;
+        background: no-repeat bottom center;
+        background-image: linear-gradient(to right, #ff9000 , #ff9000);
+        background-size: 50px 4px;
+        margin-top: 80px;
+    }
+    .container{
+        p{
+            text-align: center;
+            margin: 70px auto 126px auto;
+            width: 79.58%;
+            line-height: 36px;
+        }
+        .text-align-left{
+            text-align: left;
+        }
+    }
+    .top{
+        margin-top: 60px;
+        overflow: hidden;
+        img{
+            float: left;
+            width: 32.5%;
+            margin-left: 1.25%;
+        }
+        .first{
+            margin-left: 0;
+        }
+    }
+    
+    .bottom{
+        margin-top: 1.25%;
+        margin-bottom: 300px;
+        img{
+            width: 40.84%;
+        }
+        .first{
+            width: 57.91%;
+            margin-right: 1.25%;
+        }
+    }
+    .iconbox{
+        width: 100%;
+        margin-top: 125px;
+        overflow: hidden;
+        td{
+            // float: left;
+            // width: 33.2%;
+            text-align: center;
+            vertical-align:bottom;
+            border-right: 1px solid #e6e6e6;
+        }
+        // img{
+        //     max-width: 100%;
+        // }
+        .last{
+            border-right: 0;
+        }
+    }
+
+}

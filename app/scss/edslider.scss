@@ -4,6 +4,8 @@
 .edslider{
 	/*---slide show skin---*/
 	position:relative;
+	max-width: 1920px;
+    margin: 0 auto;
 	ul{
 		position:relative;
 	}
@@ -35,7 +37,7 @@
 		bottom: 48.5%;
 		position: absolute;
 		cursor:pointer;
-		background: rgba(0,0,0,0.3);
+		// background: rgba(0,0,0,0.3);
 		transition: background-color 0.2s;
 		z-index: 2;
 		img{
@@ -49,9 +51,9 @@
 	.prev{
 		left: 2%;
 	}
-	.next:hover,.prev:hover{
-		background-color: rgba(0,0,0,0.6);
-	}
+	// .next:hover,.prev:hover{
+	// 	background-color: rgba(0,0,0,0.6);
+	// }
 	.controls{
 		width: 100%; height: 0;
 		position:absolute;

@@ -1,16 +1,13 @@
 @charset "UTF-8";
-.fl {
-  float: left; }
-
 body {
   overflow-x: hidden; }
+
+body, h1, h2, dl, dd, p {
+  margin: 0; }
 
 ol, ul {
   list-style: none;
   padding: 0;
-  margin: 0; }
-
-body, h1, h2, dl, dd, p {
   margin: 0; }
 
 ul li {
@@ -24,16 +21,16 @@ a {
   color: #000;
   text-decoration: none; }
 
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: none; }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   font-family: '思源黑体',Arial, Helvetica,STXihei,"华文细黑", "Microsoft Yahei","微软雅黑", sans-serif;
   font-size: 18px; }
-
-table {
-  border-collapse: collapse;
-  table-layout: fixed;
-  border: none; }
 
 .clearfix:after, .container:after {
   content: '';
@@ -41,6 +38,12 @@ table {
   display: block;
   width: 0;
   height: 0; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
 
 .margintop {
   margin-top: 80px; }
@@ -71,41 +74,13 @@ table {
 
 .responsive {
   width: 100%;
+  max-width: 1920px;
   height: auto; }
 
 .singletext {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis; }
-
-.ellipsis-wrap {
-  overflow: hidden; }
-  .ellipsis-wrap .ellipsis {
-    float: right;
-    margin-left: -10px;
-    width: 100%;
-    word-break: break-all; }
-  .ellipsis-wrap:before {
-    content: '';
-    float: left;
-    width: 10px; }
-  .ellipsis-wrap:after {
-    float: right;
-    content: "...";
-    text-align: right;
-    color: #000;
-    background: #fff;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white 60%, white);
-    font-size: 18px;
-    line-height: 24px;
-    /* 为三个省略号的宽度 */
-    width: 3em;
-    /* 使盒子不占位置 */
-    margin-left: -3em;
-    /* 移动省略号位置 */
-    position: relative;
-    left: 97%;
-    padding-right: 10px; }
 
 .page_div {
   text-align: center;
@@ -147,12 +122,12 @@ table {
 
 #header .nav {
   float: right;
-  width: 70%;
+  width: 75%;
   height: 96px;
   line-height: 96px; }
   #header .nav li {
     float: left;
-    width: 16.66%;
+    width: 14%;
     text-align: center; }
     #header .nav li:hover .subnav {
       display: block; }
@@ -184,12 +159,19 @@ table {
   display: none; }
 
 #header .logo {
-  padding: 27px 0 0 20px;
+  padding: 27px 0 0 0;
   width: 108px; }
+
+.banner_container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto; }
 
 .res_banner {
   padding-top: 22%;
-  position: relative; }
+  position: relative;
+  margin: 0 auto;
+  max-width: 1920px; }
   .res_banner img {
     position: absolute;
     left: 0;
@@ -255,7 +237,17 @@ table {
   .erweibox img {
     width: 100%; }
 
+@media (max-width: 1260px) {
+  .container {
+    margin-left: 30px;
+    margin-right: 30px; } }
+
 /* 小屏幕（平板，大于等于 768px） */
+@media (max-width: 992px) and (max-width: 1260px) {
+  .container {
+    margin-left: 10px;
+    margin-right: 10px; } }
+
 @media (max-width: 992px) {
   #header li {
     font-size: 16px; }
@@ -318,3 +310,7 @@ table {
     line-height: 36px; }
   #nextPage img, #prePage img {
     margin-top: 12px; } }
+
+@media screen and (min-width: 1920px) {
+  .res_banner {
+    padding-top: 410px; } }

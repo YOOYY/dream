@@ -3,27 +3,14 @@
   background-color: #f8f8fa; }
   #information ul {
     overflow: hidden; }
-  #information .nav {
-    margin: 70px 0 65px 0; }
-    #information .nav li {
-      width: 160px;
-      height: 50px;
-      background-color: #fff;
-      border-radius: 25px;
-      margin-right: 50px;
-      text-align: center;
-      font-size: 26px;
-      line-height: 50px; }
-      #information .nav li:hover, #information .nav li.active {
-        background-color: #ff9000; }
-        #information .nav li:hover a, #information .nav li.active a {
-          color: #fff; }
+  #information .newslist a {
+    display: block; }
   #information .newslist li {
-    width: 41.15%;
-    margin: 0 2.5% 2% 0;
-    padding: 3.7% 3.8%;
+    width: 49.16%;
+    margin: 0 20px 20px 0;
+    border-radius: 10px;
     background-color: #fff;
-    box-shadow: 0px 5px 38px 0px rgba(0, 0, 0, 0.1); }
+    overflow: hidden; }
     #information .newslist li:hover .title, #information .newslist li .active .title {
       color: #ff9000; }
     #information .newslist li:hover .icon, #information .newslist li .active .icon {
@@ -31,9 +18,12 @@
       width: 34px;
       height: 12px;
       background: url("../imgs/news/more.png") no-repeat; }
+  #information .newslist .text {
+    margin-top: 36px;
+    margin-bottom: 24px;
+    overflow: hidden; }
   #information .newslist .time {
-    width: 18%;
-    padding: 10% 0;
+    padding: 8px 6.779% 0 6.779%;
     float: left; }
     #information .newslist .time .day {
       font-size: 36px;
@@ -46,30 +36,26 @@
     #information .newslist .time .year {
       font-size: 14px; }
   #information .newslist .list {
-    width: 76%;
-    float: right; }
-    #information .newslist .list .title {
+    width: 63.8%;
+    padding: 0 6.779%;
+    float: right;
+    border-left: 1px solid #ededed; }
+    #information .newslist .list .title, #information .newslist .list .des {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      display: block; }
+      font-weight: normal; }
+    #information .newslist .list .title {
+      font-size: 18px; }
     #information .newslist .list .des, #information .newslist .list .more {
       font-size: 16px;
       line-height: 26px;
       color: #666; }
-    #information .newslist .list .des {
-      height: 50px;
-      margin: 5.263% 0 11.842% 0; }
-      #information .newslist .list .des:after {
-        top: -33px;
-        height: 25px; }
-      #information .newslist .list .des:before {
-        height: 60px; }
     #information .newslist .list .more {
-      position: relative; }
+      position: relative;
+      margin: 20px 0 3px 0; }
     #information .newslist .list .icon {
       width: 0;
-      margin-right: 10px;
       transition: width 500ms; }
 
 #information_article h1, #information_article .time {
@@ -120,18 +106,18 @@
     #activity_article .nav a:hover, #information_article .nav a:hover {
       color: #ff9000; }
 
-#news .nav {
+#news .nav, #information .nav {
   overflow: hidden;
   padding: 70px 0; }
-  #news .nav li {
+  #news .nav li, #information .nav li {
     float: left;
     font-size: 26px;
     padding-right: 30px; }
-    #news .nav li:hover a, #news .nav li.active a {
+    #news .nav li:hover a, #news .nav li.active a, #information .nav li:hover a, #information .nav li.active a {
       color: #ff9000; }
-  #news .nav a {
+  #news .nav a, #information .nav a {
     color: #ccc; }
-  #news .nav i {
+  #news .nav i, #information .nav i {
     padding-right: 30px;
     float: left;
     border-left: 2px solid #999;
