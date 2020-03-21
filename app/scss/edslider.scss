@@ -5,7 +5,8 @@
 	/*---slide show skin---*/
 	position:relative;
 	max-width: 1920px;
-    margin: 0 auto;
+	margin: 0 auto;
+	overflow:hidden;
 	ul{
 		position:relative;
 	}
@@ -33,11 +34,10 @@
 	}
 	/*---controls---*/
 	.navigator{
-		width:3%;
-		bottom: 48.5%;
+		width:1.77083%;
+		bottom: 43%;
 		position: absolute;
 		cursor:pointer;
-		// background: rgba(0,0,0,0.3);
 		transition: background-color 0.2s;
 		z-index: 2;
 		img{
@@ -45,11 +45,11 @@
 		}
 	}
 	.next{
-		right: 2%;
+		right: 3.645%;
 	}
 
 	.prev{
-		left: 2%;
+		left: 3.645%;
 	}
 	// .next:hover,.prev:hover{
 	// 	background-color: rgba(0,0,0,0.6);

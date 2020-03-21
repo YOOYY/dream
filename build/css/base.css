@@ -29,7 +29,7 @@ table {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  font-family: '思源黑体',Arial, Helvetica,STXihei,"华文细黑", "Microsoft Yahei","微软雅黑", sans-serif;
+  font-family: "sourcehansanscn-regular",arial,"Microsoft Yahei", sans-serif;
   font-size: 18px; }
 
 .clearfix:after, .container:after {
@@ -126,8 +126,7 @@ table {
   height: 96px;
   line-height: 96px; }
   #header .nav li {
-    float: left;
-    width: 14%;
+    width: 14.28%;
     text-align: center; }
     #header .nav li:hover .subnav {
       display: block; }
@@ -237,18 +236,10 @@ table {
   .erweibox img {
     width: 100%; }
 
-@media (max-width: 1260px) {
-  .container {
-    margin-left: 30px;
-    margin-right: 30px; } }
-
 /* 小屏幕（平板，大于等于 768px） */
-@media (max-width: 992px) and (max-width: 1260px) {
-  .container {
-    margin-left: 10px;
-    margin-right: 10px; } }
-
 @media (max-width: 992px) {
+  #header .nav {
+    width: 77%; }
   #header li {
     font-size: 16px; }
   #header .logo {

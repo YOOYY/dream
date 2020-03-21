@@ -8,44 +8,13 @@ h1 {
   text-align: center;
   padding-top: 80px; }
 
-#lay {
-  margin: 0 auto;
-  width: 800%;
-  position: relative;
-  overflow: hidden; }
-  #lay #bannerlist {
-    position: relative;
-    width: 100%; }
-  #lay #bannerlist a {
-    float: left;
-    width: 12.5%;
-    position: relative; }
-    #lay #bannerlist a img {
-      width: 100%; }
-  #lay ul {
-    position: absolute;
-    bottom: 25px;
-    left: 5.4%;
-    z-index: 1002; }
-    #lay ul li {
-      display: block;
-      float: left;
-      cursor: pointer;
-      width: 16px;
-      height: 4px;
-      margin: 0 20px;
-      text-indent: -9999px;
-      background: #fff; }
-  #lay ul .active {
-    background-color: #f5a623; }
-
-#course a {
+#features a {
   display: block;
   position: relative; }
-  #course a:hover:after {
+  #features a:hover:after {
     content: none; }
 
-#course a:after {
+#features a:after {
   content: '';
   position: absolute;
   left: 0;
@@ -57,34 +26,24 @@ h1 {
   background: #000;
   opacity: 0.5; }
 
-#course .course_left {
+#features .features_left {
   width: 58.3%;
   float: left;
   margin-right: 1.25%; }
-  #course .course_left .row_2 {
+  #features .features_left .row_2 {
     width: 49%;
     float: left;
     margin: 2% 0; }
-  #course .course_left .first {
+  #features .features_left .first {
     margin-right: 2%; }
 
-#course .course_right {
+#features .features_right {
   float: right;
   width: 40.45%; }
-  #course .course_right .last {
+  #features .features_right .last {
     margin-top: 2.8%; }
 
-#course .course_bottom {
-  clear: both; }
-  #course .course_bottom a {
-    float: left; }
-  #course .course_bottom .col_1 {
-    width: 40.5%;
-    margin-right: 1.2%; }
-  #course .course_bottom .col_2 {
-    width: 58.3%; }
-
-#course img {
+#features img {
   width: 100%; }
 
 #newlist {
@@ -148,6 +107,11 @@ h1 {
       width: 23.684%; }
       #friendlink table .side img {
         width: 44.44%; }
+
+@media (max-width: 1200px) {
+  #features {
+    margin-left: 10px;
+    margin-right: 10px; } }
 
 /* 超小屏幕（手机，小于 768px） */
 @media screen and (max-width: 768px) {

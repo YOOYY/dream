@@ -3,6 +3,7 @@
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
+  overflow: hidden;
   /*---controls---*/ }
   .edslider ul {
     position: relative; }
@@ -22,8 +23,8 @@
   .edslider a {
     display: block; }
   .edslider .navigator {
-    width: 3%;
-    bottom: 48.5%;
+    width: 1.77083%;
+    bottom: 43%;
     position: absolute;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -31,9 +32,9 @@
     .edslider .navigator img {
       width: 100%; }
   .edslider .next {
-    right: 2%; }
+    right: 3.645%; }
   .edslider .prev {
-    left: 2%; }
+    left: 3.645%; }
   .edslider .controls {
     width: 100%;
     height: 0;

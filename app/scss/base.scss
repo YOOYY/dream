@@ -1,4 +1,5 @@
 @import './_config.scss';
+//-----------------------------
 body{
     overflow-x: hidden;
 }
@@ -32,11 +33,11 @@ table{
     table-layout:fixed;
     border: none;
 }
-
+//-----------------------------
 .container{
     max-width: 1200px;
     margin: 0 auto;
-    font-family: '思源黑体',Arial, Helvetica,STXihei,"华文细黑", "Microsoft Yahei","微软雅黑", sans-serif;
+    font-family: "sourcehansanscn-regular",arial,"Microsoft Yahei", sans-serif;
     font-size: 18px;
 }
 
@@ -91,7 +92,7 @@ table{
     white-space:nowrap;
     text-overflow: ellipsis;
 }
-
+//-----------------------------
 .page_div{
     text-align: center;
     padding-top: 90px;
@@ -142,8 +143,7 @@ table{
         height: 96px;
         line-height: 96px;
         li{
-            float: left;
-            width: 14%;
+            width: 14.28%;
             text-align: center;
             &:hover{
                 .subnav{
@@ -284,22 +284,13 @@ table{
         width: 100%;
     }
 }
-@media (max-width: 1260px) {
-    .container{
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-}
 
 /* 小屏幕（平板，大于等于 768px） */
 @media (max-width: 992px) {
-    @media (max-width: 1260px) {
-        .container{
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-    }
     #header{
+        .nav{
+            width: 77%;
+        }
         li{
             font-size: 16px;
         }
