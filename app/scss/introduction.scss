@@ -1,15 +1,16 @@
 @import './_config.scss';
 #introduction{
-    h1{
-        font-size: 36px;
-        text-align: center;
-        padding-bottom:12px;
-        background: no-repeat bottom center;
-        background-image: linear-gradient(to right, #ff9000 , #ff9000);
-        background-size: 50px 4px;
-        margin-top: 80px;
-    }
     .container{
+        padding-bottom: 300px;
+        h1{
+            font-size: 36px;
+            text-align: center;
+            padding-bottom:12px;
+            background: no-repeat bottom center;
+            background-image: linear-gradient(to right, #ff9000 , #ff9000);
+            background-size: 50px 4px;
+            margin-top: 80px;
+        }
         p{
             text-align: center;
             margin: 70px auto 126px auto;
@@ -35,7 +36,6 @@
     
     .bottom{
         margin-top: 1.25%;
-        margin-bottom: 300px;
         img{
             width: 40.84%;
         }
@@ -49,18 +49,49 @@
         margin-top: 125px;
         overflow: hidden;
         td{
-            // float: left;
-            // width: 33.2%;
             text-align: center;
             vertical-align:bottom;
             border-right: 1px solid #e6e6e6;
         }
-        // img{
-        //     max-width: 100%;
-        // }
         .last{
             border-right: 0;
         }
     }
 
+}
+
+@media (max-width: 1200px) {
+    #introduction{
+        .container{
+            padding-bottom: 100px;
+            h1{
+                font-size: 30px;
+                margin-top: 60px;
+            }
+            p{
+                margin: 40px auto 70px auto;
+            }
+            .iconbox{
+                margin-top: 70px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    #introduction{
+        .container{
+            padding-bottom: 80px;
+            h1{
+                font-size: 28px;
+                margin-top: 40px;
+            }
+            p{
+                margin: 35px auto 60px auto;
+            }
+            .iconbox{
+                margin-top: 60px;
+            }
+        }
+    }
 }

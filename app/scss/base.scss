@@ -33,6 +33,10 @@ table{
     table-layout:fixed;
     border: none;
 }
+button{
+    border: none;
+    background: none;
+}
 //-----------------------------
 .container{
     max-width: 1200px;
@@ -48,45 +52,33 @@ table{
     width: 0;
     height: 0;
 }
+
 .fl{
     float: left;
 }
+
 .fr{
     float: right;
 }
+
 .margintop{
     margin-top: 80px;
 }
 
-.marginleft20{
-    margin-left: 20%;
-}
-.bordertop0{
-    border-top: none!important;
-}
-.paddingbottom0{
-    padding-bottom: 0!important;
-}
-.margintop0{
-    margin-top: 0!important;
-}
-.paddingtop0{
-    padding-top: 0!important;
-}
 .mr0{
     margin-right: 0!important;
 }
-.ml0{
-    margin-left: 0!important;
-}
+
 .clear{
     clear: both;
 }
+
 .responsive {
     width: 100%;
     max-width: 1920px;
 	height: auto;
 }
+
 .singletext{
     overflow: hidden;
     white-space:nowrap;
@@ -137,6 +129,7 @@ table{
 }
 
 #header{
+    background: #fff;
     .nav{
         float: right;
         width: 75%;
@@ -163,7 +156,8 @@ table{
         position: absolute;
         width: 100%;
         top: 78px;
-        z-index: 3;
+        left: 0;
+        z-index: 10;
         border-radius: 10px;
         background-color: #fff;
         display: none;
@@ -269,11 +263,17 @@ table{
             color: #fff;
         }
     }
+    .marginleft20{
+        margin-left: 20%;
+    }
+    .beian{
+        margin-left: 20px;
+    }
 }
 
 .erweibox{
     float: left;
-    width: 40%;
+    width: 39%;
     p{
         font-size: 14px;
         color: #fff;
@@ -347,10 +347,14 @@ table{
             cursor: pointer;
             .subnav{
                 width: 150px;
-                top: 40px;right: 30px;
+                top: 40px;right: 30px;left: auto;
                 background-color: rgba($color: #fff, $alpha: 0.7);
+                position: absolute;
                 li{
                     font-size: 14px;
+                }
+                .active{
+                    color: #f9b882;
                 }
             }
         }

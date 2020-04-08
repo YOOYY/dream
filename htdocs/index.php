@@ -1,0 +1,78 @@
+<?php
+
+/* 定义常量,每个系统都必须有这4个常量 */
+define('APPLICATION_ROOT_PATH', dirname(dirname(__FILE__)) . '/application/');
+define('SITEDATA_ROOT_PATH', dirname(dirname(__FILE__)) . '/sitedata/');
+define('HTDOCS_ROOT_PATH', dirname(dirname(__FILE__)) . '/htdocs/');
+define('SHARE_ROOT_PATH', dirname(dirname(dirname(__FILE__))) . '/sharefor52y/');
+define('WHO_AM_I', 'py');
+//if (strstr($_SERVER['HTTP_REFERER'], "baidu") || strstr($_SERVER['HTTP_REFERER'], "so") || strstr($_SERVER['HTTP_REFERER'], "sogou") || strstr($_SERVER['HTTP_REFERER'], "google")) {
+//    Header("Location:http://www.578w.com");
+//}
+require_once 'Zend/Controller/Front.php';
+require_once 'Zend/Registry.php';
+require_once 'Zend/Translate.php';
+require_once 'Zend/Db.php';
+require_once APPLICATION_ROOT_PATH . 'controllers/Front_Controller_Action.php';
+//帮助函数
+// require_once SHARE_ROOT_PATH . 'models/Util.php';
+//错误处理
+require_once APPLICATION_ROOT_PATH . 'controllers/ErrorController.php';
+
+//配置信息
+require_once APPLICATION_ROOT_PATH . 'configs/application.php';
+require_once APPLICATION_ROOT_PATH . 'configs/dbmm.php';
+$config = array_merge($dbmm, $application_config);
+//unset($dbmm, $application_config);
+//$config = $application_config;
+////数据库
+$dbParams = array('host' => $config['db']['host'],
+    'username' => $config['db']['username'],
+    'password' => $config['db']['password'],
+    'dbname' => $config['db']['dbname'],
+    'port' => $config['db']['port'],
+);
+$db = Zend_Db::factory($config['db']['type'], $dbParams);
+$db->query("set names 'utf8'");
+
+$adapter = new Zend_Translate('array', APPLICATION_ROOT_PATH . '/languages/zh.php', 'zh');
+$adapter->addTranslation(APPLICATION_ROOT_PATH . '/languages/en.php','en');
+Zend_Registry::set('Zend_Translate', $adapter);
+
+Zend_Registry::set('db', $db);
+//Zend_Registry::set('mm', $mm);
+Zend_Registry::set('config', $config);
+
+
+//front controller
+$fc = Zend_Controller_Front::getInstance(); //front controller
+$fc->setControllerDirectory(APPLICATION_ROOT_PATH . 'controllers/');
+$router = $fc->getRouter();
+//自定义路由
+//$router->addRoute('notice', new Zend_Controller_Router_Route('notice/:show', array(
+//    'controller' => 'index',
+//    'action' => 'notice'
+//        )
+//        )
+//);
+//不同开发模式的PHP环境设置
+switch ($config['system_run_level']) {
+    case 'develop'://开发环境
+        error_reporting(E_ALL);
+        ini_set('display_errors', 'on');
+        $fc->throwExceptions(true);
+        break;
+
+    case 'product'://生产环境
+    default:
+        error_reporting(E_ALL & ~E_NOTICE);
+        ini_set('display_errors', 'off');
+        $fc->throwExceptions(false);
+        set_exception_handler("ErrorController::showException"); //未被ZF捕获的异常处理
+        break;
+}
+
+$fc->dispatch();
+//
+$db->closeConnection();
+//$mm->close();

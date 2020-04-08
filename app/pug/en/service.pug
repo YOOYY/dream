@@ -1,0 +1,67 @@
+extends ./share/container.pug
+block config
+    - var title = 'Main business';
+    - var keywords = 'Main business';
+    - var description = 'Main business';
+    - var currentId = 'service';
+    - var mimgUrl = imgUrl+'service/';
+block css
+    link(rel='stylesheet',href=cssUrl + 'service_en.css')
+block append main
+    #service
+        .banner_container
+            img.responsive(src=mimgUrl+"banner1.jpg", alt="")
+        .navbar
+            ul.nav
+                li.first Development, operation and management of innovative complex
+                li Operation and aggregation of education brands and culture organizations
+                li.last Extended services
+        .container
+            .content
+                p Dream Community originated from the cross-border combination of business, education and culture. Based on the deep insight into the integrated and innovative industry development, with the purpose of satisfying the people's pursuit and yearning for a better life, through the way of aggregation, innovation and sharing; it has built and operated the innovative complex, becoming a cultural and commercial brand favored by the domestic government and commercial complex.
+                img.pic(src=mimgUrl+"pic1.png", alt="")
+            .content
+                p Through the innovation and practice of various business models such as adult education anchor store, youth learning and growth center, and scholars’ library, Dream Community provides high-level services such as brand selection, traffic attraction, marketing promotion, etc., and becomes a leading brand aggregation operator in the market.
+                img.pic(src=mimgUrl+"pic2.png", alt="")
+            div
+                .item.item1.margintop
+                    img(src=mimgUrl+"pic3.png", alt="")
+                    .panel
+                        h3.title Food and Beverage
+                        p.des A modern concept library space full of cultural atmosphere, with exquisite food and beverage, it is dedicated to creating an interesting and informative place for urban people's leisure, experience and information exchange.
+                        .line
+                .item.item2
+                    .panel
+                        h3.title Retail
+                        p.des Based on rich educational products and cultural and creative products, combined with the Internet and offline experience, we will upgrade the production, circulation and sales process of commodities, and then reshape the business structure and ecosystem to create a new retail mode of integration.
+                        .line
+                    img(src=mimgUrl+"pic4.png", alt="")
+                .item.item1
+                    img(src=mimgUrl+"pic5.png", alt="")
+                    .panel
+                        h3.title Business services
+                        p.des Provide business information consultation, marketing planning, cultural exchange activities, conference and exhibition activities, operation and management support, information and advertisement release and other related business services for the entered merchants.
+                        .line
+                .item.item2
+                    .panel
+                        h3.title Member services
+                        p.des Dream Community will provide member services for its strategic partners and large-scale enterprises, becoming its VIP Member Service Center, providing services such as credit redeem, activity arrangement, course customization, and become an important place of advanced life, learning and growing, social and leisure for VIP members and their relatives.
+                        .line
+                    img(src=mimgUrl+"pic6.png", alt="")
+                .item.item1
+                    img(src=mimgUrl+"pic7.png", alt="")
+                    .panel
+                        h3.title Public charity
+                        p.des Dream Community aims to improve the spiritual temperament of civil society, meanwhile, we will actively participate in public charity. We will work with well-known public charity institutions in China to bring forth new ideas and become an innovation window and gathering place for urban public charity.
+                        .line
+block append js
+    script.
+        $(function(){
+            $('#service .nav li').click(function(){
+                var index = $(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+                $('#service .container>div').eq(index).show().siblings().hide();
+                $('#service .responsive').attr('src',"#{mimgUrl}banner"+ (index+1) +".jpg");
+            })
+            $('#service .nav li').eq(0).click();
+        })

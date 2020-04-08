@@ -123,7 +123,7 @@
 			//Functions (init, play, next, prev, pause, resume)
 			var timeLeft = options.interval, current, index, paused;
 
-			function init(){				
+			function init(){
 				progressResize();
 				sliderLi.length > 1 ? play() : sliderLi.fadeIn(options.duration);
 			}
@@ -246,7 +246,6 @@
 				$.each(totalImgsUrl, function(value){
 					$('<img/>')
 						.hide()
-						.attr('src', totalImgsUrl[value])
 						.on('load', function(){
 							if(++preloadedImgs == totalImgsUrl.length){
 								slider.css('background-image', 'none');
@@ -258,7 +257,8 @@
 									'background-position': 'center'
 								});
 							}
-						});
+						})
+						.attr('src', totalImgsUrl[value]);
 				});
 			} else {
 				init();

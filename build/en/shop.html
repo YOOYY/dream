@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="english" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>Dream Community线下店铺</title>
+    <meta name="keywords" content="Dream Community线下店铺">
+    <meta name="description" content="Dream Community线下店铺">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="../imgs/favicon.ico">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/shop.css"><!--[if lte IE 8]>
+    <link rel="stylesheet" href="../css/iehack.css"><![endif]-->
+    <script src="../js/respond.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container"><a class="fl logo" href="./index.html"><img class="responsive" src="../imgs/logo.png"></a>
+        <ul class="nav">
+          <li><a href="./index.html">Home</a>
+          </li>
+          <li>
+            <div>Introduction
+              <ul class="subnav">
+                <li><a href="./introduction.html#vision">vision</a></li>
+                <li><a href="./introduction.html#belief">philosophy</a></li>
+                <li><a href="./introduction.html#history">history</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="./service.html">Business</a>
+          </li>
+          <li>
+            <div>Brands
+              <ul class="subnav">
+                <li><a href="./brand.html?index=edu">EDUMALL</a></li>
+                <li><a href="./brand.html?index=dream">Dream I Lab</a></li>
+                <li><a href="./brand.html?index=library">The Library</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a class="active" href="./shop.html">Territory</a>
+          </li>
+          <li>
+            <div>Media
+              <ul class="subnav">
+                <li><a href="./news.html">Information</a></li>
+                <li><a href="./activity.html">Activities</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="./joinus.html">ContactUs</a>
+          </li>
+        </ul>
+        <div class="phone-nav"><img src="../imgs/phone_nav.png" alt="">
+          <ul class="subnav">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./introduction.html">Introduction</a></li>
+            <li><a href="./service.html">Business</a></li>
+            <li><a href="./brand.html">Brands</a></li>
+            <li><a href="./shop.html">Territory</a></li>
+            <li><a href="./news.html">Media</a></li>
+            <li><a href="./joinus.html">ContactUs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="shop">
+      <div class="banner_container"><img class="responsive banner" src="../imgs/shop/banner1.jpg" alt=""></div>
+      <div class="container">
+        <div class="navbar"><a href="./shoppage1.html"><img src="../imgs/shop/nav1.png" alt=""></a><a href="./shoppage2.html"><img src="../imgs/shop/nav2.png" alt=""></a><a href="./shoppage3.html"><img src="../imgs/shop/nav3.png" alt=""></a><a href="./shoppage4.html"><img class="last" src="../imgs/shop/nav4.png" alt=""></a></div>
+        <div class="map"><img class="responsive" src="../imgs/shop/map.png" alt=""><img class="icon1 icon" src="../imgs/shop/tip1_en.png" alt=""><img class="icon2 icon" src="../imgs/shop/tip2_en.png" alt=""><img class="icon3 icon" src="../imgs/shop/tip3_en.png" alt=""><img class="icon4 icon" src="../imgs/shop/tip4_en.png" alt="">
+          <h2 class="tips double">Address: 6th floor, Raffles City, No. 228 Xinye Road, Sijiqing Street, Jianggan District, Hangzhou<br>tel:0571-85022988</h2>
+          <h2 class="tips">Address: Guangling Public Cultural Center, No. 9 Wenchang East Road, Guangling District, Yangzhou</h2>
+          <h2 class="tips double">Address: No. 86 Renmin Middle Road, Liangxi District, Wuxi City<br>tel:0510-82827700</h2>
+          <h2 class="tips">Address: 1-1, No.501 Dazha South Road, Jiangbei District, Ningbo</h2>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <div class="cover">
+          <div class="link">
+            <dl>
+              <dt>about us</dt>
+              <dd><a href="#">Group Introduction</a></dd>
+              <dd><a href="#">contact details</a></dd>
+              <dd><a href="#">news</a></dd>
+            </dl>
+            <dl>
+              <dt>Notice to users</dt>
+              <dd><a href="#">Legal Notices</a></dd>
+              <dd><a href="#">Terms of Service</a></dd>
+              <dd><a href="#">Privacy statement</a></dd>
+            </dl>
+            <dl class="phone">
+              <dt>Customer Hotline</dt>
+              <dd>021-86802380</dd>
+            </dl>
+          </div>
+          <div class="code">
+            <div class="erweibox"><img src="../imgs/code.jpg" alt="">
+              <p>Official WeChat public account</p>
+            </div>
+            <div class="erweibox marginleft20"><img src="../imgs/code.jpg" alt="">
+              <p>Official WeChat Mini Program</p>
+            </div>
+          </div>
+        </div>
+        <p class="tips"> <a href="#" target="_blank">Website registration / license number：沪ICP备18024039号-1</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a class="beian" href="#" target="_blank"><img src="../imgs/beian.png">Shanghai Public Network Security</a></p>
+      </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/base.js"></script>
+    <script>
+      $(function(){
+          $('.icon').click(function(){
+              var index = $(this).index()-1;
+              animate(index,this);
+          })
+          $('.navbar img').mouseenter(function(){
+              var index = $(this).parent().index();
+              animate(index,this);
+          })
+          $('#shop .navbar img').eq(0).mouseenter();
+          
+          function animate(index,_that){
+              var imgIndex = index+1;
+      
+              $('#shop .banner').attr('src',"../imgs/shop/banner"+ imgIndex +".jpg");
+              $('.navbar img').removeClass('active');
+              $(_that).addClass('active');
+              $('.map .icon').removeClass('active');
+              $('.map .icon').each(function(i,item){
+                  var imgSrc = $(this).attr('src');
+                  if(index === i){
+                      $(this).addClass('active');
+                      imgSrc = imgSrc.replace('tip'+ imgIndex +'.png','tip'+ imgIndex +'_active.png');
+                  }else{
+                      imgSrc = imgSrc.replace('tip'+ (i+1) +'_active.png','tip'+ (i+1) +'.png');
+                  }
+                  $(this).attr('src',imgSrc);
+              })
+      
+      
+              $('#shop .tips').hide();
+              $('#shop .tips').eq(index).show();
+          }
+      })
+    </script>
+  </body>
+</html>

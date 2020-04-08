@@ -1,0 +1,66 @@
+{
+    "imgUrl":"../imgs/",
+    "cssUrl":"../css/",
+    "jsUrl":"../js/",
+    "cnTitle":"Dream Community",
+    "viewUrl":"./",
+    "lang":"en",
+    "header":{
+        "nav":[
+            {
+                "href":"index.html",
+                "pageId":"index",
+                "text":"Home"
+            },
+            {
+                "href":"introduction.html",
+                "pageId":"introduction",
+                "text":"Introduction",
+                "subnav":[
+                    {"text":"vision","href":"introduction.html#vision"},
+                    {"text":"philosophy","href":"introduction.html#belief"},
+                    {"text":"history","href":"introduction.html#history"}
+                ]
+            },
+            {
+                "href":"service.html",
+                "pageId":"service",
+                "text":"Business"
+            },
+            {
+                "href":"brand.html",
+                "pageId":"brand",
+                "text":"Brands",
+                "subnav":[
+                    {"text":"EDUMALL","href":"brand.html?index=edu"},
+                    {"text":"Dream I Lab","href":"brand.html?index=dream"},
+                    {"text":"The Library","href":"brand.html?index=library"}
+                ]
+            },
+            {
+                "href":"shop.html",
+                "pageId":"shop",
+                "text":"Territory"
+            },
+            {
+                "href":"news.html",
+                "pageId":"news",
+                "text":"Media",
+                "subnav":[
+                    {"text":"Information","href":"news.html"},
+                    {"text":"Activities","href":"activity.html"}
+                ]
+            },
+            {
+                "href":"joinus.html",
+                "pageId":"joinus",
+                "text":"ContactUs"
+            }
+        ],
+        "logo":{
+            "href":"index.html",
+            "img":"logo.png",
+            "alt":"logo"
+        }
+    }
+}

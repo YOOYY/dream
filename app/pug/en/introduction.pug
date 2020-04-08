@@ -1,0 +1,36 @@
+extends ./share/container.pug
+block config
+    - var title = 'Group Introduction';
+    - var keywords = 'Group Introduction';
+    - var description = 'Group Introduction';
+    - var currentId = 'introduction';
+    - var mimgUrl = imgUrl+'introduction/';
+block css
+    link(rel='stylesheet',href=cssUrl + 'introduction.css')
+block append main
+    #introduction
+        .res_banner
+            img.responsive(src=mimgUrl+"bg.jpg", alt="")
+            p New landmark of the city's culture!
+        .container
+            h1#vision Group vision
+            p Dream Community aims to improve the spiritual temperament of civil society and strives to become the most important future learning center, advanced living place and new cultural landmark of each city.
+            h1#belief Business philosophy
+            table.iconbox
+                tr
+                    td
+                        img(src=mimgUrl+"icon1_en.png", alt="")
+                    td
+                        img(src=mimgUrl+"icon2_en.png", alt="")
+                    td.last
+                        img(src=mimgUrl+"icon3_en.png", alt="")
+            h1#history Development history
+            p.text-align-left As a leading innovation complex operator and service provider of aggregated education brands and culture organizations, Dream Community is welcomed and favored by many first-class commercial real estate developers in China, such as CapitaLand, Jinmao, Yanlord, etc., and is rapidly expanded in the downtown or high-end shopping center of the first and second tier cities such as: Shanghai, Hangzhou, Ningbo, Yangzhou, Wuxi, etc.
+            h1 Company environment
+            div.top
+                img.first(src=mimgUrl+"show1.jpg", alt="")
+                img(src=mimgUrl+"show2.jpg", alt="")
+                img(src=mimgUrl+"show3.jpg", alt="")
+            div.bottom
+                img.first(src=mimgUrl+"show4.jpg", alt="")
+                img(src=mimgUrl+"show5.jpg", alt="")

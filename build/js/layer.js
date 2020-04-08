@@ -34,14 +34,12 @@ $(function() {
 
         for(var i=0;i<5;i++){
             
-            var oImg = aLi(i).children().children('img'),item = arr[i];
+            var item = arr[i];
                 
                 aLi(i).css('zIndex',item[3]);
                 
-                aLi(i).finish().animate({left : item[0] , top : item[1] , opacity : item[2] });
-                
-                oImg.finish().animate({ width : item[4] } );
-                
+                aLi(i).finish().animate({left : item[0] , top : item[1] , opacity : item[2] ,width : item[4] });
+                                
             }
     }
 

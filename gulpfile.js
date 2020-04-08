@@ -13,23 +13,23 @@ var gulp = require("gulp"),
     sass = require('gulp-sass'),
     mock = require('./mock.js'),
     ts = require('gulp-typescript'),
+    lang = "en",
 
     rootPath = 'app',
 
     imgPath = "./" + rootPath + "/imgs",
     scssPath = "./" + rootPath + "/scss",
-    htmlPath = "./" + rootPath + "/pug",
+    htmlPath = "./" + rootPath + "/pug/" + lang,
     jsPath = "./" + rootPath + "/js",
 
     // condition = (process.argv[2] === 'build' ? true : false),
     // outPath = (condition === true ? "build" : "debug"),
     outPath = "build",
     condition = false,
-
     htmllint = require("gulp-htmllint"),
     fancyLog = require('fancy-log'),
     colors = require('ansi-colors'),
-    outhtmlPath = outPath + "/",
+    outhtmlPath = outPath + "/" + lang,
     outcssPath = outPath + "/css",
     outjsPath = outPath + "/js",
     outImgPath = outPath + "/imgs";
@@ -110,7 +110,7 @@ gulp.task('server', function () {
     browserSync({
         server: {
             baseDir: './'+ outPath +'/',
-            directory: false,
+            directory: true,
             index: ["index.html"],
             tunnel: true,
             middleware: mock.data()

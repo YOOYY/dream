@@ -1,0 +1,69 @@
+extends ./share/container.pug
+block config
+    - var title = '线下店铺';
+    - var keywords = '线下店铺';
+    - var description = '线下店铺';
+    - var currentId = 'shop';
+    - var mimgUrl = imgUrl+'shop/';
+block css
+    link(rel='stylesheet',href=cssUrl + 'shop.css')
+block append main
+    #shop
+        .banner_container
+            img.responsive.banner(src=mimgUrl+"banner1.jpg", alt="")
+        .container
+            .navbar
+                a(href=viewUrl+'shoppage1.html')
+                    img(src=mimgUrl+"nav1.png", alt="")
+                a(href=viewUrl+'shoppage2.html')
+                    img(src=mimgUrl+"nav2.png", alt="")
+                a(href=viewUrl+'shoppage3.html')
+                    img(src=mimgUrl+"nav3.png", alt="")
+                a(href=viewUrl+'shoppage4.html')
+                    img.last(src=mimgUrl+"nav4.png", alt="")
+            .map
+                img.responsive(src=mimgUrl+"map.png", alt="")
+                img.icon1.icon(src=mimgUrl+"tip1_en.png", alt="")
+                img.icon2.icon(src=mimgUrl+"tip2_en.png", alt="")
+                img.icon3.icon(src=mimgUrl+"tip3_en.png", alt="")
+                img.icon4.icon(src=mimgUrl+"tip4_en.png", alt="")
+                h2.tips.double Address: 6th floor, Raffles City, No. 228 Xinye Road, Sijiqing Street, Jianggan District, Hangzhou#[br]tel:0571-85022988
+                h2.tips Address: Guangling Public Cultural Center, No. 9 Wenchang East Road, Guangling District, Yangzhou
+                h2.tips.double Address: No. 86 Renmin Middle Road, Liangxi District, Wuxi City#[br]tel:0510-82827700
+                h2.tips Address: 1-1, No.501 Dazha South Road, Jiangbei District, Ningbo
+block append js
+    script.
+        $(function(){
+            $('.icon').click(function(){
+                var index = $(this).index()-1;
+                animate(index,this);
+            })
+            $('.navbar img').mouseenter(function(){
+                var index = $(this).parent().index();
+                animate(index,this);
+            })
+            $('#shop .navbar img').eq(0).mouseenter();
+            
+            function animate(index,_that){
+                var imgIndex = index+1;
+
+                $('#shop .banner').attr('src',"#{mimgUrl}banner"+ imgIndex +".jpg");
+                $('.navbar img').removeClass('active');
+                $(_that).addClass('active');
+                $('.map .icon').removeClass('active');
+                $('.map .icon').each(function(i,item){
+                    var imgSrc = $(this).attr('src');
+                    if(index === i){
+                        $(this).addClass('active');
+                        imgSrc = imgSrc.replace('tip'+ imgIndex +'.png','tip'+ imgIndex +'_active.png');
+                    }else{
+                        imgSrc = imgSrc.replace('tip'+ (i+1) +'_active.png','tip'+ (i+1) +'.png');
+                    }
+                    $(this).attr('src',imgSrc);
+                })
+
+
+                $('#shop .tips').hide();
+                $('#shop .tips').eq(index).show();
+            }
+        })

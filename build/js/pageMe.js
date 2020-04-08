@@ -1,4 +1,4 @@
-;(function ($, window, document, undefined) {
+;(function ($,imgUrl) {
     'use strict';
     function Paging(element, options) {
         this.element = element;
@@ -22,7 +22,7 @@
             var pageNum = me.options.pageNum;
             var totalNum = me.options.totalNum;
             var totalList = me.options.totalList;
-            content.push("<button type='button' id='prePage'><img src='./imgs/page_prev.png'></button>");
+            content.push("<button type='button' id='prePage'><img src='"+imgUrl+"page_prev.png'></button>");
             // content.push("<button type='button' id='firstPage'>首页</button><button type='button' id='prePage'>上一页</button>");
             // 总页数大于6必显示省略号
             if (totalNum > 6) {
@@ -73,7 +73,7 @@
                     }
                 }
             }
-            content.push("<button type='button' id='nextPage'><img src='./imgs/page_next.png'></button>");
+            content.push("<button type='button' id='nextPage'><img src='"+imgUrl+"page_next.png'></button>");
             // content.push("<button type='button' id='lastPage'>尾页</button><button type='button' id='nextPage'>下一页</button>");
             // content.push("<span class='totalNum'> 共 " + totalNum + " 页 </span>");
             // content.push("<span class='totalList'> 共 " + totalList + " 条记录 </span>");
@@ -133,4 +133,4 @@
     $.fn.paging = function (options) {
         return new Paging($(this), options);
     }
-})(jQuery, window, document);
+})(jQuery,imgUrl);

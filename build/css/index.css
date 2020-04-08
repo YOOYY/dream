@@ -10,36 +10,48 @@ h1 {
 
 #features a {
   display: block;
-  position: relative; }
-  #features a:hover:after {
-    content: none; }
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden; }
+  #features a:hover .text {
+    background: none; }
 
-#features a:after {
-  content: '';
+#features .text {
   position: absolute;
-  left: 0;
   top: 0;
   bottom: 0;
+  left: 0;
   right: 0;
-  border-radius: 10px;
-  z-index: 1;
-  background: #000;
-  opacity: 0.5; }
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); }
+  #features .text h6 {
+    font-size: 30px;
+    margin-top: 20%;
+    margin-bottom: 14px;
+    font-weight: normal; }
+  #features .text p {
+    font-size: 16px; }
 
 #features .features_left {
   width: 58.3%;
   float: left;
-  margin-right: 1.25%; }
+  margin-right: 1.25%;
+  position: relative; }
   #features .features_left .row_2 {
     width: 49%;
     float: left;
     margin: 2% 0; }
+    #features .features_left .row_2 h6 {
+      margin-top: 30%; }
   #features .features_left .first {
     margin-right: 2%; }
 
 #features .features_right {
   float: right;
   width: 40.45%; }
+  #features .features_right h6 {
+    margin-top: 24%; }
   #features .features_right .last {
     margin-top: 2.8%; }
 
@@ -111,7 +123,11 @@ h1 {
 @media (max-width: 1200px) {
   #features {
     margin-left: 10px;
-    margin-right: 10px; } }
+    margin-right: 10px; }
+  #features .text h6 {
+    font-size: 24px; }
+  #features .text p {
+    font-size: 14px; } }
 
 /* 超小屏幕（手机，小于 768px） */
 @media screen and (max-width: 768px) {
@@ -120,5 +136,11 @@ h1 {
   h1 {
     font-size: 24px;
     padding-top: 40px; }
-  #lay ul {
-    left: 2.5% !important; } }
+  #features .text h6 {
+    font-size: 14px;
+    margin-top: 16%;
+    margin-bottom: 5px; }
+  #features .text p {
+    font-size: 10px; }
+  #features .features_left .row_2 h6 {
+    margin-top: 10%; } }

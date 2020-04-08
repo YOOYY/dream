@@ -1,0 +1,80 @@
+extends ./share/container.pug
+block config
+    - var title = 'Anchor store brands';
+    - var keywords = 'Anchor store brands';
+    - var description = 'Anchor store brands';
+    - var currentId = 'brand';
+    - var mimgUrl = imgUrl+'brand/';
+block css
+    link(rel='stylesheet',href=cssUrl + 'brand.css')
+block append main
+    #brand
+        .banner_container
+            img.responsive(src=mimgUrl+"banner1.jpg", alt="")
+        .navbar
+            ul.nav
+                li EDUMALL
+                li Dream I Lab
+                li The Library
+        .container.margintop
+            div#edu
+                h1 EDUMALL Introduction
+                p The library is a new concept library integrating learning, social interaction and sharing, a social platform integrating online and physical stores, and a cultural consumption and experience center led by spiritual exchange and knowledge sharing.
+                p Different from the traditional library, the library constructs a spiritual home of urban scholars (including local residents and cadastral scholars) through multiple-channel participation. It has evolved into an open learning exchange center from a reading, book retrieval and borrowing place.
+                h1.margintop120 Environmental atmosphere
+                div.top
+                    img.first(src=mimgUrl+"pic1.jpg", alt="")
+                    img(src=mimgUrl+"pic2.jpg", alt="")
+                    img(src=mimgUrl+"pic3.jpg", alt="")
+                div.bottom
+                    img.first(src=mimgUrl+"pic4.jpg", alt="")
+                    img.w57(src=mimgUrl+"pic5.jpg", alt="")
+            div#dream
+                h1 Dream I Lab Introduction
+                p Dreamilab is one of the anchor stores of children's education brand under Dream Community. It is a one-stop education anchor store for children with the core of general and quality education.
+                p Dreamilab refers to the classic modern business model of department store, focuses on traffic attraction for education projects, endorsing their service quality and reputation, cross-border transformation of the distribution pattern of education products, realizes the integration of all categories and multi brands of children's training. At the same time, with the overall improvement of the taste and experience of education places, integrates the supporting service, and creates a healthy, happy, excellent future learning center for children.
+                h1.margintop120 Environmental atmosphere
+                div.top
+                    img.first(src=mimgUrl+"pic6.jpg", alt="")
+                    img(src=mimgUrl+"pic7.jpg", alt="")
+                    img(src=mimgUrl+"pic8.jpg", alt="")
+                div.bottom
+                    img.first.w57(src=mimgUrl+"pic9.jpg", alt="")
+                    img(src=mimgUrl+"pic10.jpg", alt="")
+            div#library
+                h1 The Library Introduction
+                p EDUMALL is the anchor store of adult education and culture brand under Dream Community. It is a high-end collection store for adults with the core of cultural and spiritual consumption and advanced life experience.
+                p With a cultural and artistic atmosphere, EDUMALL aggregates rich content resources in a highly scenarized and shared teaching space, creatively integrates education, cultural creation, aesthetics, sports, science and technology, supporting services and many other fields, bringing people more ideas and possibilities about the needs of "a better life", in a mode of integration, innovation and sharing to build an innovative future learning center.
+                h1.margintop120 Environmental atmosphere
+                div.top
+                    img.first(src=mimgUrl+"pic11.jpg", alt="")
+                    img(src=mimgUrl+"pic12.jpg", alt="")
+                    img(src=mimgUrl+"pic13.jpg", alt="")
+                div.bottom
+                    img.first.w57(src=mimgUrl+"pic14.jpg", alt="")
+                    img(src=mimgUrl+"pic15.jpg", alt="")
+block append js
+    script.
+        $(function(){
+            $('#brand .nav li').click(function(){
+                var index = $(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+                $('#brand .container>div').eq(index).show().siblings().hide();
+                $('#brand .responsive').attr('src',"#{mimgUrl}banner"+ (index+1) +".jpg");
+            })
+            var index = GetQueryString("index");
+            switch(index){
+                case "edu":
+                    index = 0;
+                    break;
+                case "dream":
+                    index = 1;
+                    break;
+                case "library":
+                    index = 2;
+                    break;
+                default:
+                    index = 0;
+            }
+            $('#brand .nav li').eq(index).click();
+        })

@@ -1,3 +1,4 @@
+var iImgUrl = imgUrl+'index/';
 $(function(){
     $('#mySlide').edslider({
         width: '100%',
