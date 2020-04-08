@@ -94,14 +94,12 @@ class Admin{
         $msg = '';
         $tmp_name = $_FILES['multfile']['tmp_name'];
         if (!empty($filetype) && !in_array($_FILES['multfile']['type'],$filetype)) {
-            $msg .= '文件类型错误，请检查!/n';
-            continue;
+            $msg .= '文件类型错误，请检查!';
         }
         if ($msg == '') {
             $pathinfo = $path . $filename .$ext;
             if (!move_uploaded_file($tmp_name, $pathinfo)) {
-                $msg = '上次失败，请重试';
-                break;
+                $msg = '上传失败，请重试';
             }
         }
         if ($msg != '') {

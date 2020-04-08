@@ -51,9 +51,9 @@
             <a href="<?php echo $this->baseUrl; ?>brand" <?php echo $this->controllername == 'brand'?'class="active"':''; ?>>
             <?php echo $this->translate->_("headerBrand");?></a>
               <ul class="subnav">
-                <li><a href="<?php echo $this->baseUrl; ?>brand?index=edu">EDUMALL</a></li>
-                <li><a href="<?php echo $this->baseUrl; ?>brand?index=dream">Dream I Lab</a></li>
                 <li><a href="<?php echo $this->baseUrl; ?>brand?index=library">The Library</a></li>
+                <li><a href="<?php echo $this->baseUrl; ?>brand?index=dream">Dream I Lab</a></li>
+                <li><a href="<?php echo $this->baseUrl; ?>brand?index=edu">EDUMALL</a></li>
               </ul>
             </div>
           </li>

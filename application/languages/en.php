@@ -1,6 +1,6 @@
 <?php
 return array(
-    '_en' => '',
+    '_en' => '_en',
     'webTitle' => 'Dream Community',
     'webKeywords' => 'Dream Community,Dreamland official website',
     'webDescription' => 'Dream Community,Dreamland official website',
@@ -32,7 +32,7 @@ return array(
     'indexEDUMALL' => 'Shared knowledge space, full content deployment platform, knowledge buyer',
     'indexCoffee' => 'coffee',
     'indexCoffeeDes' => 'Knowledge of coffee origin, use, fancy coffee pull flower',
-    'indexMeal' => 'light meal',
+    'indexMeal' => 'food and beverage',
     'indexMealDes' => 'Create more nutritious light meals with different staple foods',
     'indexDream' => "Children's Education Department Store",
     'indexLibrary' => 'Create a new library integrating business, entertainment, socializing and knowledge sharing',

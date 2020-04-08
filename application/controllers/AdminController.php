@@ -56,7 +56,9 @@ class AdminController extends Front_Controller_Action {
         try {
             $req = json_decode(file_get_contents('php://input'),true);
             $id = $req['id'];
-            $req['password'] = $this->_admin->_encrypt($req['password']);
+            if(isset($req['password'])){
+                $req['password'] = $this->_admin->_encrypt($req['password']);
+            }
             $res = $this->_admin->update('adminuser',$id,$req);
             $res = ['error'=>0,'data'=>$res];
         } catch (Exception $e) {
@@ -79,14 +81,21 @@ class AdminController extends Front_Controller_Action {
 
     public function bannerAction() {
         $name = $this->getRequest()->getPost('name');
+        $path = $this->getRequest()->getPost('path');
 
-        $path = dirname(dirname(dirname(__FILE__))) . '/htdocs/imgs/index/';
-        $type = array('image/jpeg','image/png');
+        $path = dirname(dirname(dirname(__FILE__))) . '/htdocs/imgs/'.$path.'/';
+        if($path === 'index'){
+            $type = array('image/jpeg','image/png');
+        }else{
+            $type = array('image/jpeg');
+        }
 
         try {
             $res = $this->_admin->upfile($name,$path,null,$type);
-            $id = substr($res,6,1);
-            $this->_admin->update('banner',$id,array('name'=>$res));
+            if($path === 'index'){
+                $id = substr($res,6,1);
+                $this->_admin->update('banner',$id,array('name'=>$res));
+            }
             $res = ['error'=>0,'data'=>$res];
         } catch (Exception $e) {
             $res = $this->util->err($e);

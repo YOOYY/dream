@@ -10,5 +10,6 @@
         $content.= $e->getTraceAsString()."\t";
         require_once APPLICATION_ROOT_PATH . 'models/Logs.php';
         Logs::write('exception', $content);
+        return $e->getMessage();
     }
 }

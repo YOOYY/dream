@@ -5,7 +5,6 @@
  *  @package base
  */
 require_once 'Zend/Controller/Action.php';
-
 class Front_Controller_Action extends Zend_Controller_Action {
 
     /**
@@ -24,14 +23,14 @@ class Front_Controller_Action extends Zend_Controller_Action {
         $this->_configView();
 
         $actionName = $this->_getParam('action');
-
-        header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE");
-        header("Access-Control-Allow-Origin: http://localhost:8080");
-        header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-        header("Access-Control-Allow-Credentials: true");
-
+        $controllerName = $this->_getParam('controller');
+        // header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE");
+        // header("Access-Control-Allow-Origin: http://localhost:8080");
+        // header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+        // header("Access-Control-Allow-Credentials: true");
         if($_SERVER['REQUEST_METHOD'] == 'OPTIONS'){exit;}
-        if($this->view->controllerName == 'admin'){
+
+        if($controllerName == 'admin'){
             SESSION_START();
             $this->_authenticate($actionName);
         }
@@ -125,7 +124,7 @@ class Front_Controller_Action extends Zend_Controller_Action {
     }
 
     private function _authenticate($actionName) {
-
+        // return;
         if($actionName == 'login'){
             return;
         }

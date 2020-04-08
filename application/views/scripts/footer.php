@@ -4,15 +4,19 @@
           <div class="link">
             <dl>
               <dt><?php echo $this->translate->_("footerAboutus");?></dt>
-              <dd><a href="#"><?php echo $this->translate->_("footerIntroduction");?></a></dd>
-              <dd><a href="#"><?php echo $this->translate->_("footerContact");?></a></dd>
-              <dd><a href="#"><?php echo $this->translate->_("footerNews");?></a></dd>
+                <dd>
+                    <a href="<?php echo "{$this->baseUrl}introduction/index{$this->nav_en}";?>">
+                        <?php echo $this->translate->_("footerIntroduction");?>
+                    </a>
+                </dd>
+              <dd><a href="<?php echo $this->baseUrl; ?>joinus/index<?php echo $this->nav_en;?>"><?php echo $this->translate->_("footerContact");?></a></dd>
+              <dd><a href="<?php echo "{$this->baseUrl}news/index{$this->nav_en}"; ?>"><?php echo $this->translate->_("footerNews");?></a></dd>
             </dl>
             <dl>
               <dt><?php echo $this->translate->_("footerNotice");?></dt>
-              <dd><a href="#"><?php echo $this->translate->_("footerLegal");?></a></dd>
-              <dd><a href="#"><?php echo $this->translate->_("footerService");?></a></dd>
-              <dd><a href="#"><?php echo $this->translate->_("footerPrivacy");?></a></dd>
+              <dd><a href="<?php echo "{$this->baseUrl}index/index{$this->nav_en}"; ?>"><?php echo $this->translate->_("footerLegal");?></a></dd>
+              <dd><a href="<?php echo "{$this->baseUrl}index/index{$this->nav_en}"; ?>"><?php echo $this->translate->_("footerService");?></a></dd>
+              <dd><a href="<?php echo "{$this->baseUrl}index/index{$this->nav_en}"; ?>"><?php echo $this->translate->_("footerPrivacy");?></a></dd>
             </dl>
             <dl class="phone">
               <dt><?php echo $this->translate->_("footerHotline");?></dt>
@@ -23,7 +27,7 @@
             <div class="erweibox"><img src="<?php echo $this->imgUrl ?>code.jpg" alt="">
               <p><?php echo $this->translate->_("footerWeChatService");?></p>
             </div>
-            <div class="erweibox marginleft20"><img src="<?php echo $this->imgUrl ?>code.jpg" alt="">
+            <div class="erweibox marginleft20"><img src="<?php echo $this->imgUrl ?>code1.jpg" alt="">
               <p><?php echo $this->translate->_("footerWeChatProgram");?></p>
             </div>
           </div>
