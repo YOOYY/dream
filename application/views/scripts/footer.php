@@ -1,4 +1,4 @@
-<div id="footer">
+﻿<div id="footer">
       <div class="container">
         <div class="cover">
           <div class="link">
@@ -28,8 +28,8 @@
             </div>
           </div>
         </div>
-        <p class="tips"> <a href="#" target="_blank"><?php echo $this->translate->_("footerLicense");?>沪ICP备18024039号-1</a>
-        <a class="beian" href="#" target="_blank"><img src="<?php echo $this->imgUrl ?>beian.png">&nbsp<?php echo $this->translate->_("footerSecurity");?></a></p>
+        <p class="tips"> <a href="http://www.beian.miit.gov.cn" target="_blank"><?php echo $this->translate->_("footerLicense");?>沪ICP备18024039号-1</a>
+        <a class="beian" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602008563" target="_blank"><img src="<?php echo $this->imgUrl ?>beian.png">&nbsp<?php echo $this->translate->_("footerSecurity");?></a></p>
       </div>
     </div>
     <script src="<?php echo $this->baseUrl; ?>js/jquery.js"></script>

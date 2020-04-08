@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh">
   <head>
     <meta charset="utf-8">
@@ -21,8 +21,8 @@
     <script src="<?php echo $this->baseUrl; ?>js/respond.js"></script>
   </head>
   <body>
-        <div style="position:absolute;right:10%;top:4%">
-            <span id="zh" style="cursor:pointer">中文</span> / <span id="en" style="cursor:pointer">English</span>
+        <div style="position:absolute;right:3%;top:0%;background:#5c5c60;padding:10px;border-radius:0 0 5px 5px;color:#fff">
+            <span id="zh" style="cursor:pointer">中</span> / <span id="en" style="cursor:pointer">En</span>
         </div>
     <div id="header">
       <div class="container">

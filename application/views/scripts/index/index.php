@@ -1,7 +1,6 @@
-<?php echo $this->render("header{$this->en}.php");?>
+﻿<?php echo $this->render("header{$this->en}.php");?>
 <ul id="mySlide">
     <?php
-    // print_r($this->bannerlist);
         foreach ($this->bannerlist as $bval){
             echo "<li><a><img class='responsive' src='{$this->mimgUrl}{$bval['name']}'></a></li>";
         }
