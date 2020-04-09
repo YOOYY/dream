@@ -2,7 +2,9 @@
 <ul id="mySlide">
     <?php
         foreach ($this->bannerlist as $bval){
+          if($bval['path']==='index'){
             echo "<li><a><img class='responsive' src='{$this->mimgUrl}{$bval['name']}'></a></li>";
+          }
         }
     ?>
     </ul>

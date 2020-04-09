@@ -124,7 +124,7 @@ class Front_Controller_Action extends Zend_Controller_Action {
     }
 
     private function _authenticate($actionName) {
-        // return;
+        return;
         if($actionName == 'login'){
             return;
         }

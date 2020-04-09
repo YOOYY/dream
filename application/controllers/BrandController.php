@@ -23,13 +23,13 @@ class BrandController extends Front_Controller_Action {
             var index = GetQueryString('index');
             switch(index){
                 case 'edu':
-                    index = 0;
+                    index = 2;
                     break;
                 case 'dream':
                     index = 1;
                     break;
                 case 'library':
-                    index = 2;
+                    index = 0;
                     break;
                 default:
                     index = 0;
