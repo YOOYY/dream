@@ -40,7 +40,6 @@ return array(
     'indexNews' => '企业资讯',
     'indexMore' => '查看更多',
     'indexBrand' => '合作品牌',
-    'introductionSlogin' => '城市的文化新地标!',
     'introductionVision' => '集团愿景',
     'introductionVisionDes' => '梦想天地以提升中国人的精神气质为己任，努力成为每个城市最重要的未来学习中心、生活进阶场所和文化新地标。',
     'introductionBelief' => '企业理念',

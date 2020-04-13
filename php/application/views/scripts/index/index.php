@@ -1,4 +1,4 @@
-﻿<?php echo $this->render("header{$this->en}.php");?>
+<?php echo $this->render("header{$this->en}.php");?>
 <ul id="mySlide">
     <?php
         foreach ($this->bannerlist as $bval){
@@ -9,7 +9,7 @@
     ?>
     </ul>
     <div class="container margintop" id="features">
-      <div class="features_left"><a href="<?php echo $this->baseUrl ?>brand?index=edu"><img src="<?php echo $this->mimgUrl ?>feature1.jpg" alt="">
+      <div class="features_left"><a href="<?php echo "{$this->baseUrl}brand/index{$this->nav_en}?index=edu"; ?>"><img src="<?php echo $this->mimgUrl ?>feature1.jpg" alt="">
           <div class="text">
             <h6>EDUMALL</h6>
             <p><?php echo $this->translate->_("indexEDUMALL");?></p>
@@ -22,11 +22,11 @@
             <h6><?php echo $this->translate->_("indexMeal");?></h6>
             <p><?php echo $this->translate->_("indexMealDes");?></p>
           </div></a></div>
-      <div class="features_right"><a href="<?php echo $this->baseUrl ?>brand?index=dream"><img src="<?php echo $this->mimgUrl ?>feature2.jpg" alt="">
+      <div class="features_right"><a href="<?php echo "{$this->baseUrl}brand/index{$this->nav_en}?index=dream"; ?>"><img src="<?php echo $this->mimgUrl ?>feature2.jpg" alt="">
           <div class="text">
             <h6>Dream I Lab</h6>
             <p><?php echo $this->translate->_("indexDream");?></p>
-          </div></a><a class="last" href="<?php echo $this->baseUrl ?>brand?index=library"><img src="<?php echo $this->mimgUrl ?>feature5.jpg">
+          </div></a><a class="last" href="<?php echo "{$this->baseUrl}brand/index{$this->nav_en}?index=library"; ?>"><img src="<?php echo $this->mimgUrl ?>feature5.jpg">
           <div class="text">
             <h6>The Library</h6>
             <p><?php echo $this->translate->_("indexLibrary");?></p>

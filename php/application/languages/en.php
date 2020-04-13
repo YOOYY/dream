@@ -39,7 +39,6 @@ return array(
     'indexNews' => 'Anchor store brands',
     'indexMore' => 'more',
     'indexBrand' => 'Partners',
-    'introductionSlogin' => "New landmark of the city's culture!",
     'introductionVision' => 'Group vision',
     'introductionVisionDes' => 'Dream Community aims to improve the spiritual temperament of civil society and strives to become the most important future learning center, advanced living place and new cultural landmark of each city.',
     'introductionBelief' => 'Business philosophy',

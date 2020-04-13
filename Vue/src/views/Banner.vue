@@ -2,7 +2,7 @@
     <div id="banner">
         <v-headpanel>
             <em>banner更换</em>
-            首页图片格式是为1920*700px的jpg或png，其他图片格式是大小为1920*420px的jpg，建议用tinypng压缩
+            首页图片格式是为1920*600px的jpg或png，其他图片格式是大小为1920*420px的jpg，建议用tinypng压缩
         </v-headpanel>
         <el-row>
             <el-col

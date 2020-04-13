@@ -1,8 +1,6 @@
 <?php echo $this->render("header{$this->en}.php");?>
     <div id="introduction">
-      <div class="res_banner"><img class="responsive" src="<?php echo $this->mimgUrl ?>bg.jpg" alt="">
-        <p><?php echo $this->translate->_("introductionSlogin");?></p>
-      </div>
+        <img class="responsive" src="<?php echo $this->mimgUrl ?>bg.jpg" alt="">
       <div class="container">
         <h1 id="vision"><?php echo $this->translate->_("introductionVision");?></h1>
         <p><?php echo $this->translate->_("introductionVisionDes");?></p>
