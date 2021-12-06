@@ -11,7 +11,7 @@ vue是后台管理的前端页面，用的element-ui
 
 本地运行展示流程  
 1.运行dream.sql建立本地数据表，修改php文件夹下configs/dbmm.php中数据库配置  
-2.将php/htdocs路径映射到mysql虚拟主机路径建立本地服务器访问测试域名  
+2.将php/htdocs路径映射到mysql虚拟主机路径建立本地服务器访问测试域名http://test.com  
 
 官网管理后台入口:http://www.wedream.com/admin  
 测试账号 test 密码 test
