@@ -13,21 +13,17 @@
               <div class="pagination fl">
                 <div class="marginbottom">
                   <h2>&#62; <?php echo $this->translate->_("joinusMerchants");?></h2>
-                  <p>E-mail：baosiwang@edumallgh.com</p>
+                  <p>E-mail：baosiwang@wedream.com</p>
                 </div>
                 <div>
                   <h2>&#62; <?php echo $this->translate->_("joinusDevelopment");?></h2>
-                  <p>E-mail：anpengjuan@edumallgh.com</p>
+                  <p>E-mail：anpengjuan@wedream.com</p>
                 </div>
               </div>
               <div class="pagination fr">
                 <div class="marginbottom">
-                  <h2>&#62; <?php echo $this->translate->_("joinusVenue");?></h2>
-                  <p>E-mail：tenglong@edumallgh.com</p>
-                </div>
-                <div>
                   <h2>&#62; <?php echo $this->translate->_("joinusMeetings");?></h2>
-                  <p>E-mail：chenyanji@edumallgh.com</p>
+                  <p>E-mail：tenglong@wedream.com</p>
                 </div>
               </div>
             </div><img src="<?php echo $this->mimgUrl ?>pic.jpg" alt="">

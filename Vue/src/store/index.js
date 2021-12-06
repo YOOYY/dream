@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        website: 'http://www.edumallgh.com:8081',
+        website: 'http://www.wedream.com',
         title: '后台管理系统',
         admin: {
             'id': -1,

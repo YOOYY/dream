@@ -3,30 +3,35 @@
 require_once APPLICATION_ROOT_PATH . 'models/Article.php';
 require_once APPLICATION_ROOT_PATH . 'models/Util.php';
 
-class NewsController extends Front_Controller_Action {
+class NewsController extends Front_Controller_Action
+{
 
-    public function preDispatch() {
+    public function preDispatch()
+    {
         $this->_article = new Article();
         $this->util = new Util();
-        
-        $this->view->title = $this->config['sitename'].'媒体中心';
-        $this->view->keywords = $this->config['sitename'].'媒体中心';
-        $this->view->description = $this->config['sitename'].'媒体中心';
 
-        $this->view->mimgUrl = $this->view->imgUrl.'news/';
-        $this->view->aimgUrl = $this->view->imgUrl.'article/';
-        $this->view->header= '<link rel="stylesheet" href="'.$this->view->baseUrl.'css/news.css">';
+        $this->view->title = $this->config['sitename'] . '媒体中心';
+        $this->view->keywords = $this->config['sitename'] . '媒体中心';
+        $this->view->description = $this->config['sitename'] . '媒体中心';
+
+        $this->view->mimgUrl = $this->view->imgUrl . 'news/';
+        $this->view->aimgUrl = $this->view->imgUrl . 'article/';
+        $this->view->header = '<link rel="stylesheet" href="' . $this->view->baseUrl . 'css/news.css">';
     }
 
-    public function indexAction() {
+    public function indexAction()
+    {
         $page = (int) $this->_getParam('page', '1');
-        $type = 1;$limit = 4;$start = $page-1;
+        $type = 1;
+        $limit = 4;
+        $start = $page - 1;
         $totalList = $this->_article->getNum($type);
-        $totalNum = ceil($totalList/$limit);
+        $totalNum = ceil($totalList / $limit);
         $apiUrl = "{$this->view->baseUrl}news/api/";
 
-        $this->view->list = $this->_article->getList($type,$start,$limit);
-        $this->view->footer= <<<EOF
+        $this->view->list = $this->_article->getList($type, $start, $limit);
+        $this->view->footer = <<<EOF
         <script>
         var imgUrl = '{$this->view->imgUrl}';
         </script>
@@ -82,15 +87,18 @@ EOF;
         $this->render('index');
     }
 
-    public function activityAction() {
+    public function activityAction()
+    {
         $page = (int) $this->_getParam('page', '1');
-        $type = 2;$limit = 6;$start = $page-1;
+        $type = 2;
+        $limit = 6;
+        $start = $page - 1;
         $totalList = $this->_article->getNum($type);
-        $totalNum = ceil($totalList/$limit);
+        $totalNum = ceil($totalList / $limit);
         $apiUrl = "{$this->view->baseUrl}news/api/";
-        $this->view->list = $this->_article->getList($type,$start,$limit);
+        $this->view->list = $this->_article->getList($type, $start, $limit);
         $newsDetails = $this->view->translate->_("newsDetails");
-        $this->view->footer= <<<EOF
+        $this->view->footer = <<<EOF
         <script>
         var imgUrl = '{$this->view->imgUrl}';
         </script>
@@ -144,7 +152,8 @@ EOF;
         $this->render('activity');
     }
 
-    public function newsAction() {
+    public function newsAction()
+    {
         $id = $this->_getParam('id', '1');
         $res = $this->_article->getinfo($id);
         $this->view->info = $res['info'];
@@ -153,7 +162,8 @@ EOF;
         $this->render('news');
     }
 
-    public function articleAction() {
+    public function articleAction()
+    {
         $id = $this->_getParam('id', '1');
         $res = $this->_article->getinfo($id);
         $this->view->info = $res['info'];
@@ -162,28 +172,45 @@ EOF;
         $this->render('article');
     }
 
-    public function apiAction() {
+    public function apiAction()
+    {
         $type = (int) $this->_getParam('type', 1);
         $start = (int) $this->_getParam('start', 0);
         $limit = (int) $this->_getParam('limit', 4);
         try {
-            $res = $this->_article->getlist($type,$start,$limit);
-            $res = ['error'=>0,'data'=>$res];
+            $res = $this->_article->getlist($type, $start, $limit);
+            $res = ['error' => 0, 'data' => $res];
         } catch (Exception $e) {
-           $this->util->err($e);
-           $res = ['error'=>1,'data'=>'获取列表失败，请稍后再试'];
+            $this->util->err($e);
+            $res = ['error' => 1, 'data' => '获取列表失败，请稍后再试'];
         }
         echo json_encode($res);
     }
 
-    public function updatereaderAction() {
+    public function updatereaderAction()
+    {
         $id = (int) $this->_getParam('id');
         $reader = (int) $this->_getParam('reader');
         try {
-            $this->_article->updateReader($id,$reader);
+            $this->_article->updateReader($id, $reader);
         } catch (Exception $e) {
-           $this->util->err($e);
+            $this->util->err($e);
         }
         echo '';
+    }
+
+    public function legalAction()
+    {
+        $this->render('legal');
+    }
+
+    public function privacyAction()
+    {
+        $this->render('privacy');
+    }
+
+    public function serviceAction()
+    {
+        $this->render('service');
     }
 }

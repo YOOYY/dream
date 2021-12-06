@@ -4,11 +4,9 @@
 define('APPLICATION_ROOT_PATH', dirname(dirname(__FILE__)) . '/application/');
 define('SITEDATA_ROOT_PATH', dirname(dirname(__FILE__)) . '/sitedata/');
 define('HTDOCS_ROOT_PATH', dirname(dirname(__FILE__)) . '/htdocs/');
-define('SHARE_ROOT_PATH', dirname(dirname(dirname(__FILE__))) . '/sharefor52y/');
+// define('SHARE_ROOT_PATH', dirname(dirname(dirname(__FILE__))) . '/sharefor52y/');
 define('WHO_AM_I', 'py');
-//if (strstr($_SERVER['HTTP_REFERER'], "baidu") || strstr($_SERVER['HTTP_REFERER'], "so") || strstr($_SERVER['HTTP_REFERER'], "sogou") || strstr($_SERVER['HTTP_REFERER'], "google")) {
-//    Header("Location:http://www.578w.com");
-//}
+
 require_once 'Zend/Controller/Front.php';
 require_once 'Zend/Registry.php';
 require_once 'Zend/Translate.php';
@@ -26,7 +24,8 @@ $config = array_merge($dbmm, $application_config);
 //unset($dbmm, $application_config);
 //$config = $application_config;
 ////数据库
-$dbParams = array('host' => $config['db']['host'],
+$dbParams = array(
+    'host' => $config['db']['host'],
     'username' => $config['db']['username'],
     'password' => $config['db']['password'],
     'dbname' => $config['db']['dbname'],
@@ -36,7 +35,7 @@ $db = Zend_Db::factory($config['db']['type'], $dbParams);
 $db->query("set names 'utf8'");
 
 $adapter = new Zend_Translate('array', APPLICATION_ROOT_PATH . '/languages/zh.php', 'zh');
-$adapter->addTranslation(APPLICATION_ROOT_PATH . '/languages/en.php','en');
+$adapter->addTranslation(APPLICATION_ROOT_PATH . '/languages/en.php', 'en');
 Zend_Registry::set('Zend_Translate', $adapter);
 
 Zend_Registry::set('db', $db);
@@ -57,13 +56,13 @@ $router = $fc->getRouter();
 //);
 //不同开发模式的PHP环境设置
 switch ($config['system_run_level']) {
-    case 'develop'://开发环境
+    case 'develop': //开发环境
         error_reporting(E_ALL);
         ini_set('display_errors', 'on');
         $fc->throwExceptions(true);
         break;
 
-    case 'product'://生产环境
+    case 'product': //生产环境
     default:
         error_reporting(E_ALL & ~E_NOTICE);
         ini_set('display_errors', 'off');

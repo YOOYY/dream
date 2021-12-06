@@ -41,7 +41,7 @@ return array(
     'indexBrand' => 'Partners',
     'introductionVision' => 'Group vision',
     'introductionVisionDes' => 'Dream Community aims to improve the spiritual temperament of civil society and strives to become the most important future learning center, advanced living place and new cultural landmark of each city.',
-    'introductionBelief' => 'Business philosophy',
+    'introductionBelief' => 'Manaagement philosophy',
     'introductionHistory' => 'Development history',
     'introductionHistoryDes' => 'As a leading innovation complex operator and service provider of aggregated education brands and culture organizations, Dream Community is welcomed and favored by many first-class commercial real estate developers in China, such as CapitaLand, Jinmao, Yanlord, etc., and is rapidly expanded in the downtown or high-end shopping center of the first and second tier cities such as: Shanghai, Hangzhou, Ningbo, Yangzhou, Wuxi, etc.',
     'introductionEnv' => 'Company environment',
@@ -84,10 +84,9 @@ return array(
     'joinusCooperation' => 'Business cooperation',
     'joinusTalent' => 'Talent recruitment',
     'joinusMethod' => 'cooperation method',
-    'joinusMerchants' => 'Merchants settled',
-    'joinusDevelopment' => 'Content development',
-    'joinusVenue' => 'Event venue',
-    'joinusMeetings' => 'Business meetings',
+    'joinusMerchants' => 'Project Development',
+    'joinusDevelopment' => 'Content cooperation',
+    'joinusMeetings' => 'Business cooperation',
     'joinusPlace' => 'Work Location',
     'joinusDetail' => 'Details'
 );
